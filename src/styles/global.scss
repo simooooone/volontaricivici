@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-1 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.font-2 {
+  font-family: "Oswald", sans-serif;
+}
+
+.font-3 {
+  font-family: "Cormorant", serif;
+}
+
+.font-4 {
+  font-family: "Eczar", serif;
+}
+
+.font-5 {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+.barraNavigazione {
+  background-color: rgba(99, 50, 64, 1);
+  position: sticky;
+  top: 0;
+
+  .cont-barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    margin: 0 auto;
+  }
+
+  .cont-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+  }
+
+  .cont-logo {
+    flex: 1;
+
+    .logo {
+      max-width: 70px;
+      display: block;
+    }
+  }
+
+  .cont-menu {
+    justify-self: center;
+  }
+
+  .menu-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.link-navbar {
+  display: block;
+  transition: opacity 0.4s;
+  color: rgb(255, 255, 255, 1);
+  font-size: 24px;
+  font-family: "Josefin Sans", sans-serif;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.top {
+  .cont-img-top {
+    position: relative;
+
+    .img-top {
+      margin: 0;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .slogan-top {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgb(255, 255, 255, 1);
+      font-size: 40px;
+      font-family: "Josefin Sans", sans-serif;
+      text-align: center;
+      z-index: 2;
+
+      .acronimo {
+        font-size: 60px;
+      }
+    }
+  }
+}
+/* .barraNavigazione {
+  box-shadow: 2px 2px 20px 0px rgb(0 0 0 / 42%);
+}
+
+.link-navbar {
+  @apply duration-500 no-underline block transition-opacity;
+  color: rgb(126 91 239 / 1);
+}
+
+.link-navbar:hover {
+  @apply opacity-95;
+} */
