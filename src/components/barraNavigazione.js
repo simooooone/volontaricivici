@@ -16,6 +16,7 @@ const BarraNavigazione = ({ siteTitle }) => (
       {/* <div className="cont-btn">
         <Link className="btn-contatti" to="/contatti">
           Contattaci
+          Partecipare
         </Link>
       </div> */}
     </div>
