@@ -1,15 +1,34 @@
 import * as React from "react"
-
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Metatags from "../components/metatags"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
-const NotFoundPage = () => (
-  <Layout>
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+const NotFoundPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          notFoundPageTitle
+          notFoundPageDescription
+        }
+      }
+    }
+  `)
 
-export const Head = () => <Seo title="404: Not Found" />
+  return (
+    <Layout alt="404 Pagina non trovata!">
+      <Metatags
+        title={`${data.site.siteMetadata.notFoundPageTitle}`}
+        description={`${data.site.siteMetadata.notFoundPageDescription}`}
+      />
+      <h1>404 Pagina non trovata :-(</h1>
+      <p>La pagina richiesta non è stata trovata.</p>
+      <br />
+      <p>
+        <Link to="/">Torna alla Home Page</Link>
+      </p>
+    </Layout>
+  )
+}
 
 export default NotFoundPage

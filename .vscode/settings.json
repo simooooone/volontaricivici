@@ -1,0 +1,33 @@
+{
+  "[javascript, javascriptreact, typescript, typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 4
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.suggestSelection": "first",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": true,
+  "editor.insertSpaces": true,
+  "editor.indentSize": "tabSize",
+  "editor.detectIndentation": true,
+  "editor.tabSize": 4,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.tabWidth": 4,
+  "prettier.useTabs": true,
+  "tailwindCSS.suggestions": true,
+  "tailwindCSS.emmetCompletions": true,
+  "emmet.showAbbreviationSuggestions": true,
+  "terminal.integrated.suggest.quickSuggestions": true
+}

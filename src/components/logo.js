@@ -1,8 +1,8 @@
 import * as React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import logo from "../assets/images/logo.png"
 
-const Logo = () => {
+const Logo = ({ width, height }) => {
   const data = useStaticQuery(graphql`
     query SiteFooterQuery {
       site {
@@ -13,11 +13,15 @@ const Logo = () => {
     }
   `)
 
+  const imgProps = {
+    ...(width && { width }),
+    ...(height && { height }),
+  }
   return (
     <Link to="/">
       <img
+        {...imgProps}
         alt={`Logo ${data?.site?.siteMetadata?.title || ""}`}
-        height={90}
         src={logo}
         className="logo"
       />

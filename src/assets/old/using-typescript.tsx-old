@@ -3,7 +3,7 @@
 // import { PageProps, Link, graphql, HeadFC } from "gatsby"
 
 // import Layout from "../components/layout"
-// import Seo from "../components/seo"
+// import Seo from "../components/metatags"
 
 // type DataProps = {
 //   site: {

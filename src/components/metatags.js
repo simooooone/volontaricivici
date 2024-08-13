@@ -1,0 +1,85 @@
+import React from "react"
+import { Helmet } from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
+
+const Metatags = ({ title, description }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+          author
+          siteUrl
+        }
+      }
+    }
+  `)
+  const url = typeof window !== "undefined" ? window.location.href : ""
+  let langPage = url.includes("/en/") ? "en" : "it"
+
+  return (
+    <Helmet htmlAttributes={{ lang: langPage }}>
+      <title>{`${title} | ${data.site.siteMetadata.title}`}</title>
+      <meta
+        name="description"
+        content={`${description} | ${data.site.siteMetadata.description}`}
+      />
+      <meta name="description" content={`${data.site.siteMetadata.author}`} />
+
+      <link
+        rel="apple-touch-icon"
+        sizes="120x120"
+        href="../favicons/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="../favicons/favicon-32x32.png"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="../favicons/favicon-16x16.png"
+      />
+      <link
+        rel="mask-icon"
+        href="../favicons/safari-pinned-tab.svg"
+        color="#ffffff"
+      />
+      <meta name="msapplication-TileColor" content="#2d89ef" />
+      <meta name="theme-color" content="#ffffff" />
+      <meta itemprop="name" content={`${data.site.siteMetadata.title}`} />
+      {/* <meta
+        name="google-site-verification"
+        content="OWXaxaKJ9W7togjVQe05PEuQCf2gi7ytdB2RW3h9jk8"
+      /> */}
+      <meta
+        itemprop="description"
+        content={`${data.site.siteMetadata.description}`}
+      />
+      <meta itemprop="image" content="" />
+      <meta property="og:url" content="https://www.simonefoschi.it" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={`${data.site.siteMetadata.title}`} />
+      <meta
+        property="og:description"
+        content={`${data.site.siteMetadata.description}`}
+      />
+      <meta property="og:image" content="" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={`${data.site.siteMetadata.title}`} />
+      <meta
+        name="twitter:description"
+        content={`${data.site.siteMetadata.description}`}
+      />
+      <meta name="twitter:image" content="" />
+    </Helmet>
+  )
+}
+
+export default Metatags

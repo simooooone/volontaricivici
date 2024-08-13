@@ -1,55 +1,85 @@
-import * as React from "react"
-import { Link } from "gatsby"
-
+import React from "react"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Metatags from "../components/metatags"
 
-const UsingSSR = ({ serverData }) => {
+const Blog = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(
+        filter: {
+          frontmatter: {
+            langKey: { eq: "it" }
+            date: { ne: null }
+            update: { ne: null }
+          }
+        }
+        sort: [
+          { frontmatter: { update: DESC } }
+          { frontmatter: { date: ASC } }
+        ]
+      ) {
+        edges {
+          node {
+            frontmatter {
+              author
+              date
+              title
+              description
+              published
+              update
+            }
+            fields {
+              slug
+            }
+          }
+        }
+      }
+
+      site {
+        siteMetadata {
+          blogTitle
+          blogDescription
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
-      <h1>
-        This page is <b>rendered server-side</b>
-      </h1>
-      <p>
-        This page is rendered server side every time the page is requested.
-        Reload it to see a(nother) random photo from{" "}
-        <code>dog.ceo/api/breed/shiba/images/random</code>:
-      </p>
-      <img
-        style={{ width: "320px", borderRadius: "var(--border-radius)" }}
-        alt="A random dog"
-        src={serverData.message}
+      <Metatags
+        title={`${data.site.siteMetadata.blogTitle}`}
+        description={`${data.site.siteMetadata.blogDescription}`}
       />
-      <p>
-        To learn more, head over to our{" "}
-        <a href="https://www.gatsbyjs.com/docs/reference/rendering-options/server-side-rendering/">
-          documentation about Server Side Rendering
-        </a>
-        .
-      </p>
-      <Link to="/">Go back to the homepage</Link>
+      <h1>Blog</h1>
+      <ol className="posts">
+        {data.allMarkdownRemark.edges.length ? (
+          data.allMarkdownRemark.edges.map(edge => {
+            const post = edge.node.frontmatter
+
+            if (post.published) {
+              return (
+                <li
+                  className="post"
+                  key={`${post.published}+${post.update}+${post.date}`}
+                >
+                  <Link to={`/${edge.node.fields.slug}`}>
+                    <h3>{post.title}</h3>
+                    <p>{post.description}</p>
+                    <p>
+                      <em>{post.date}</em>
+                    </p>
+                  </Link>
+                </li>
+              )
+            }
+          })
+        ) : (
+          <div>Spiacenti, non ci sono post da mostrare</div>
+        )}
+      </ol>
     </Layout>
   )
 }
 
-export const Head = () => <Seo title="Using SSR" />
-
-export default UsingSSR
-
-export async function getServerData() {
-  try {
-    const res = await fetch(`https://dog.ceo/api/breed/shiba/images/random`)
-    if (!res.ok) {
-      throw new Error(`Response failed`)
-    }
-    return {
-      props: await res.json(),
-    }
-  } catch (error) {
-    return {
-      status: 500,
-      headers: {},
-      props: {},
-    }
-  }
-}
+export default Blog

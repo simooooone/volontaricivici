@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Metatags from "../components/metatags"
 import immagineTop from "../assets/images/img-top-home.jpg"
 import immagineUno from "../assets/images/index-1.jpg"
 
@@ -10,8 +10,8 @@ const IndexPage = () => {
     query SiteIndexQuery {
       site {
         siteMetadata {
-          title
-          description
+          homeTitle
+          homeDescription
           slogan
           acronimo
         }
@@ -19,15 +19,15 @@ const IndexPage = () => {
     }
   `)
 
-  let title = data?.site?.siteMetadata?.title || ``
-  let description = data?.site?.siteMetadata?.description || ``
+  let title = data?.site?.siteMetadata?.homeTitle || ``
+  let description = data?.site?.siteMetadata?.homeDescription || ``
   let slogan = data?.site?.siteMetadata?.slogan || ``
   let acronimo = data?.site?.siteMetadata?.acronimo || ``
 
   return (
     <>
       <Layout>
-        <Seo title={title} description={description} />
+        <Metatags homeTitle={title} homeDescription={description} />
         <div className="w-full top mx-0">
           <div className="cont-img-top">
             <img
@@ -61,12 +61,11 @@ const IndexPage = () => {
             </Link>
           </div>
         </div>
-
         <div className="blocco">
           <div className="cont-testo">
             <h1 className="titolo">Proponi iniziativa</h1>
             <h2 className="sottotitolo">
-              Proporrre soluzioni come cuore della nostra associazione
+              Proporre soluzioni come cuore della nostra associazione
             </h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam

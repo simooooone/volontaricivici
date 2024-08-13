@@ -3,14 +3,14 @@ import { Link } from "gatsby"
 import logo from "../assets/images/logo.png"
 import Menu from "./menu"
 import DatiAnagraficiMenu from "./datiAnagraficiMenu"
-import FooterBarraNavigazione from "./footerBarraNavigazione"
+import Footer from "./footer"
 
-const BarraNavigazione = ({ siteTitle }) => (
+const Header = ({ Title }) => (
   <div className="barraNavigazione fixed left-0 inset-y-0 max-h-svh h-svh w-80 bg-slate-50">
     <div className="max-h-svh h-svh overflow-scroll py-8 px-6">
       <div>
         <Link to="/">
-          <img alt={`Logo ${siteTitle}`} height={150} src={logo} />
+          <img alt={`Logo ${Title}`} height={150} src={logo} />
         </Link>
       </div>
       <div className="py-5">
@@ -19,9 +19,9 @@ const BarraNavigazione = ({ siteTitle }) => (
       <div>
         <DatiAnagraficiMenu />
       </div>
-      <FooterBarraNavigazione />
+      <Footer />
     </div>
   </div>
 )
 
-export default BarraNavigazione
+export default Header

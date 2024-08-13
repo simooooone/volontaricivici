@@ -1,7 +1,8 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import BarraNavigazione from "./barraNavigazione"
-import Footer from "./footerBarraNavigazione"
+import Metatags from "./metatags"
+import Header from "./header"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -14,11 +15,12 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const siteTitle = data?.site?.siteMetadata?.title || ``
+  const Title = data?.site?.siteMetadata?.title || ``
 
   return (
     <>
-      <BarraNavigazione siteTitle={siteTitle} />
+      <Metatags />
+      <Header Title={Title} />
 
       <main>{children}</main>
       <Footer />
