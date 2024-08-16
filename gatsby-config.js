@@ -136,7 +136,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: `${__dirname}/src/assets/images`,
+        path: `${__dirname}/src/assets/images/`,
       },
     },
     {
@@ -146,6 +146,8 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
     // {
     //   resolve: `gatsby-source-google-calendar`,

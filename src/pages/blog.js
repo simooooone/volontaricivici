@@ -28,6 +28,7 @@ const Blog = () => {
               description
               published
               update
+              featuredImage
             }
             fields {
               slug

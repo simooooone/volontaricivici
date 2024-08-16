@@ -1,3 +1,6 @@
+:root {
+  --colore-bordi: rgba(0, 0, 0, 0.2);
+}
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -132,39 +135,22 @@ body {
 }
 
 .blocco {
-  width: 100%;
-  padding: 0;
   background-color: rgba(255, 255, 255, 1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
+  align-items: flex-start;
 
   .cont-testo {
-    padding: 30px 40px;
-    width: 50%;
-    flex: 0 0 auto;
-
-    .titolo {
-      font-size: 40px;
-      font-family: "Josefin Sans", sans-serif;
-      line-height: 1;
-      margin-bottom: 12px;
+    @media (max-width: 991px) {
+      padding-inline: 2rem;
+      padding-block: 3rem;
     }
 
-    .sottotitolo {
-      line-height: 1;
-      font-size: 20px;
-      font-family: "Josefin Sans", sans-serif;
-      margin-bottom: 2rem;
-    }
-
-    p {
-      margin-bottom: 35px;
+    @media (min-width: 992px) {
+      padding: 3rem;
+      position: sticky;
+      top: 3rem;
     }
 
     .btn-testo {
-      display: block;
       width: max-content;
       display: flex;
       align-items: center;
@@ -178,14 +164,63 @@ body {
   }
 
   .cont-img {
-    width: 50%;
-    flex: 0 0 auto;
-    align-self: stretch;
+    position: sticky;
+    top: 3rem;
 
     .img {
-      max-width: 100%;
-      height: 100%;
       object-fit: cover;
     }
   }
+}
+
+.titolo,
+.titolo2 {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.titolo {
+  font-size: 40px;
+}
+
+.titolo2 {
+  font-size: 30px;
+}
+
+.sottotitolo {
+  line-height: 1;
+  font-size: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  margin-bottom: 2rem;
+}
+
+.fontTit {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+}
+
+.footer {
+  border-top: 1px solid var(--colore-bordi);
+
+  @media (min-width: 992px) {
+    .bordo-contatti-footer {
+      border-left: 1px solid var(--colore-bordi);
+    }
+  }
+
+  .bordo-contatti-footer {
+    border-right: 1px solid var(--colore-bordi);
+  }
+
+  .border-blocco-logo {
+    @media (max-width: 991px) {
+      border-left: 1px solid var(--colore-bordi);
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

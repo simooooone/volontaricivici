@@ -4,7 +4,7 @@ import logo from "../assets/images/logo.png"
 
 const Logo = ({ width, height }) => {
   const data = useStaticQuery(graphql`
-    query SiteFooterQuery {
+    query {
       site {
         siteMetadata {
           title

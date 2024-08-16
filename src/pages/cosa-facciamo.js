@@ -37,33 +37,53 @@ const CosaFacciamo = () => {
           </div>
         </div>
       </div>
-      <div className="blocco">
-        <h1>Cosa Facciamo</h1>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium
-          neque obcaecati cupiditate?
-        </p>
-      </div>
-      <div className="blocco">
-        <div className="cont-testo">
-          <h1 className="titolo">Proponi iniziativa</h1>
-          <h2 className="sottotitolo">
-            Proporre soluzioni come cuore della nostra associazione
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            quod, voluptates, quia, quos nemo quae quibusdam quas quidem officia
-            voluptatibus autem. Quisquam quod, voluptates, quia, quos nemo quae
-            quibusdam quas quidem officia voluptatibus autem. Quisquam quod,
-            voluptates, quia, quos nemo quae quibusdam quas quidem officia
-            voluptatibus autem.
-          </p>
-          <Link to="/" className="btn-testo">
-            Proponi la tua iniziativa
-          </Link>
+      <div className="container-fluid">
+        <div className="row blocco">
+          <div className="cont-testo col-lg-6 col-12">
+            <h1 className="titolo">Cosa Facciamo</h1>
+            <h2 className="sottotitolo">
+              Le proposte per il paese della nostra associazione
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              quod, voluptates, quia, quos nemo quae quibusdam quas quidem
+              officia voluptatibus autem. Quisquam quod, voluptates, quia, quos
+              nemo quae quibusdam quas quidem officia voluptatibus autem.
+              Quisquam quod, voluptates, quia, quos nemo quae quibusdam quas
+              quidem officia voluptatibus autem.
+            </p>
+            <Link to="/" className="btn-testo">
+              Chi Siamo
+            </Link>
+          </div>
+          <div className="cont-img order-lg-first col-lg-6 px-0">
+            <img alt="Immagine Chi Siamo" src={immagineUno} className="img" />
+          </div>
         </div>
-        <div className="cont-img">
-          <img alt="Immagine Chi Siamo" src={immagineUno} className="img" />
+      </div>
+      <div className="container-fluid">
+        <div className="row blocco">
+          <div className="cont-testo col-lg-6 col-12">
+            <h1 className="titolo">Eventi e manifestazioni</h1>
+            <h2 className="sottotitolo">
+              La nostra associazione all'interno degli eventi per la Repubblica
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              quod, voluptates, quia, quos nemo quae quibusdam quas quidem
+              officia voluptatibus autem. Quisquam quod, voluptates, quia, quos
+              nemo quae quibusdam quas quidem officia voluptatibus autem.
+              Quisquam quod, voluptates, quia, quos nemo quae quibusdam quas
+              quidem officia voluptatibus autem.
+            </p>
+            <Link to="/" className="btn-testo">
+              Proponi la tua iniziativa
+            </Link>
+          </div>
+
+          <div className="cont-img col-lg-6 px-0">
+            <img alt="Immagine Chi Siamo" src={immagineUno} className="img" />
+          </div>
         </div>
       </div>
     </Layout>
