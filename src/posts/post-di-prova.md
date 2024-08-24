@@ -1,13 +1,13 @@
 ---
-title: Lorem ipsum dolor sit
+title: Prova evento 1
 description: amet consectetur adipisicing elit Ipsam tenetur
-slogan: nihil ipsum
-date: 2018/12/16
-update: 2019/9/4
-author: Simo
+slogan: Post di prova
+date: 24/08/2024
+update: 24/08/2024
+author: Autore
 published: true
-langKey: it
-featuredImage: /assets/images/img-top-chi.jpg
+sideImage: /domenica-4-agosto.jpg
+featuredImage: /img-top-chi.jpg
 ---
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tenetur nihil ipsum vel quibusdam reprehenderit amet quo dolorem dignissimos? Impedit blanditiis quasi explicabo cumque soluta ratione sint quos fugiat natus.

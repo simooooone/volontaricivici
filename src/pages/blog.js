@@ -6,19 +6,7 @@ import Metatags from "../components/metatags"
 const Blog = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(
-        filter: {
-          frontmatter: {
-            langKey: { eq: "it" }
-            date: { ne: null }
-            update: { ne: null }
-          }
-        }
-        sort: [
-          { frontmatter: { update: DESC } }
-          { frontmatter: { date: ASC } }
-        ]
-      ) {
+      allMarkdownRemark {
         edges {
           node {
             frontmatter {
@@ -29,6 +17,7 @@ const Blog = () => {
               published
               update
               featuredImage
+              sideImage
             }
             fields {
               slug
@@ -73,6 +62,8 @@ const Blog = () => {
                   </Link>
                 </li>
               )
+            } else {
+              return null
             }
           })
         ) : (
