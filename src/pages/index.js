@@ -28,7 +28,7 @@ const IndexPage = () => {
   return (
     <>
       <Layout>
-        <Metatags homeTitle={title} homeDescription={description} />
+        <Metatags title={title} description={description} />
         <div className="w-full top mx-0">
           <div className="cont-img-top">
             <img

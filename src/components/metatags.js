@@ -2,7 +2,8 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Metatags = ({ title, description }) => {
+const Metatags = props => {
+  // {title, description}
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -20,10 +21,10 @@ const Metatags = ({ title, description }) => {
 
   return (
     <Helmet htmlAttributes={{ lang: langPage }}>
-      <title>{`${title} | ${data.site.siteMetadata.title}`}</title>
+      <title>{`${props.title} | ${data.site.siteMetadata.title}`}</title>
       <meta
         name="description"
-        content={`${description} | ${data.site.siteMetadata.description}`}
+        content={`${props.description} | ${data.site.siteMetadata.description}`}
       />
       <meta name="description" content={`${data.site.siteMetadata.author}`} />
 

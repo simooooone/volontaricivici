@@ -20,7 +20,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Metatags />
       <BarraMobile />
       <Header Title={Title} />
       <main>{children}</main>
