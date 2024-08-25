@@ -8,7 +8,7 @@ const NotFoundPage = () => {
     query {
       site {
         siteMetadata {
-          notFoundPageTitle
+          notFoundPageTitolo
           notFoundPageDescription
         }
       }
@@ -18,7 +18,7 @@ const NotFoundPage = () => {
   return (
     <Layout alt="404 Pagina non trovata!">
       <Metatags
-        title={`${data.site.siteMetadata.notFoundPageTitle}`}
+        titolo={`${data.site.siteMetadata.notFoundPageTitolo}`}
         description={`${data.site.siteMetadata.notFoundPageDescription}`}
       />
       <h1>404 Pagina non trovata :-(</h1>

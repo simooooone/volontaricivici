@@ -1,5 +1,6 @@
 ---
-title: Prova evento 1
+titolo: Prova evento 1
+sottotitolo: Estratto articolo
 description: amet consectetur adipisicing elit Ipsam tenetur
 slogan: Post di prova
 date: 24/08/2024

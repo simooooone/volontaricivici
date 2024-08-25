@@ -7,7 +7,7 @@ const Logo = ({ width, height }) => {
     query {
       site {
         siteMetadata {
-          title
+          titolo
         }
       }
     }
@@ -21,7 +21,7 @@ const Logo = ({ width, height }) => {
     <Link to="/">
       <img
         {...imgProps}
-        alt={`Logo ${data?.site?.siteMetadata?.title || ""}`}
+        alt={`Logo ${data?.site?.siteMetadata?.titolo || ""}`}
         src={logo}
         className="logo"
       />

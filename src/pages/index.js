@@ -5,13 +5,14 @@ import Metatags from "../components/metatags"
 import immagineTop from "../assets/images/img-top-home.jpg"
 import immagineUno from "../assets/images/index-1.jpg"
 import immagineDue from "../assets/images/index-2.jpg"
+import TopPagine from "../components/topPagine"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query SiteIndexQuery {
       site {
         siteMetadata {
-          homeTitle
+          homeTitolo
           homeDescription
           slogan
           acronimo
@@ -20,7 +21,7 @@ const IndexPage = () => {
     }
   `)
 
-  let title = data?.site?.siteMetadata?.homeTitle || ``
+  let titolo = data?.site?.siteMetadata?.homeTitolo || ``
   let description = data?.site?.siteMetadata?.homeDescription || ``
   let slogan = data?.site?.siteMetadata?.slogan || ``
   let acronimo = data?.site?.siteMetadata?.acronimo || ``
@@ -28,20 +29,14 @@ const IndexPage = () => {
   return (
     <>
       <Layout>
-        <Metatags title={title} description={description} />
-        <div className="w-full top mx-0">
-          <div className="cont-img-top">
-            <img
-              alt="Immagine Principale"
-              src={immagineTop}
-              className="img-top"
-            />
-            <div className="slogan-top">
-              <div className="acronimo">{acronimo}</div>
-              Un'associazione per San Marino.
-            </div>
-          </div>
-        </div>
+        <Metatags titolo={titolo} description={description} />
+        <TopPagine
+          alt=""
+          immagineTop={immagineTop}
+          slogan={acronimo}
+          dedica="Un'associazione per San Marino"
+          displayExtended="block"
+        />
         <div className="container-fluid">
           <div className="row blocco">
             <div className="cont-testo col-lg-6 col-12">

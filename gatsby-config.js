@@ -9,7 +9,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Vo.Ci. Nei Castelli`,
+    titolo: `Vo.Ci. Nei Castelli`,
     description: `Associazione Dei Volontari Civici Sammarinesi - Vo.Ci. Nei Castelli`,
     acronimo: `Vo.Ci.`,
     slogan: `Associazione sammarinese dei Volontari Civici`,
@@ -23,19 +23,20 @@ module.exports = {
     privacy: "Privacy Policy",
     facebook: "https://www.facebook.com/vocisanmarino",
     instagram: "https://www.instagram.com/",
-    homeTitle: "Il Blog di Vo.Ci. Nei Castelli",
+    homeTitolo: "Il Blog di Vo.Ci. Nei Castelli",
     homeDescription: "",
-    chiSiamoTitle: "Il Blog di Vo.Ci. Nei Castelli",
+    chiSiamoTitolo: "Il Blog di Vo.Ci. Nei Castelli",
     chiSiamoDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium neque obcaecati cupiditate?",
     chiSiamoAcronimo: "Chi Siamo",
-    cosaFacciamoTitle: "Il Blog di Vo.Ci. Nei Castelli",
+    cosaFacciamoTitolo: "Il Blog di Vo.Ci. Nei Castelli",
     cosaFacciamoDescription: "",
     cosaFacciamoAcronimo: "Cosa Facciamo",
-    blogTitle: "Il Blog di Vo.Ci. Nei Castelli",
+    blogTitolo: "Il Blog di Vo.Ci. Nei Castelli",
     blogDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium neque obcaecati cupiditate?",
-    notFoundPageTitle: "404 | Pagina non trovata",
+    blogAcronimo: "Il Blog di Vo.Ci. Nei Castelli",
+    notFoundPageTitolo: "404 | Pagina non trovata",
     notFoundPageDescription: "La pagina richiesta non è stata trovata",
   },
   plugins: [
@@ -58,15 +59,15 @@ module.exports = {
                 privacy
                 facebook
                 instagram
-                title
+                titolo
                 description
-                blogTitle
+                blogTitolo
                 blogDescription
-                chiSiamoTitle
+                chiSiamoTitolo
                 chiSiamoDescription
-                cosaFacciamoTitle
+                cosaFacciamoTitolo
                 cosaFacciamoDescription
-                notFoundPageTitle
+                notFoundPageTitolo
                 notFoundPageDescription
               }
             }
@@ -98,7 +99,7 @@ module.exports = {
                       html
                       fields { slug }
                       frontmatter {
-                        title
+                        titolo
                         date
                         update
                       }

@@ -6,6 +6,7 @@
   --white-hover: rgba(255, 255, 255, 0.8);
   --color-barra-mobile: rgba(255, 255, 255, 1);
   --background-barra-mobile: rgb(51, 51, 51, 1);
+  --font: "Josefin Sans", sans-serif;
 }
 
 body {
@@ -15,7 +16,7 @@ body {
 }
 
 .font-1 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: var(--font);
 }
 
 .font-2 {
@@ -49,6 +50,7 @@ body {
     background-color: var(--background-barra-mobile);
     color: var(--color-barra-mobile);
     z-index: 1000;
+    padding-right: 10px;
   }
 
   .toggle-button {
@@ -122,7 +124,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 90px;
+    height: 85px;
     margin: 0 auto;
     width: 100%;
   }
@@ -157,35 +159,7 @@ body {
     list-style: none;
   }
 
-  .link-navbar {
-    transition: opacity 0.4s;
-    color: var(--white);
-    font-size: 24px;
-    font-family: "Josefin Sans", sans-serif;
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-    transition: color 0.4s;
-
-    &:before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background-color: var(--white);
-      transition: width 0.4s;
-    }
-
-    &:hover {
-      color: var(--white-hover);
-
-      &:before {
-        width: 100%;
-      }
-    }
-
+  .link-underlined {
     &.active {
       color: var(--white-hover);
 
@@ -203,7 +177,7 @@ body {
       box-shadow: 0px 5px 6px 4px rgba(0, 0, 0, 0.1);
     }
 
-    .link-navbar {
+    .link-underlined {
       color: var(--colore-testo);
 
       &:before {
@@ -264,11 +238,12 @@ body {
     .slogan-top {
       position: absolute;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      left: 0;
+      width: 100%;
+      transform: translateY(-50%);
       color: var(--white);
       font-size: 40px;
-      font-family: "Josefin Sans", sans-serif;
+      font-family: var(--font);
       text-align: center;
       z-index: 3;
       line-height: 1.2;
@@ -276,6 +251,9 @@ body {
       .acronimo {
         font-size: 60px;
       }
+    }
+    .logo-mobi {
+      margin-bottom: 20px;
     }
   }
 
@@ -292,6 +270,16 @@ body {
           height: 60vh;
         }
       }
+
+      .slogan-top {
+        .acronimo {
+          font-size: 35px;
+        }
+
+        .home {
+          font-size: 30px;
+        }
+      }
     }
   }
 }
@@ -303,13 +291,17 @@ body {
   @media screen and (min-width: 992px) {
     .sticky-cont {
       position: sticky;
-      top: 0;
+      top: 125px;
     }
   }
 
   .cont-testo {
     padding: 2rem 3rem;
     align-self: center;
+
+    @media screen and (max-width: 992px) {
+      padding: 2rem 1.5rem;
+    }
 
     .btn-testo {
       width: max-content;
@@ -326,7 +318,7 @@ body {
 
   .cont-img {
     position: sticky;
-    top: 3rem;
+    top: 125px;
 
     .img {
       object-fit: cover;
@@ -339,13 +331,17 @@ body {
 
 .titolo,
 .titolo2 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: var(--font);
   line-height: 1;
   margin-bottom: 12px;
 }
 
 .titolo {
   font-size: 40px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 30px;
+  }
 }
 
 .titolo2 {
@@ -355,12 +351,12 @@ body {
 .sottotitolo {
   line-height: 1;
   font-size: 20px;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: var(--font);
   margin-bottom: 2rem;
 }
 
 .fontTit {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: var(--font);
   font-weight: bold;
 }
 
@@ -408,36 +404,12 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
+
+  &.bordo {
+    border-radius: 20px;
+  }
 }
-
-// .setRight,
-// .setLerft,
-// .setUp,
-// .setDown {
-//   opacity: 0;
-//   transition: transform 0.4s, opacity 0.4s;
-
-//   &.active {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-// }
-
-// .setRight {
-//   transform: translateX(100%);
-// }
-
-// .setLeft {
-//   transform: translateX(-100%);
-// }
-
-// .setUp {
-//   transform: translateY(-100%);
-// }
-
-// .setDown {
-//   transform: translateY(100%);
-// }
 
 .btn-img {
   background: none;
@@ -451,4 +423,91 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.cont-post {
+  .image {
+    display: block;
+
+    img {
+      object-fit: cover;
+      border-radius: 20px;
+      width: 100%;
+      height: 300px;
+    }
+  }
+
+  .post {
+    padding: 20px;
+
+    .link-post {
+      margin-bottom: 15px;
+      text-decoration: none;
+
+      .tito {
+        line-height: 1;
+        font-size: 20px;
+        font-family: var(--font);
+        color: var(--colore-testo);
+      }
+    }
+
+    .stito {
+      font-size: 16px;
+      font-family: var(--font);
+      color: var(--colore-testo);
+    }
+
+    .data {
+      font-size: 14px;
+      font-family: var(--font);
+      color: var(--colore-testo);
+    }
+  }
+}
+
+.link-underlined {
+  transition: opacity 0.4s;
+  color: var(--colore-testo);
+  font-size: 24px;
+  font-family: var(--font);
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  transition: color 0.4s;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--colore-testo);
+    transition: width 0.4s;
+  }
+
+  &:hover {
+    color: var(--colore-testo-hover);
+
+    &:before {
+      width: 100%;
+    }
+  }
+
+  &.white {
+    color: var(--white);
+
+    &:before {
+      background-color: var(--white);
+    }
+
+    &:hover {
+      color: var(--white-hover);
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
 }

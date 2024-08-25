@@ -1,6 +1,5 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Metatags from "./metatags"
 import Header from "./header"
 import Footer from "./footer"
 import BarraMobile from "./barraMobile"
@@ -10,18 +9,18 @@ const Layout = ({ children }) => {
     query SiteLayoutQuery {
       site {
         siteMetadata {
-          title
+          titolo
         }
       }
     }
   `)
 
-  const Title = data?.site?.siteMetadata?.title || ``
+  const Titolo = data?.site?.siteMetadata?.titolo || ``
 
   return (
     <>
       <BarraMobile />
-      <Header Title={Title} />
+      <Header Titolo={Titolo} />
       <main>{children}</main>
       <Footer />
     </>

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Metatags from "../components/metatags"
@@ -15,7 +15,7 @@ const CosaFacciamo = () => {
     query {
       site {
         siteMetadata {
-          cosaFacciamoTitle
+          cosaFacciamoTitolo
           cosaFacciamoDescription
           cosaFacciamoAcronimo
         }
@@ -23,7 +23,7 @@ const CosaFacciamo = () => {
     }
   `)
   const [toggler, setToggler] = useState(false)
-  let title = data?.site?.siteMetadata?.cosaFacciamoTitle || ``
+  let titolo = data?.site?.siteMetadata?.cosaFacciamoTitolo || ``
   let description = data?.site?.siteMetadata?.cosaFacciamoDescription || ``
   let acronimo = data?.site?.siteMetadata?.cosaFacciamoAcronimo || ``
 
@@ -37,7 +37,7 @@ const CosaFacciamo = () => {
 
   return (
     <Layout>
-      <Metatags title={title} description={description} />
+      <Metatags titolo={titolo} description={description} />
       <TopPagine alt="" immagineTop={immagineTop} slogan={acronimo} />
       {/* <div className="w-full top mx-0">
         <div className="cont-img-top int">

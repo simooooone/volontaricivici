@@ -11,7 +11,7 @@ const Blog = () => {
     query {
       site {
         siteMetadata {
-          blogTitle
+          blogTitolo
           blogDescription
         }
       }
@@ -20,7 +20,7 @@ const Blog = () => {
           id
           html
           frontmatter {
-            title
+            titolo
             description
             slogan
             date
@@ -45,14 +45,14 @@ const Blog = () => {
   return (
     <Layout>
       <Metatags
-        title={meta.blogTitle || ``}
+        titolo={meta.blogTitolo || ``}
         description={meta.blogDescription || ``}
       />
       {/* <div className="w-full top mx-0">
         <div className="cont-img-top int">
           <img
             src={immagineTop}
-            alt={`image top ${meta.blogTitle}`}
+            alt={`image top ${meta.blogTitolo}`}
             className="img-top"
           />
           <div className="slogan-top">
@@ -62,20 +62,24 @@ const Blog = () => {
       </div> */}
 
       <TopPagine
-        alt={meta.blogTitle}
+        alt={meta.blogTitolo}
         immagineTop={immagineTop}
         slogan={front.slogan}
       />
       <div className="container-fluid">
-        <div className="row blocco">
-          <div className="cont-testo sticky-cont col-md-4 col-12">
+        <div className="row blocco pt-5">
+          <div className="cont-img sticky-cont col-md-4 col-12">
             <button onClick={() => setToggler(!toggler)} className="btn-img">
-              <img src={immagineSide} alt={`${meta.blogTitle}`} />
+              <img
+                src={immagineSide}
+                alt={`${meta.blogTitolo}`}
+                className="bordo"
+              />
             </button>
             <FsLightbox toggler={toggler} sources={[{ immagineSide }]} />
           </div>
-          <div className="cont-testo testo sticky-cont col-md-8 col-12">
-            <h1 className="titolo">{front.title}</h1>
+          <div className="cont-testo testo sticky-cont pt-0 col-md-8 col-12">
+            <h1 className="titolo">{front.titolo}</h1>
             <h2 className="sottotitolo">{meta.blogDescription}</h2>
             <p>
               <em>{front.date}</em>

@@ -14,7 +14,7 @@ const ChiSiamo = () => {
     query {
       site {
         siteMetadata {
-          chiSiamoTitle
+          chiSiamoTitolo
           chiSiamoDescription
           chiSiamoAcronimo
         }
@@ -22,14 +22,14 @@ const ChiSiamo = () => {
     }
   `)
 
-  let title = data?.site?.siteMetadata?.chiSiamoTitle || ``
+  let titolo = data?.site?.siteMetadata?.chiSiamoTitolo || ``
   let description = data?.site?.siteMetadata?.chiSiamoDescription || ``
   let acronimo = data?.site?.siteMetadata?.chiSiamoAcronimo || ``
   const [toggler, setToggler] = useState(false)
 
   return (
     <Layout>
-      <Metatags title={title} description={description} />
+      <Metatags titolo={titolo} description={description} />
 
       <TopPagine alt="" immagineTop={immagineTop} slogan={acronimo} />
       {/* <div className="w-full top mx-0">

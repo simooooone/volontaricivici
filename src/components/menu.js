@@ -5,26 +5,34 @@ const Menu = () => (
   <>
     <ul className="menu-top">
       <li className="li">
-        <Link to="/" className="link-navbar" activeClassName="active">
+        <Link to="/" className="link-underlined white" activeClassName="active">
           Home
         </Link>
       </li>
       <li className="li">
-        <Link to="/chi-siamo" className="link-navbar" activeClassName="active">
+        <Link
+          to="/chi-siamo"
+          className="link-underlined white"
+          activeClassName="active"
+        >
           Chi Siamo
         </Link>
       </li>
       <li className="li">
         <Link
           to="/cosa-facciamo"
-          className="link-navbar"
+          className="link-underlined white"
           activeClassName="active"
         >
           Cosa Facciamo
         </Link>
       </li>
       <li className="li">
-        <Link to="/blog" className="link-navbar" activeClassName="active">
+        <Link
+          to="/blog"
+          className="link-underlined white"
+          activeClassName="active"
+        >
           Blog
         </Link>
       </li>

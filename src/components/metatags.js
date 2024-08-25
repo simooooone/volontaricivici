@@ -3,12 +3,12 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 const Metatags = props => {
-  // {title, description}
+  // {titolo, description}
   const data = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
-          title
+          titolo
           description
           author
           siteUrl
@@ -21,7 +21,7 @@ const Metatags = props => {
 
   return (
     <Helmet htmlAttributes={{ lang: langPage }}>
-      <title>{`${props.title} | ${data.site.siteMetadata.title}`}</title>
+      <title>{`${props.titolo} | ${data.site.siteMetadata.titolo}`}</title>
       <meta
         name="description"
         content={`${props.description} | ${data.site.siteMetadata.description}`}
@@ -54,29 +54,38 @@ const Metatags = props => {
       />
       <meta name="msapplication-TileColor" content="#2d89ef" />
       <meta name="theme-color" content="#ffffff" />
-      <meta itemprop="name" content={`${data.site.siteMetadata.title}`} />
+      <meta
+        itemprop="name"
+        content={`${props.titolo} | ${data.site.siteMetadata.titolo}`}
+      />
       {/* <meta
         name="google-site-verification"
         content="OWXaxaKJ9W7togjVQe05PEuQCf2gi7ytdB2RW3h9jk8"
       /> */}
       <meta
         itemprop="description"
-        content={`${data.site.siteMetadata.description}`}
+        content={`${props.description} | ${data.site.siteMetadata.description}`}
       />
       <meta itemprop="image" content="" />
-      <meta property="og:url" content="https://www.simonefoschi.it" />
+      <meta property="og:url" content={`${data.site.siteMetadata.siteUrl}`} />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content={`${data.site.siteMetadata.title}`} />
+      <meta
+        property="og:title"
+        content={`${props.titolo} | ${data.site.siteMetadata.titolo}`}
+      />
       <meta
         property="og:description"
-        content={`${data.site.siteMetadata.description}`}
+        content={`${props.description} | ${data.site.siteMetadata.description}`}
       />
       <meta property="og:image" content="" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={`${data.site.siteMetadata.title}`} />
+      <meta
+        name="twitter:titolo"
+        content={`${props.titolo} | ${data.site.siteMetadata.titolo}`}
+      />
       <meta
         name="twitter:description"
-        content={`${data.site.siteMetadata.description}`}
+        content={`${props.description} | ${data.site.siteMetadata.description}`}
       />
       <meta name="twitter:image" content="" />
     </Helmet>

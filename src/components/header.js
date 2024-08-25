@@ -1,11 +1,17 @@
 import * as React from "react"
-import { useState, useEffect } from "react"
-import { Link } from "gatsby"
+import { useEffect } from "react"
 import Menu from "./menu"
 import Logo from "./logo"
 
 const Header = () => {
-  const [scrollPosition, setScrollPosition] = useState(0)
+  useEffect(() => {
+    if (window.innerWidth > 991) {
+      window.addEventListener("scroll", handleScroll)
+      return () => {
+        window.removeEventListener("scroll", handleScroll)
+      }
+    }
+  }, [])
 
   const handleScroll = () => {
     const scrollTop = window.scrollY
@@ -14,7 +20,6 @@ const Header = () => {
     const position = Math.ceil(
       (scrollTop / (scrollHeight - clientHeight)) * 100
     )
-    setScrollPosition(position)
 
     if (position > 10) {
       document.querySelector(".barraNavigazione").classList.add("fix")
@@ -22,13 +27,6 @@ const Header = () => {
       document.querySelector(".barraNavigazione").classList.remove("fix")
     }
   }
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
 
   return (
     <header>
