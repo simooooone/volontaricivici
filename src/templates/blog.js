@@ -1,7 +1,10 @@
-import React from "react"
+import * as React from "react"
+import { useState } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Metatags from "../components/metatags"
+import FsLightbox from "fslightbox-react"
+import TopPagine from "../components/topPagine"
 
 const Blog = () => {
   const data = useStaticQuery(graphql`
@@ -35,8 +38,9 @@ const Blog = () => {
   let meta = data?.site?.siteMetadata
   let post_content = data?.allMarkdownRemark?.nodes[0]
   let front = post_content.frontmatter
-  const immagine = front.featuredImage
+  const immagineTop = front.featuredImage
   const immagineSide = front.sideImage
+  const [toggler, setToggler] = useState(false)
 
   return (
     <Layout>
@@ -44,20 +48,33 @@ const Blog = () => {
         title={meta.blogTitle || ``}
         description={meta.blogDescription || ``}
       />
-      <div className="w-full top mx-0">
+      {/* <div className="w-full top mx-0">
         <div className="cont-img-top int">
-          <img src={immagine} alt={`image top ${meta.blogTitle}`} />
+          <img
+            src={immagineTop}
+            alt={`image top ${meta.blogTitle}`}
+            className="img-top"
+          />
           <div className="slogan-top">
             <div className="acronimo">{front.slogan}</div>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <TopPagine
+        alt={meta.blogTitle}
+        immagineTop={immagineTop}
+        slogan={front.slogan}
+      />
       <div className="container-fluid">
         <div className="row blocco">
-          <div className="cont-testo col-md-4 col-12">
-            <img src={immagineSide} alt={`${meta.blogTitle}`} />
+          <div className="cont-testo sticky-cont col-md-4 col-12">
+            <button onClick={() => setToggler(!toggler)} className="btn-img">
+              <img src={immagineSide} alt={`${meta.blogTitle}`} />
+            </button>
+            <FsLightbox toggler={toggler} sources={[{ immagineSide }]} />
           </div>
-          <div className="cont-testo col-md-8 col-12">
+          <div className="cont-testo testo sticky-cont col-md-8 col-12">
             <h1 className="titolo">{front.title}</h1>
             <h2 className="sottotitolo">{meta.blogDescription}</h2>
             <p>

@@ -1,9 +1,13 @@
-import React from "react"
+import * as React from "react"
+import { useState } from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Layout from "../components/layout"
 import Metatags from "../components/metatags"
+import FsLightbox from "fslightbox-react"
+import TopPagine from "../components/topPagine"
 import immagineTop from "../assets/images/img-top-chi.jpg"
-import immagineUno from "../assets/images/index-1.jpg"
+import immagineUno from "../assets/images/chi-1.jpg"
+import immagineDue from "../assets/images/chi-2.jpg"
 
 const ChiSiamo = () => {
   const data = useStaticQuery(graphql`
@@ -21,11 +25,14 @@ const ChiSiamo = () => {
   let title = data?.site?.siteMetadata?.chiSiamoTitle || ``
   let description = data?.site?.siteMetadata?.chiSiamoDescription || ``
   let acronimo = data?.site?.siteMetadata?.chiSiamoAcronimo || ``
+  const [toggler, setToggler] = useState(false)
 
   return (
     <Layout>
       <Metatags title={title} description={description} />
-      <div className="w-full top mx-0">
+
+      <TopPagine alt="" immagineTop={immagineTop} slogan={acronimo} />
+      {/* <div className="w-full top mx-0">
         <div className="cont-img-top int">
           <img
             alt="Vo.Ci. Nei Castelli Chi Siamo"
@@ -36,7 +43,7 @@ const ChiSiamo = () => {
             <div className="acronimo">{acronimo}</div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="container-fluid">
         <div className="row blocco">
           <div className="cont-testo col-lg-6 col-12">
@@ -57,7 +64,10 @@ const ChiSiamo = () => {
             </Link>
           </div>
           <div className="cont-img order-lg-first col-lg-6 px-0">
-            <img alt="Immagine Chi Siamo" src={immagineUno} className="img" />
+            <button onClick={() => setToggler(!toggler)} className="btn-img">
+              <img alt="Immagine Chi Siamo" src={immagineUno} className="img" />
+            </button>
+            <FsLightbox toggler={toggler} sources={[{ immagineUno }]} />
           </div>
         </div>
       </div>
@@ -82,7 +92,10 @@ const ChiSiamo = () => {
           </div>
 
           <div className="cont-img col-lg-6 px-0">
-            <img alt="Immagine Chi Siamo" src={immagineUno} className="img" />
+            <button onClick={() => setToggler(!toggler)} className="btn-img">
+              <img alt="Immagine Chi Siamo" src={immagineDue} className="img" />
+            </button>
+            <FsLightbox toggler={toggler} sources={[{ immagineDue }]} />
           </div>
         </div>
       </div>

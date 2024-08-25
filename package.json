@@ -8,6 +8,7 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "fs": "^0.0.1-security",
+    "fslightbox-react": "^1.7.6",
     "gatsby": "^5.13.5",
     "gatsby-image": "^3.11.0",
     "gatsby-omni-font-loader": "^2.0.2",

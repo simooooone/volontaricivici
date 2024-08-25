@@ -7,7 +7,7 @@ update: 24/08/2024
 author: Autore
 published: true
 sideImage: /domenica-4-agosto.jpg
-featuredImage: /img-top-chi.jpg
+featuredImage: /domenica-4-agosto-top.jpg
 ---
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tenetur nihil ipsum vel quibusdam reprehenderit amet quo dolorem dignissimos? Impedit blanditiis quasi explicabo cumque soluta ratione sint quos fugiat natus.

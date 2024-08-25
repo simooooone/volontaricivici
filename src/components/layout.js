@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Metatags from "./metatags"
 import Header from "./header"
 import Footer from "./footer"
+import BarraMobile from "./barraMobile"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -20,8 +21,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Metatags />
+      <BarraMobile />
       <Header Title={Title} />
-
       <main>{children}</main>
       <Footer />
     </>

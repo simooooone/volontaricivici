@@ -5,16 +5,12 @@ const Menu = () => (
   <>
     <ul className="menu-top">
       <li className="li">
-        <Link to="/" className="link-navbar" activeClassName="activeNavItem">
+        <Link to="/" className="link-navbar" activeClassName="active">
           Home
         </Link>
       </li>
       <li className="li">
-        <Link
-          to="/chi-siamo"
-          className="link-navbar"
-          activeClassName="activeNavItem"
-        >
+        <Link to="/chi-siamo" className="link-navbar" activeClassName="active">
           Chi Siamo
         </Link>
       </li>
@@ -22,17 +18,13 @@ const Menu = () => (
         <Link
           to="/cosa-facciamo"
           className="link-navbar"
-          activeClassName="activeNavItem"
+          activeClassName="active"
         >
           Cosa Facciamo
         </Link>
       </li>
       <li className="li">
-        <Link
-          to="/blog"
-          className="link-navbar"
-          activeClassName="activeNavItem"
-        >
+        <Link to="/blog" className="link-navbar" activeClassName="active">
           Blog
         </Link>
       </li>
