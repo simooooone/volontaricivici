@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Metatags from "../components/metatags"
 import immagineTop from "../assets/images/img-top-home.jpg"
 import immagineUno from "../assets/images/index-1.jpg"
+import immagineDue from "../assets/images/index-2.jpg"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -84,7 +85,7 @@ const IndexPage = () => {
             </div>
 
             <div className="cont-img col-lg-6 px-0">
-              <img alt="Immagine Chi Siamo" src={immagineUno} className="img" />
+              <img alt="Immagine Chi Siamo" src={immagineDue} className="img" />
             </div>
           </div>
         </div>
