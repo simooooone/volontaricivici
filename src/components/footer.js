@@ -34,8 +34,6 @@ const Footer = () => {
             <div className="mb-4">
               <Logo width="90" alt={dati.acronimo} />
             </div>
-            {/* <h3 className="titolo2">{dati.acronimo}</h3>
-      <h3 className="sottotitolo">{dati.slogan}</h3> */}
             <b className="sottotitolo">
               <strong>{dati.acronimo}</strong>
             </b>
@@ -63,6 +61,11 @@ const Footer = () => {
               <a href={dati.instagram} alt="instagram">
                 <span className="ico-instagram"></span>
               </a>
+            </div>
+            <div className="cont-privacy"></div>
+            <div className="cont-copyright">
+              &copy; {new Date().getFullYear()} {dati.author}. Tutti i diritti
+              riservati.
             </div>
           </div>
         </div>
