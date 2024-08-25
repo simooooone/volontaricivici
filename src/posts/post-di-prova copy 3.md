@@ -3,8 +3,8 @@ titolo: Prova evento 1
 sottotitolo: Estratto articolo
 description: amet consectetur adipisicing elit Ipsam tenetur
 slogan: Post di prova
-date: 24/08/2024
-update: 24/08/2024
+date: 22/08/2024
+update: 22/08/2024
 author: Autore
 published: true
 sideImage: /domenica-4-agosto.jpg
