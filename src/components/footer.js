@@ -24,7 +24,7 @@ const Footer = () => {
     }
   `)
 
-  let dati = data.site.siteMetadata
+  const dati = data.site.siteMetadata
 
   return (
     <>

@@ -4,7 +4,6 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Metatags from "../components/metatags"
 import FsLightbox from "fslightbox-react"
-// import { observeElements } from "../utils/utils"
 import immagineTop from "../assets/images/img-top-cosa.jpg"
 import immagineUno from "../assets/images/cosa-1.jpg"
 import immagineDue from "../assets/images/cosa-2.jpg"
@@ -22,35 +21,21 @@ const CosaFacciamo = () => {
       }
     }
   `)
-  const [toggler, setToggler] = useState(false)
-  let titolo = data?.site?.siteMetadata?.cosaFacciamoTitolo || ``
-  let description = data?.site?.siteMetadata?.cosaFacciamoDescription || ``
-  let acronimo = data?.site?.siteMetadata?.cosaFacciamoAcronimo || ``
 
-  // useEffect(() => {
-  //   observeElements(".setLeft, .setRight", {
-  //     root: null,
-  //     rootMargin: "0px",
-  //     threshold: 0,
-  //   })
-  // }, [])
+  const [toggler, setToggler] = useState(false)
+  const metadata = data?.site?.siteMetadata
 
   return (
     <Layout>
-      <Metatags titolo={titolo} description={description} />
-      <TopPagine alt="" immagineTop={immagineTop} slogan={acronimo} />
-      {/* <div className="w-full top mx-0">
-        <div className="cont-img-top int">
-          <img
-            alt="Vo.Ci. Nei Castelli Cosa Facciamo"
-            src={immagineTop}
-            className="img-top"
-          />
-          <div className="slogan-top">
-            <div className="acronimo">{acronimo}</div>
-          </div>
-        </div>
-      </div> */}
+      <Metatags
+        titolo={metadata.cosaFacciamoTitolo || ``}
+        description={metadata.cosaFacciamoDescription || ``}
+      />
+      <TopPagine
+        alt=""
+        immagineTop={immagineTop}
+        slogan={metadata.cosaFacciamoAcronimo || ``}
+      />
       <div className="container-fluid">
         <div className="row blocco">
           <div className="cont-testo col-lg-6 col-12">
@@ -66,14 +51,14 @@ const CosaFacciamo = () => {
               Quisquam quod, voluptates, quia, quos nemo quae quibusdam quas
               quidem officia voluptatibus autem.
             </p>
-            <Link to="/" className="btn-testo">
+            <Link to="/chi-siamo" className="btn-testo">
               Chi Siamo
             </Link>
           </div>
           <div className="cont-img order-lg-first setLeft col-lg-6 px-0">
             <button onClick={() => setToggler(!toggler)} className="btn-img">
               <img
-                alt="Immagine Cosa Facciamo Uno"
+                alt="Immagine Cosa Facciamo 1"
                 src={immagineUno}
                 className="img"
               />
@@ -105,7 +90,7 @@ const CosaFacciamo = () => {
           <div className="cont-img col-lg-6 px-0 setRight">
             <button onClick={() => setToggler(!toggler)} className="btn-img">
               <img
-                alt="Immagine Cosa Facciamo Due"
+                alt="Immagine Cosa Facciamo 2"
                 src={immagineDue}
                 className="img"
               />

@@ -21,19 +21,19 @@ const IndexPage = () => {
     }
   `)
 
-  let titolo = data?.site?.siteMetadata?.homeTitolo || ``
-  let description = data?.site?.siteMetadata?.homeDescription || ``
-  let slogan = data?.site?.siteMetadata?.slogan || ``
-  let acronimo = data?.site?.siteMetadata?.acronimo || ``
+  const metadata = data?.site?.siteMetadata
 
   return (
     <>
       <Layout>
-        <Metatags titolo={titolo} description={description} />
+        <Metatags
+          titolo={metadata.homeTitolo || ""}
+          description={metadata.homeDescription || ""}
+        />
         <TopPagine
           alt=""
           immagineTop={immagineTop}
-          slogan={acronimo}
+          slogan={metadata.acronimo || ""}
           dedica="Un'associazione per San Marino"
           displayExtended="block"
         />
@@ -41,7 +41,7 @@ const IndexPage = () => {
           <div className="row blocco">
             <div className="cont-testo col-lg-6 col-12">
               <h1 className="titolo">Chi siamo e cosa facciamo</h1>
-              <h2 className="sottotitolo">{slogan}</h2>
+              <h2 className="sottotitolo">{metadata.slogan || ""}</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quisquam quod, voluptates, quia, quos nemo quae quibusdam quas

@@ -22,28 +22,20 @@ const ChiSiamo = () => {
     }
   `)
 
-  let titolo = data?.site?.siteMetadata?.chiSiamoTitolo || ``
-  let description = data?.site?.siteMetadata?.chiSiamoDescription || ``
-  let acronimo = data?.site?.siteMetadata?.chiSiamoAcronimo || ``
   const [toggler, setToggler] = useState(false)
+  const metadata = data?.site?.siteMetadata
 
   return (
     <Layout>
-      <Metatags titolo={titolo} description={description} />
-
-      <TopPagine alt="" immagineTop={immagineTop} slogan={acronimo} />
-      {/* <div className="w-full top mx-0">
-        <div className="cont-img-top int">
-          <img
-            alt="Vo.Ci. Nei Castelli Chi Siamo"
-            src={immagineTop}
-            className="img-top"
-          />
-          <div className="slogan-top">
-            <div className="acronimo">{acronimo}</div>
-          </div>
-        </div>
-      </div> */}
+      <Metatags
+        titolo={metadata.chiSiamoTitolo || ``}
+        description={metadata.chiSiamoDescription || ``}
+      />
+      <TopPagine
+        alt=""
+        immagineTop={immagineTop}
+        slogan={metadata.chiSiamoAcronimo || ``}
+      />
       <div className="container-fluid">
         <div className="row blocco">
           <div className="cont-testo col-lg-6 col-12">
@@ -59,13 +51,17 @@ const ChiSiamo = () => {
               Quisquam quod, voluptates, quia, quos nemo quae quibusdam quas
               quidem officia voluptatibus autem.
             </p>
-            <Link to="/" className="btn-testo">
-              Chi Siamo
+            <Link to="/cosa-facciamo" className="btn-testo">
+              Cosa Facciamo
             </Link>
           </div>
           <div className="cont-img order-lg-first col-lg-6 px-0">
             <button onClick={() => setToggler(!toggler)} className="btn-img">
-              <img alt="Immagine Chi Siamo" src={immagineUno} className="img" />
+              <img
+                alt="Immagine Chi Siamo 1"
+                src={immagineUno}
+                className="img"
+              />
             </button>
             <FsLightbox toggler={toggler} sources={[{ immagineUno }]} />
           </div>
@@ -93,7 +89,11 @@ const ChiSiamo = () => {
 
           <div className="cont-img col-lg-6 px-0">
             <button onClick={() => setToggler(!toggler)} className="btn-img">
-              <img alt="Immagine Chi Siamo" src={immagineDue} className="img" />
+              <img
+                alt="Immagine Chi Siamo 2"
+                src={immagineDue}
+                className="img"
+              />
             </button>
             <FsLightbox toggler={toggler} sources={[{ immagineDue }]} />
           </div>

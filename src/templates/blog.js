@@ -35,11 +35,9 @@ const Blog = () => {
     }
   `)
 
-  let meta = data?.site?.siteMetadata
-  let post_content = data?.allMarkdownRemark?.nodes[0]
-  let front = post_content.frontmatter
-  const immagineTop = front.featuredImage
-  const immagineSide = front.sideImage
+  const meta = data?.site?.siteMetadata
+  const content = data?.allMarkdownRemark?.nodes[0]
+  const front = content.frontmatter
   const [toggler, setToggler] = useState(false)
 
   return (
@@ -48,22 +46,9 @@ const Blog = () => {
         titolo={meta.blogTitolo || ``}
         description={meta.blogDescription || ``}
       />
-      {/* <div className="w-full top mx-0">
-        <div className="cont-img-top int">
-          <img
-            src={immagineTop}
-            alt={`image top ${meta.blogTitolo}`}
-            className="img-top"
-          />
-          <div className="slogan-top">
-            <div className="acronimo">{front.slogan}</div>
-          </div>
-        </div>
-      </div> */}
-
       <TopPagine
         alt={meta.blogTitolo}
-        immagineTop={immagineTop}
+        immagineTop={front.featuredImage}
         slogan={front.slogan}
       />
       <div className="container-fluid">
@@ -71,12 +56,12 @@ const Blog = () => {
           <div className="cont-img sticky-cont col-md-4 col-12">
             <button onClick={() => setToggler(!toggler)} className="btn-img">
               <img
-                src={immagineSide}
+                src={front.sideImage}
                 alt={`${meta.blogTitolo}`}
                 className="bordo"
               />
             </button>
-            <FsLightbox toggler={toggler} sources={[{ immagineSide }]} />
+            <FsLightbox toggler={toggler} sources={[front.sideImage]} />
           </div>
           <div className="cont-testo testo sticky-cont pt-0 col-md-8 col-12">
             <h1 className="titolo">{front.titolo}</h1>
@@ -85,7 +70,11 @@ const Blog = () => {
               <em>{front.date}</em>
             </p>
             <br />
-            <div dangerouslySetInnerHTML={{ __html: post_content.html }}></div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: content.html,
+              }}
+            ></div>
             {/* <div>{parse(post.html, { replace: replaceCode })}</div> */}
             {/* <div className="blog-post-nav">
               <Link

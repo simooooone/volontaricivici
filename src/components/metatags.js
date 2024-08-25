@@ -16,11 +16,9 @@ const Metatags = props => {
       }
     }
   `)
-  const url = typeof window !== "undefined" ? window.location.href : ""
-  let langPage = url.includes("/en/") ? "en" : "it"
 
   return (
-    <Helmet htmlAttributes={{ lang: langPage }}>
+    <Helmet htmlAttributes={{ lang: "it" }}>
       <title>{`${props.titolo} | ${data.site.siteMetadata.titolo}`}</title>
       <meta
         name="description"

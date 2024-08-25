@@ -39,7 +39,7 @@ const Blog = () => {
     }
   `)
 
-  let meta = data?.site?.siteMetadata
+  const meta = data?.site?.siteMetadata
 
   return (
     <Layout>
