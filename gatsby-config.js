@@ -15,7 +15,7 @@ module.exports = {
     slogan: `Associazione sammarinese dei Volontari Civici`,
     author: `Simone Foschi`,
     azienda: "Vo.Ci. Nei Castelli",
-    indirizzo: "Via XXVIII Luglio, 213 - 47891 Dogana",
+    indirizzo: "Via Cà dei lunghi, 132  Cailungo",
     telefono: "338 189 31 99",
     cellulare: "338 189 31 99",
     email: "vocineicastelli@giuntedicastello.sm",

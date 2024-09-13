@@ -49,11 +49,9 @@ const Footer = () => {
             <br />
             {dati.indirizzo}
             <br />
-            {dati.telefono}
-            <br />
             {dati.cellulare}
             <br />
-            {dati.email}
+            <span class="breakWord">{dati.email}</span>
           </div>
           <div className="col-lg-4 col-md-6 py-5 col-12 px-0 ps-md-5">
             {/* <h3 className="titolo2">Social</h3> */}
