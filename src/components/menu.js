@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import { Link } from "gatsby"
 
 const Menu = () => (
@@ -11,11 +11,11 @@ const Menu = () => (
       </li>
       <li className="li">
         <Link
-          to="/chi-siamo"
+          to="/direttivo"
           className="link-underlined white"
           activeClassName="active"
         >
-          Chi Siamo
+          Direttivo
         </Link>
       </li>
       <li className="li">

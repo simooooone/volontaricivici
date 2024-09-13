@@ -1,6 +1,8 @@
 :root {
   --colore-bordi: rgba(0, 0, 0, 0.2);
   --colore-testo: rgb(51, 51, 51, 1);
+  --colore-titolo: rgb(51, 51, 51, 1);
+  --colore-titolo2: rgba(148, 51, 51, 1);
   --colore-testo-hover: rgb(51, 51, 51, 0.8);
   --white: rgba(255, 255, 255, 1);
   --white-hover: rgba(255, 255, 255, 0.8);
@@ -425,6 +427,28 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.cont-tit-direttivo {
+  text-align: center;
+  color: var(--colore-titolo2);
+  font-size: 1.8rem;
+}
+
+.blocco-direttivo {
+  .cont-direttivo {
+    text-align: center;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
+    .carica {
+      color: var(--colore-titolo2);
+      font-size: 1.25rem;
+      margin-bottom: 15px;
+    }
+    // .nome {
+    // }
+  }
 }
 
 .cont-post {

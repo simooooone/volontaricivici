@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Metatags from "../components/metatags"

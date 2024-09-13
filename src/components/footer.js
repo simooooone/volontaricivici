@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Logo from "./logo"
 
@@ -64,8 +64,7 @@ const Footer = () => {
             </div>
             <div className="cont-privacy"></div>
             <div className="cont-copyright">
-              &copy; {new Date().getFullYear()} {dati.author}. Tutti i diritti
-              riservati.
+              &copy; {new Date().getFullYear()} {dati.author}. Sviluppo Web
             </div>
           </div>
         </div>

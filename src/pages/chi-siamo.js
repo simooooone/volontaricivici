@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import { useState } from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Layout from "../components/layout"
@@ -41,7 +41,7 @@ const ChiSiamo = () => {
           <div className="cont-testo col-lg-6 col-12">
             <h1 className="titolo">Chi siamo</h1>
             <h2 className="sottotitolo">
-              I motivi fondsanti di Vo.Ci. Nei Castelli
+              I motivi fondanti di Vo.Ci. Nei Castelli
             </h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
@@ -70,10 +70,10 @@ const ChiSiamo = () => {
       <div className="container-fluid">
         <div className="row blocco">
           <div className="cont-testo col-lg-6 col-12">
-            <h1 className="titolo">Lorem Ipsum</h1>
-            <h2 className="sottotitolo">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </h2>
+            <h2 className="titolo">Cosa ci spinge a farlo?</h2>
+            <h3 className="sottotitolo">
+              I motivi fondanti di Vo.Ci. Nei Castelli
+            </h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
               quod, voluptates, quia, quos nemo quae quibusdam quas quidem

@@ -23,21 +23,29 @@ module.exports = {
     privacy: "Privacy Policy",
     facebook: "https://www.facebook.com/vocisanmarino",
     instagram: "https://www.instagram.com/",
-    homeTitolo: "Il Blog di Vo.Ci. Nei Castelli",
-    homeDescription: "",
-    chiSiamoTitolo: "Il Blog di Vo.Ci. Nei Castelli",
+    homeTitolo: "Vo.Ci. Nei Castelli, associazione di volontariato sammarinese",
+    homeDescription:
+      "Vo.Ci. Nei Castelli è un'associazione di volontariato sammarinese",
+    homeAcronimo: "Vo.Ci. Nei Castelli",
+    direttivoTitolo: "Il direttivo di Vo.Ci. Nei Castelli",
+    direttivoDescription:
+      "Il direttivo di Vo.Ci. Nei Castelli è composto da un gruppo di persone che si occupano della gestione dell'associazione",
+    direttivoAcronimo: "Direttivo",
+    chiSiamoTitolo: "Cjhi Siamo Vo.Ci. Nei Castelli",
     chiSiamoDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium neque obcaecati cupiditate?",
+      "Siamo un'associazione di volontariato sammarinese che si occupa di varie attività ed eventi in Repubblica",
     chiSiamoAcronimo: "Chi Siamo",
-    cosaFacciamoTitolo: "Il Blog di Vo.Ci. Nei Castelli",
-    cosaFacciamoDescription: "",
+    cosaFacciamoTitolo: "Cosa facciamo - Vo.Ci. Nei Castelli",
+    cosaFacciamoDescription:
+      "Cosa facciamo in Vo.Ci. Nei Castelli - Associazione di volontariato sammarinese",
     cosaFacciamoAcronimo: "Cosa Facciamo",
     blogTitolo: "Il Blog di Vo.Ci. Nei Castelli",
     blogDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium neque obcaecati cupiditate?",
+      "Il nostro Blog con tutte le novità e gli eventi di Vo.Ci. Nei Castelli",
     blogAcronimo: "Il Blog di Vo.Ci. Nei Castelli",
     notFoundPageTitolo: "404 | Pagina non trovata",
     notFoundPageDescription: "La pagina richiesta non è stata trovata",
+    notFoundPageAcronimo: "404 | Pagina non trovata",
   },
   plugins: [
     {
@@ -61,14 +69,24 @@ module.exports = {
                 instagram
                 titolo
                 description
+                homeTitolo
+                homeDescription
+                homeAcronimo
                 blogTitolo
                 blogDescription
+                blogAcronimo
                 chiSiamoTitolo
                 chiSiamoDescription
+                chiSiamoAcronimo
                 cosaFacciamoTitolo
                 cosaFacciamoDescription
+                cosaFacciamoAcronimo
+                direttivoTitolo
+                direttivoDescription
+                direttivoAcronimo
                 notFoundPageTitolo
                 notFoundPageDescription
+                notFoundPageAcronimo
               }
             }
           }
