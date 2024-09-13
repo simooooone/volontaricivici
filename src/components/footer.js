@@ -1,6 +1,9 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Logo from "./logo"
+import coordinateBancarie from "../assets/documenti/coordinate-bancarie-voci-nei-castelli.pdf"
+import statuto from "../assets/documenti/statuto-voci-nei-castelli.pdf"
+import attoCostitutivo from "../assets/documenti/atto-costitutivo-voci-nei-castelli.pdf"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -53,7 +56,7 @@ const Footer = () => {
             {dati.email}
           </div>
           <div className="col-lg-4 col-md-6 py-5 col-12 px-0 ps-md-5">
-            <h3 className="titolo2">Social</h3>
+            {/* <h3 className="titolo2">Social</h3> */}
             <div className="cont-social">
               <a href={dati.facebook} alt="facebook">
                 <span className="ico-facebook"></span>
@@ -64,7 +67,33 @@ const Footer = () => {
             </div>
             <div className="cont-privacy"></div>
             <div className="cont-copyright">
-              &copy; {new Date().getFullYear()} {dati.author}. Sviluppo Web
+              <a
+                className="btn btn-primary my-1"
+                target="_blank"
+                href={coordinateBancarie}
+                rel="noopener noreferrer"
+              >
+                Coordinate Bancarie
+              </a>
+              <a
+                className="btn btn-primary d-inline-block mx-2 my-1"
+                target="_blank"
+                href={attoCostitutivo}
+                rel="noopener noreferrer"
+              >
+                Atto Costitutivo
+              </a>
+              <a
+                className="btn btn-primary my-1"
+                target="_blank"
+                href={statuto}
+                rel="noopener noreferrer"
+              >
+                Statuto
+              </a>
+              <br />
+              <br />
+              &copy; {new Date().getFullYear()} {dati.azienda}
             </div>
           </div>
         </div>

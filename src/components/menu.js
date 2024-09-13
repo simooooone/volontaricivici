@@ -1,5 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
+import moduloIscrizione from "../assets/documenti/scheda-iscrizione-voci-nei-castelli.pdf"
+// import statuto from "../assets/documenti/statuto-voci-nei-castelli.pdf"
+// import attoCostitutivo from "../assets/documenti/atto-costitutivo-voci-nei-castelli.pdf"
 
 const Menu = () => (
   <>
@@ -9,7 +12,7 @@ const Menu = () => (
           Home
         </Link>
       </li>
-      <li className="li">
+      {/* <li className="li">
         <Link
           to="/direttivo"
           className="link-underlined white"
@@ -19,22 +22,44 @@ const Menu = () => (
         </Link>
       </li>
       <li className="li">
-        <Link
-          to="/cosa-facciamo"
+        <a
           className="link-underlined white"
-          activeClassName="active"
+          target="_blank"
+          href={statuto}
+          rel="noopener noreferrer"
         >
-          Cosa Facciamo
-        </Link>
+          Statuto
+        </a>
       </li>
       <li className="li">
-        <Link
-          to="/blog"
+        <a
           className="link-underlined white"
-          activeClassName="active"
+          target="_blank"
+          href={attoCostitutivo}
+          rel="noopener noreferrer"
         >
-          Blog
-        </Link>
+          Atto Costitutivo
+        </a>
+      </li> */}
+      <li className="li">
+        <a
+          className="link-underlined white"
+          href="https://forms.gle/t68PppASbiaeQH54A"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Contatti
+        </a>
+      </li>
+      <li className="li">
+        <a
+          className="link-underlined white"
+          target="_blank"
+          href={moduloIscrizione}
+          rel="noopener noreferrer"
+        >
+          Modulo di Iscrizione
+        </a>
       </li>
     </ul>
   </>

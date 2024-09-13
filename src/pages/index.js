@@ -1,10 +1,9 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Metatags from "../components/metatags"
 import immagineTop from "../assets/images/img-top-home.jpg"
 import immagineUno from "../assets/images/index-1.jpg"
-import immagineDue from "../assets/images/index-2.jpg"
 import TopPagine from "../components/topPagine"
 
 const IndexPage = () => {
@@ -40,47 +39,72 @@ const IndexPage = () => {
         <div className="container-fluid">
           <div className="row blocco">
             <div className="cont-testo col-lg-6 col-12">
-              <h1 className="titolo">Chi siamo e cosa facciamo</h1>
+              <h1 className="titolo">L'Associazione Vo.Ci. </h1>
               <h2 className="sottotitolo">{metadata.slogan || ""}</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam quod, voluptates, quia, quos nemo quae quibusdam quas
-                quidem officia voluptatibus autem. Quisquam quod, voluptates,
-                quia, quos nemo quae quibusdam quas quidem officia voluptatibus
-                autem. Quisquam quod, voluptates, quia, quos nemo quae quibusdam
-                quas quidem officia voluptatibus autem.
+                Al fine di ricordare che questa associazione è stata è nata
+                dalla volontà e il sostegno di tutte le Giunte della Repubblica
+                di San Marino, si riporta di seguito un passaggio dal verbale
+                della Consulta delle Giunte di Castello svolta mercoledì 24
+                Aprile 2024 alla presenza dei 9 Capitani:
+                <br />
+                <br />
+                Aggiornamenti:
+                <br />
+                creazione associazione/cooperativa “Volontari Civici dei
+                Castelli”: il giorno 2 Maggio il neonato Direttivo eletto
+                nell’incontro pubblico del 17 Aprile u.s. incontrerà
+                l’Avvocato/Notaio Lucia Selva per la firma assieme ai nove
+                Capitani di Castello proponenti e fondatori l’associazione.
               </p>
-              <Link to="/" className="btn-testo">
-                Chi Siamo
-              </Link>
             </div>
             <div className="cont-img order-lg-first col-lg-6 px-0">
               <img alt="Immagine Chi Siamo" src={immagineUno} className="img" />
             </div>
           </div>
         </div>
-        <div className="container-fluid">
-          <div className="row blocco">
-            <div className="cont-testo col-lg-6 col-12">
-              <h1 className="titolo">Proponi iniziativa</h1>
-              <h2 className="sottotitolo">
-                Proporre soluzioni come cuore della nostra associazione
-              </h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam quod, voluptates, quia, quos nemo quae quibusdam quas
-                quidem officia voluptatibus autem. Quisquam quod, voluptates,
-                quia, quos nemo quae quibusdam quas quidem officia voluptatibus
-                autem. Quisquam quod, voluptates, quia, quos nemo quae quibusdam
-                quas quidem officia voluptatibus autem.
-              </p>
-              <Link to="/" className="btn-testo">
-                Proponi la tua iniziativa
-              </Link>
+        <div className="container pt-5 mb-5">
+          <div className="row">
+            <h2 className="cont-tit-direttivo col-12">Direttivo</h2>
+          </div>
+        </div>
+        <div className="container mb-5">
+          <div className="row blocco-direttivo">
+            <div className="cont-direttivo offset-md-4 col-md-4 col-12">
+              <div className="carica">Presidente</div>
+              <div className="nome">Melissa Mussoni</div>
             </div>
-
-            <div className="cont-img col-lg-6 px-0">
-              <img alt="Immagine Chi Siamo" src={immagineDue} className="img" />
+          </div>
+        </div>
+        <div className="container mb-5">
+          <div className="row blocco-direttivo">
+            <div className="cont-direttivo col-md-4 col-12">
+              <div className="carica">Segretario</div>
+              <div className="nome">Paolo Bartolini</div>
+            </div>
+            <div className="cont-direttivo col-md-4 col-12">
+              <div className="carica">Vice-presidente</div>
+              <div className="nome">Ana Balint Carattoni</div>
+            </div>
+            <div className="cont-direttivo col-md-4 col-12">
+              <div className="carica">Tesoriere</div>
+              <div className="nome">Maddalena Muccioli</div>
+            </div>
+          </div>
+        </div>
+        <div className="container pb-5">
+          <div className="row blocco-direttivo">
+            <div className="cont-direttivo col-md-4 col-12">
+              <div className="carica">Consigliere</div>
+              <div className="nome">Lino Sbraccia</div>
+            </div>
+            <div className="cont-direttivo col-md-4 col-12">
+              <div className="carica">Consigliere</div>
+              <div className="nome">Roberto Ercolani</div>
+            </div>
+            <div className="cont-direttivo col-md-4 col-12">
+              <div className="carica">Consigliere</div>
+              <div className="nome">Gabriele Muratori</div>
             </div>
           </div>
         </div>
