@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Logo from "./logo"
 import coordinateBancarie from "../assets/documenti/coordinate-bancarie-voci-nei-castelli.pdf"
 import statuto from "../assets/documenti/statuto-voci-nei-castelli.pdf"
@@ -51,7 +51,9 @@ const Footer = () => {
             <br />
             {dati.cellulare}
             <br />
-            <span class="breakWord">{dati.email}</span>
+            <a href={`mailto:${dati.email}`} class="breakWord">
+              {dati.email}
+            </a>
           </div>
           <div className="col-lg-4 col-md-6 py-5 col-12 px-0 ps-md-5">
             {/* <h3 className="titolo2">Social</h3> */}
@@ -92,6 +94,11 @@ const Footer = () => {
               <br />
               <br />
               &copy; {new Date().getFullYear()} {dati.azienda}
+              <br />
+              <br />
+              <Link to="/privacy" className="link-underlined">
+                Privacy
+              </Link>
             </div>
           </div>
         </div>

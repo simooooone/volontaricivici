@@ -9,19 +9,21 @@
  */
 module.exports = {
   siteMetadata: {
+    title: `Vo.Ci. Nei Castelli`,
     titolo: `Vo.Ci. Nei Castelli`,
     description: `Associazione Dei Volontari Civici Sammarinesi - Vo.Ci. Nei Castelli`,
     acronimo: `Vo.Ci.`,
     slogan: `Associazione sammarinese dei Volontari Civici`,
     author: `Simone Foschi`,
     azienda: "Vo.Ci. Nei Castelli",
+    presidente: "Melissa Mussoni",
     indirizzo: "Via Cà dei lunghi, 132  Cailungo",
     telefono: "338 189 31 99",
     cellulare: "338 189 31 99",
     email: "vocineicastelli@giuntedicastello.sm",
     siteUrl: "https://www.vocisanmarino.sm",
     privacy: "Privacy Policy",
-    facebook: "https://www.facebook.com/vocisanmarino",
+    facebook: "https://www.facebook.com/profile.php?id=61559614356602",
     instagram: "https://www.instagram.com/",
     homeTitolo: "Vo.Ci. Nei Castelli, associazione di volontariato sammarinese",
     homeDescription:
@@ -46,6 +48,8 @@ module.exports = {
     notFoundPageTitolo: "404 | Pagina non trovata",
     notFoundPageDescription: "La pagina richiesta non è stata trovata",
     notFoundPageAcronimo: "404 | Pagina non trovata",
+    privacyTitolo: "Privacy policy",
+    privacyDescription: "Privacy policy Vo.Ci. Nei Castelli",
   },
   plugins: [
     {
@@ -55,38 +59,42 @@ module.exports = {
           {
             site {
               siteMetadata {
+                title
+                titolo
+                description
                 acronimo
                 slogan
                 author
                 azienda
-                siteUrl
+                presidente
                 indirizzo
                 telefono
                 cellulare
                 email
+                siteUrl
                 privacy
                 facebook
                 instagram
-                titolo
-                description
                 homeTitolo
                 homeDescription
                 homeAcronimo
-                blogTitolo
-                blogDescription
-                blogAcronimo
+                direttivoTitolo
+                direttivoDescription
+                direttivoAcronimo
                 chiSiamoTitolo
                 chiSiamoDescription
                 chiSiamoAcronimo
                 cosaFacciamoTitolo
                 cosaFacciamoDescription
                 cosaFacciamoAcronimo
-                direttivoTitolo
-                direttivoDescription
-                direttivoAcronimo
+                blogTitolo
+                blogDescription
+                blogAcronimo
                 notFoundPageTitolo
                 notFoundPageDescription
                 notFoundPageAcronimo
+                privacyTitolo
+                privacyDescription
               }
             }
           }
@@ -132,22 +140,18 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-sass`,
-    "gatsby-plugin-postcss",
-    `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Vo.Ci. nei Castelli`,
+        short_name: `Vo.Ci.`,
         start_url: `/`,
         background_color: `#663399`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
-        display: "minimal-ui",
+        // display: "minimal-ui",
+        display: `standalone`, // Standalone per far sembrare che sia un'app nativa
         icon: `src/assets/images/logo.png`, // This path is relative to the root of the site.
       },
     },
@@ -165,23 +169,6 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
-    // {
-    //   resolve: `gatsby-source-google-calendar`,
-    //   options: {
-    //     calendarIds: [
-    //       "ccaf3eee58135b88ab599006919ac953d699e42e575017eaacbdc04ffb2a5a4e@group.calendar.google.com",
-    //     ],
-    //     // options to retrieve the next 10 upcoming events
-    //     timeMin: new Date().toISOString(),
-    //     maxResults: 10,
-    //     singleEvents: true,
-    //     orderBy: "startTime",
-    //   },
-    // },
-
     {
       resolve: `gatsby-omni-font-loader`,
       options: {
@@ -198,5 +185,27 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-sass`,
+    "gatsby-plugin-postcss",
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    "gatsby-plugin-offline",
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
+    // {
+    //   resolve: `gatsby-source-google-calendar`,
+    //   options: {
+    //     calendarIds: [
+    //       "ccaf3eee58135b88ab599006919ac953d699e42e575017eaacbdc04ffb2a5a4e@group.calendar.google.com",
+    //     ],
+    //     // options to retrieve the next 10 upcoming events
+    //     timeMin: new Date().toISOString(),
+    //     maxResults: 10,
+    //     singleEvents: true,
+    //     orderBy: "startTime",
+    //   },
+    // },
   ],
 }

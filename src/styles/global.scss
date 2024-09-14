@@ -541,3 +541,20 @@ img {
     }
   }
 }
+
+.lista-sito {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: var(--colore-testo);
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 20px;
+  }
+}
