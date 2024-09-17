@@ -51,7 +51,7 @@ const Footer = () => {
             <br />
             {dati.cellulare}
             <br />
-            <a href={`mailto:${dati.email}`} class="breakWord">
+            <a href={`mailto:${dati.email}`} class="link">
               {dati.email}
             </a>
           </div>

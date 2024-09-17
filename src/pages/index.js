@@ -39,23 +39,31 @@ const IndexPage = () => {
         <div className="container-fluid">
           <div className="row blocco">
             <div className="cont-testo col-lg-6 col-12">
-              <h1 className="titolo">L'Associazione Vo.Ci. </h1>
+              <h1 className="titolo">
+                Associazione Vo.Ci. - Volontari Civici dei Castelli
+              </h1>
               <h2 className="sottotitolo">{metadata.slogan || ""}</h2>
               <p>
-                Al fine di ricordare che questa associazione è stata è nata
-                dalla volontà e il sostegno di tutte le Giunte della Repubblica
-                di San Marino, si riporta di seguito un passaggio dal verbale
-                della Consulta delle Giunte di Castello svolta mercoledì 24
-                Aprile 2024 alla presenza dei 9 Capitani:
+                Al fine di ricordare che questa associazione è nata dalla
+                volontà e il sostegno di tutte le Giunte della Repubblica di San
+                Marino, si riporta di seguito un passaggio dal verbale della
+                Consulta delle Giunte di Castello svolta mercoledì 24 Aprile
+                2024 alla presenza dei 9 Capitani:
                 <br />
                 <br />
-                Aggiornamenti:
+                <b>Aggiornamenti:</b>
                 <br />
-                creazione associazione/cooperativa “Volontari Civici dei
-                Castelli”: il giorno 2 Maggio il neonato Direttivo eletto
-                nell’incontro pubblico del 17 Aprile u.s. incontrerà
-                l’Avvocato/Notaio Lucia Selva per la firma assieme ai nove
-                Capitani di Castello proponenti e fondatori l’associazione.
+                <br />
+                <h3 className="sottotitolo2">
+                  Creazione Associazione/Cooperativa “Volontari Civici dei
+                  Castelli”
+                </h3>
+                <i>
+                  "il giorno 2 Maggio il neonato Direttivo eletto nell’incontro
+                  pubblico del 17 Aprile u.s. incontrerà l’Avvocato/Notaio Lucia
+                  Selva per la firma assieme ai nove Capitani di Castello
+                  proponenti e fondatori l’associazione."
+                </i>
               </p>
             </div>
             <div className="cont-img order-lg-first col-lg-6 px-0">

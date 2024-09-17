@@ -359,9 +359,27 @@ body {
   margin-bottom: 2rem;
 }
 
+.sottotitolo2 {
+  line-height: 1;
+  font-size: 21px;
+  font-family: var(--font);
+  margin-bottom: 2rem;
+}
+
 .fontTit {
   font-family: var(--font);
   font-weight: bold;
+}
+
+.link {
+  font-family: var(--font);
+  color: var(--colore-testo);
+  text-decoration: underline;
+  word-break: break-word;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .footer {
@@ -387,9 +405,9 @@ body {
     }
   }
 
-  .breakWord {
-    word-break: break-word;
-  }
+  // .breakWord {
+  //   word-break: break-word;
+  // }
 
   .bordo-contatti-footer {
     padding: 3rem 0;
@@ -549,12 +567,5 @@ img {
 
   li {
     margin-bottom: 10px;
-  }
-
-  a {
-    color: var(--colore-testo);
-    text-decoration: none;
-    font-family: var(--font);
-    font-size: 20px;
   }
 }

@@ -13,7 +13,7 @@ module.exports = {
     titolo: `Vo.Ci. Nei Castelli`,
     description: `Associazione Dei Volontari Civici Sammarinesi - Vo.Ci. Nei Castelli`,
     acronimo: `Vo.Ci.`,
-    slogan: `Associazione sammarinese dei Volontari Civici`,
+    slogan: `Associazione Sammarinese di Volontari`,
     author: `Simone Foschi`,
     azienda: "Vo.Ci. Nei Castelli",
     presidente: "Melissa Mussoni",

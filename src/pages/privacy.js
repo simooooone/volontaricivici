@@ -45,7 +45,15 @@ const PrivacyPolicy = () => {
                     <br />
                     Il titolare del trattamento dei dati è {metadata.azienda},
                     con sede legale in {metadata.indirizzo}, contattabile
-                    all’indirizzo email: {metadata.email}.<li></li>
+                    all’indirizzo email:{" "}
+                    <a
+                      href={`mailto:${metadata.email}`}
+                      rel="noopener noreferrer"
+                      class="link"
+                    >
+                      {metadata.email}
+                    </a>
+                    .<li></li>
                     <b>2. Tipi di dati raccolti Il sito</b>
                     <br />
                     {metadata.siteUrl} non raccoglie direttamente alcun tipo di
@@ -77,11 +85,12 @@ const PrivacyPolicy = () => {
                     protezione dei dati (GDPR). Google Forms è un servizio
                     fornito da Google LLC, che funge da responsabile esterno del
                     trattamento dei dati. Puoi consultare la privacy policy di
-                    Google a questo link:
+                    Google a questo link:{" "}
                     <a
                       href="https://policies.google.com/privacy"
                       rel="noopener noreferrer"
                       target="_blank"
+                      class="link"
                     >
                       link alla privacy policy di Google.
                     </a>
@@ -112,8 +121,15 @@ const PrivacyPolicy = () => {
                     • Richiedere la portabilità dei propri dati. <br />
                     <br />
                     Per esercitare i propri diritti, l’utente può contattare il
-                    titolare del trattamento all’indirizzo email
-                    {metadata.email}. <br />
+                    titolare del trattamento all’indirizzo email{" "}
+                    <a
+                      href={`mailto:${metadata.email}`}
+                      rel="noopener noreferrer"
+                      class="link"
+                    >
+                      {metadata.email}
+                    </a>
+                    . <br />
                     <li></li>
                     <b>7. Modifiche alla Privacy Policy</b>
                     <br />
