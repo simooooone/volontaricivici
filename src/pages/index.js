@@ -71,12 +71,12 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
-        <div className="container pt-5 mb-5">
+        <div className="container pt-5 mb-3">
           <div className="row">
             <h2 className="cont-tit-direttivo col-12">Direttivo</h2>
           </div>
         </div>
-        <div className="container mb-5">
+        <div className="container mb-3">
           <div className="row blocco-direttivo">
             <div className="cont-direttivo offset-md-4 col-md-4 col-12">
               <div className="carica">Presidente</div>
@@ -84,7 +84,7 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
-        <div className="container mb-5">
+        <div className="container mb-3">
           <div className="row blocco-direttivo">
             <div className="cont-direttivo col-md-4 col-12">
               <div className="carica">Segretario</div>
