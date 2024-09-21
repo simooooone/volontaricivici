@@ -86,31 +86,27 @@ const IndexPage = () => {
         </div>
         <div className="container mb-3">
           <div className="row blocco-direttivo">
-            <div className="cont-direttivo col-md-4 col-12">
+            <div className="cont-direttivo col-md-4 col-6">
               <div className="carica">Segretario</div>
               <div className="nome">Paolo Bartolini</div>
             </div>
-            <div className="cont-direttivo col-md-4 col-12">
+            <div className="cont-direttivo col-md-4 col-6">
               <div className="carica">Vice-presidente</div>
               <div className="nome">Ana Balint Carattoni</div>
             </div>
-            <div className="cont-direttivo col-md-4 col-12">
+            <div className="cont-direttivo col-md-4 col-6">
               <div className="carica">Tesoriere</div>
               <div className="nome">Maddalena Muccioli</div>
             </div>
-          </div>
-        </div>
-        <div className="container pb-5">
-          <div className="row blocco-direttivo">
-            <div className="cont-direttivo col-md-4 col-12">
+            <div className="cont-direttivo col-md-4 col-6">
               <div className="carica">Consigliere</div>
               <div className="nome">Lino Sbraccia</div>
             </div>
-            <div className="cont-direttivo col-md-4 col-12">
+            <div className="cont-direttivo col-md-4 col-6">
               <div className="carica">Consigliere</div>
               <div className="nome">Roberto Ercolani</div>
             </div>
-            <div className="cont-direttivo col-md-4 col-12">
+            <div className="cont-direttivo col-md-4 col-6">
               <div className="carica">Consigliere</div>
               <div className="nome">Gabriele Muratori</div>
             </div>

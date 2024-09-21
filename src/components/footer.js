@@ -32,7 +32,7 @@ const Footer = () => {
   return (
     <>
       <footer className="footer py-5 mt-5 container-fluid">
-        <div className="row px-5 align-items-stretch">
+        <div className="row px-5">
           <div className="col-lg-4 col-12 border-blocco-logo">
             <div className="mb-4">
               <Logo width="90" alt={dati.acronimo} />
@@ -51,24 +51,20 @@ const Footer = () => {
             <br />
             {dati.cellulare}
             <br />
-            <a href={`mailto:${dati.email}`} class="link">
+            <a
+              href={`mailto:${dati.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link-underlined normal maxc d-block"
+            >
               {dati.email}
             </a>
           </div>
           <div className="col-lg-4 col-md-6 py-5 col-12 px-0 ps-md-5">
-            {/* <h3 className="titolo2">Social</h3> */}
-            <div className="cont-social">
-              <a href={dati.facebook} alt="facebook">
-                <span className="ico-facebook"></span>
-              </a>
-              <a href={dati.instagram} alt="instagram">
-                <span className="ico-instagram"></span>
-              </a>
-            </div>
-            <div className="cont-privacy"></div>
+            <h3 className="titolo2">Links</h3>
             <div className="cont-copyright">
               <a
-                className="btn btn-primary my-1"
+                className="link-underlined normal maxc d-block"
                 target="_blank"
                 href={coordinateBancarie}
                 rel="noopener noreferrer"
@@ -76,7 +72,7 @@ const Footer = () => {
                 Coordinate Bancarie
               </a>
               <a
-                className="btn btn-primary d-inline-block mx-2 my-1"
+                className="link-underlined normal maxc d-block my-2"
                 target="_blank"
                 href={attoCostitutivo}
                 rel="noopener noreferrer"
@@ -84,21 +80,32 @@ const Footer = () => {
                 Atto Costitutivo
               </a>
               <a
-                className="btn btn-primary my-1"
+                className="link-underlined normal maxc d-block mb-2"
                 target="_blank"
                 href={statuto}
                 rel="noopener noreferrer"
               >
                 Statuto
               </a>
-              <br />
-              <br />
-              &copy; {new Date().getFullYear()} {dati.azienda}
-              <br />
-              <br />
-              <Link to="/privacy" className="link-underlined">
+              <Link
+                to="/privacy"
+                className="link-underlined normal maxc d-block"
+              >
                 Privacy
               </Link>
+              <div className="cont-social">
+                <a href={dati.facebook} alt="facebook">
+                  <span className="ico-facebook"></span>
+                </a>
+                <a href={dati.instagram} alt="instagram">
+                  <span className="ico-instagram"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="row px-5 pt-5">
+            <div className="col-12 text-center">
+              &copy; {new Date().getFullYear()} {dati.azienda}
             </div>
           </div>
         </div>
