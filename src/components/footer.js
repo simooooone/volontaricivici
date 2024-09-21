@@ -55,7 +55,7 @@ const Footer = () => {
               href={`mailto:${dati.email}`}
               target="_blank"
               rel="noopener noreferrer"
-              class="link-underlined normal maxc d-block"
+              class="link-underlined normal maxc d-block longWord"
             >
               {dati.email}
             </a>
