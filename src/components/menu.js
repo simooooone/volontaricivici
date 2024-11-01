@@ -41,7 +41,7 @@ const Menu = () => (
           Atto Costitutivo
         </a>
       </li> */}
-      <li className="li">
+      {/* <li className="li">
         <a
           className="link-underlined white"
           href="https://forms.gle/t68PppASbiaeQH54A"
@@ -50,7 +50,7 @@ const Menu = () => (
         >
           Contatti
         </a>
-      </li>
+      </li> */}
       <li className="li">
         <a
           className="link-underlined white"
