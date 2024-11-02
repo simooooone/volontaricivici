@@ -54,10 +54,13 @@ const IndexPage = () => {
                 <b>Aggiornamenti:</b>
                 <br />
                 <br />
+              </p>
+              
                 <h3 className="sottotitolo2">
                   Creazione Associazione/Cooperativa “Volontari Civici dei
                   Castelli”
-                </h3>
+              </h3>
+              <p>
                 <i>
                   "il giorno 2 Maggio il neonato Direttivo eletto nell’incontro
                   pubblico del 17 Aprile u.s. incontrerà l’Avvocato/Notaio Lucia

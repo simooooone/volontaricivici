@@ -49,7 +49,7 @@ const PrivacyPolicy = () => {
                     <a
                       href={`mailto:${metadata.email}`}
                       rel="noopener noreferrer"
-                      class="link"
+                      className="link"
                     >
                       {metadata.email}
                     </a>
@@ -90,7 +90,7 @@ const PrivacyPolicy = () => {
                       href="https://policies.google.com/privacy"
                       rel="noopener noreferrer"
                       target="_blank"
-                      class="link"
+                      className="link"
                     >
                       link alla privacy policy di Google.
                     </a>
@@ -125,7 +125,7 @@ const PrivacyPolicy = () => {
                     <a
                       href={`mailto:${metadata.email}`}
                       rel="noopener noreferrer"
-                      class="link"
+                      className="link"
                     >
                       {metadata.email}
                     </a>
