@@ -6,6 +6,7 @@
   "author": "Simone Foschi <s.foschi@gmail.com>",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
+    "@supabase/supabase-js": "^2.48.1",
     "bootstrap": "^5.3.3",
     "fs": "^0.0.1-security",
     "fslightbox-react": "^1.7.6",
@@ -43,7 +44,7 @@
   "license": "Private Repo, all rights reserved &copy; Simone Foschi",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",

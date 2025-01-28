@@ -29,5 +29,6 @@
   "tailwindCSS.suggestions": true,
   "tailwindCSS.emmetCompletions": true,
   "emmet.showAbbreviationSuggestions": true,
-  "terminal.integrated.suggest.quickSuggestions": true
+  "terminal.integrated.suggest.quickSuggestions": true,
+  "cSpell.words": ["fslightbox", "maxc", "popperjs", "supabase"]
 }
