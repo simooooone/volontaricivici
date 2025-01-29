@@ -75,21 +75,6 @@ const Blog = () => {
                 __html: content.html,
               }}
             ></div>
-            {/* <div>{parse(post.html, { replace: replaceCode })}</div> */}
-            {/* <div className="blog-post-nav">
-              <Link
-                to={`/${prev == null ? "" : prev.fields.slug}`}
-                className={prev || "hideme"}
-              >
-                &lsaquo; Precedente
-              </Link>
-              <Link
-                to={`/${next == null ? "" : next.fields.slug}`}
-                className={next || "hideme"}
-              >
-                Seguente &rsaquo;
-              </Link>
-            </div> */}
             <p>
               <Link to="/blog">&lsaquo; Torna all'elenco</Link>
             </p>
