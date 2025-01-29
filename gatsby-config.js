@@ -52,6 +52,7 @@ module.exports = {
     privacyDescription: "Privacy policy Vo.Ci. Nei Castelli",
   },
   plugins: [
+    `gatsby-plugin-decap-cms`,
     {
       resolve: `gatsby-plugin-feed`,
       options: {
