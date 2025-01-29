@@ -8,3 +8,8 @@
 import "bootstrap/dist/js/bootstrap.min.js"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./src/styles/global.scss"
+import "netlify-identity-widget"
+if (typeof window !== "undefined") {
+  window.netlifyIdentity = require("netlify-identity-widget")
+  window.netlifyIdentity.init()
+}
