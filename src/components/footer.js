@@ -1,9 +1,9 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Logo from "./logo"
-import coordinateBancarie from "../assets/documenti/coordinate-bancarie-voci-nei-castelli.pdf"
-import statuto from "../assets/documenti/statuto-voci-nei-castelli.pdf"
-import attoCostitutivo from "../assets/documenti/atto-costitutivo-voci-nei-castelli.pdf"
+import coordinateBancarie from "../../content/assets/documenti/coordinate-bancarie-voci-nei-castelli.pdf"
+import statuto from "../../content/assets/documenti/statuto-voci-nei-castelli.pdf"
+import attoCostitutivo from "../../content/assets/documenti/atto-costitutivo-voci-nei-castelli.pdf"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`

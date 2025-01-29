@@ -147,21 +147,18 @@ module.exports = {
         name: `Associazione Vo.Ci. nei Castelli San Marino`,
         short_name: `Vo.Ci. nei Castelli`,
         lang: `it`,
-        display: `standalone`, // Standalone per far sembrare che sia un'app nativa
+        display: `standalone`,
         start_url: `/`,
-        icon: `src/assets/images/logo.png`, // This path is relative to the root of the site.
+        icon: `content/assets/images/logo.png`,
         background_color: `#663399`,
         theme_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // display: "minimal-ui",
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: `${__dirname}/src/assets/images/`,
+        path: `${__dirname}/content/assets/images`,
       },
     },
     {
@@ -196,18 +193,5 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
-    // {
-    //   resolve: `gatsby-source-google-calendar`,
-    //   options: {
-    //     calendarIds: [
-    //       "ccaf3eee58135b88ab599006919ac953d699e42e575017eaacbdc04ffb2a5a4e@group.calendar.google.com",
-    //     ],
-    //     // options to retrieve the next 10 upcoming events
-    //     timeMin: new Date().toISOString(),
-    //     maxResults: 10,
-    //     singleEvents: true,
-    //     orderBy: "startTime",
-    //   },
-    // },
   ],
 }

@@ -7,7 +7,8 @@ date: 29/01/2025
 update: 29/01/2025
 author: TEST TEST
 published: true
-featuredImage: /img/logo-1.jpeg
-sideImage: /img/logo-1.jpeg
+featuredImage: /logo-1.jpeg
+sideImage: /logo-1.jpeg
 ---
+
 TEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TEST

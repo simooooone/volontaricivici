@@ -5,9 +5,9 @@ import Layout from "../components/layout"
 import Metatags from "../components/metatags"
 import FsLightbox from "fslightbox-react"
 import TopPagine from "../components/topPagine"
-import immagineTop from "../assets/images/img-top-chi.jpg"
-import immagineUno from "../assets/images/chi-1.jpg"
-import immagineDue from "../assets/images/chi-2.jpg"
+import immagineTop from "../../content/assets/images/img-top-chi.jpg"
+import immagineUno from "../../content/assets/images/chi-1.jpg"
+import immagineDue from "../../content/assets/images/chi-2.jpg"
 
 const ChiSiamo = () => {
   const data = useStaticQuery(graphql`

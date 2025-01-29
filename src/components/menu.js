@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-import moduloIscrizione from "../assets/documenti/scheda-iscrizione-voci-nei-castelli.pdf"
-// import statuto from "../assets/documenti/statuto-voci-nei-castelli.pdf"
-// import attoCostitutivo from "../assets/documenti/atto-costitutivo-voci-nei-castelli.pdf"
+import moduloIscrizione from "../../content/assets/documenti/scheda-iscrizione-voci-nei-castelli.pdf"
+// import statuto from "../../content/assets/documenti/statuto-voci-nei-castelli.pdf"
+// import attoCostitutivo from "../../content/assets/documenti/atto-costitutivo-voci-nei-castelli.pdf"
 
 const Menu = () => (
   <>

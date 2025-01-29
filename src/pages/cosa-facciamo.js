@@ -4,9 +4,9 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Metatags from "../components/metatags"
 import FsLightbox from "fslightbox-react"
-import immagineTop from "../assets/images/img-top-cosa.jpg"
-import immagineUno from "../assets/images/cosa-1.jpg"
-import immagineDue from "../assets/images/cosa-2.jpg"
+import immagineTop from "../../content/assets/images/img-top-cosa.jpg"
+import immagineUno from "../../content/assets/images/cosa-1.jpg"
+import immagineDue from "../../content/assets/images/cosa-2.jpg"
 import TopPagine from "../components/topPagine"
 
 const CosaFacciamo = () => {

@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import logo from "../assets/images/logo.png"
+import logo from "../../content/assets/images/logo.png"
 
 const Logo = ({ width, height, className }) => {
   const data = useStaticQuery(graphql`

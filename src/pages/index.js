@@ -2,8 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Metatags from "../components/metatags"
-import immagineTop from "../assets/images/img-top-home.jpg"
-import immagineUno from "../assets/images/index-1.jpg"
+import immagineTop from "../../content/assets/images/img-top-home.jpg"
+import immagineUno from "../../content/assets/images/index-1.jpg"
 import TopPagine from "../components/topPagine"
 
 const IndexPage = () => {
@@ -55,10 +55,10 @@ const IndexPage = () => {
                 <br />
                 <br />
               </p>
-              
-                <h3 className="sottotitolo2">
-                  Creazione Associazione/Cooperativa “Volontari Civici dei
-                  Castelli”
+
+              <h3 className="sottotitolo2">
+                Creazione Associazione/Cooperativa “Volontari Civici dei
+                Castelli”
               </h3>
               <p>
                 <i>
