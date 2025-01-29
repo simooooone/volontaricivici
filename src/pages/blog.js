@@ -12,13 +12,14 @@ const Blog = () => {
         edges {
           node {
             frontmatter {
-              author
-              date
               titolo
               sottotitolo
               description
-              published
+              slogan
+              date
               update
+              author
+              published
               featuredImage
               sideImage
             }

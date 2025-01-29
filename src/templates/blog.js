@@ -21,6 +21,7 @@ const Blog = () => {
           html
           frontmatter {
             titolo
+            sottotitolo
             description
             slogan
             date
