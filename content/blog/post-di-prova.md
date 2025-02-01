@@ -3,13 +3,18 @@ title: Prova 2
 sottotitolo: Estratto articolo
 description: amet consectetur adipisicing elit Ipsam tenetur
 slogan: Post di prova
-date: 24/08/2024
-update: 24/08/2024
+date: 27/01/2025
+update: 27/01/2025
 author: Autore
 published: true
+<<<<<<< HEAD
 featuredImage: /domenica-4-agosto-top.jpg
 sideImage: /domenica-4-agosto.jpg
 titolo: Prova evento 1
+=======
+sideImage: /img/domenica-4-agosto.jpg
+featuredImage: /img/domenica-4-agosto-top.jpg
+>>>>>>> 76b36cb (Updates to blog and admin logics)
 ---
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tenetur nihil ipsum vel quibusdam reprehenderit amet quo dolorem dignissimos? Impedit blanditiis quasi explicabo cumque soluta ratione sint quos fugiat natus.

@@ -1,0 +1,4 @@
+
+  "resolutions":{
+    "graphql": "16.10.0"
+  }

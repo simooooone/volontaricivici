@@ -78,7 +78,7 @@ const Metatags = props => {
       <meta property="og:image" content="" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta
-        name="twitter:titolo"
+        name="twitter:title"
         content={`${props.titolo} | ${data.site.siteMetadata.titolo}`}
       />
       <meta

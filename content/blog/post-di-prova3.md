@@ -1,15 +1,24 @@
 ---
-title: Prova
+<<<<<<< HEAD:content/blog/post-di-prova copy 3.md
+title: test PROVA
+=======
+titolo: test PROVA
+>>>>>>> 76b36cb (Updates to blog and admin logics):content/blog/post-di-prova3.md
 sottotitolo: Estratto articolo
 description: amet consectetur adipisicing elit Ipsam tenetur
 slogan: Post di prova
-date: 20/08/2024
-update: 20/08/2024
+date: 22/08/2024
+update: 22/08/2024
 author: Autore
 published: true
+<<<<<<< HEAD:content/blog/post-di-prova copy 3.md
 featuredImage: /domenica-4-agosto-top.jpg
 sideImage: /domenica-4-agosto.jpg
 titolo: Prova evento 1
+=======
+featuredImage: /img/domenica-4-agosto-top.jpg
+sideImage: /img/domenica-4-agosto.jpg
+>>>>>>> 76b36cb (Updates to blog and admin logics):content/blog/post-di-prova3.md
 ---
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tenetur nihil ipsum vel quibusdam reprehenderit amet quo dolorem dignissimos? Impedit blanditiis quasi explicabo cumque soluta ratione sint quos fugiat natus.

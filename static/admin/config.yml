@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: static/img
+media_folder: /content/asset/images/blog
 public_folder: /img
 collections:
   - name: "blog"
@@ -10,29 +10,19 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Titolo", name: "titolo", widget: "string" }
       - { label: "Sottotitolo", name: "sottotitolo", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Descrizione", name: "description", widget: "text" }
       - { label: "Slogan", name: "slogan", widget: "string" }
+      - { label: "Data", name: "date", widget: "string" }
+      - { label: "Aggiornamento", name: "update", widget: "string" }
+      - { label: "Autore", name: "author", widget: "string" }
       - {
-          label: "Date",
-          name: "date",
-          widget: "datetime",
-          format: "DD/MM/YYYY",
-        }
-      - {
-          label: "Update",
-          name: "update",
-          widget: "datetime",
-          format: "DD/MM/YYYY",
-        }
-      - { label: "Author", name: "author", widget: "string" }
-      - {
-          label: "Published",
+          label: "Pubblicato",
           name: "published",
           widget: "boolean",
           default: true,
         }
-      - { label: "Featured Image", name: "featuredImage", widget: "image" }
-      - { label: "Side Image", name: "sideImage", widget: "image" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Immagine principale", name: "featuredImage", widget: "image" }
+      - { label: "Immagine laterale", name: "sideImage", widget: "image" }
+      - { label: "Corpo", name: "body", widget: "markdown" }

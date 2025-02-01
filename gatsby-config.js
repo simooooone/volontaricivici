@@ -9,7 +9,6 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Vo.Ci. Nei Castelli`,
     titolo: `Vo.Ci. Nei Castelli`,
     description: `Associazione Dei Volontari Civici Sammarinesi - Vo.Ci. Nei Castelli`,
     acronimo: `Vo.Ci.`,
@@ -105,6 +104,7 @@ module.exports = {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
+                  title: edge.node.frontmatter.title,
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   update: [edge.node.frontmatter.update],
@@ -185,11 +185,9 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    "gatsby-plugin-postcss",
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    "gatsby-plugin-offline",
+    `gatsby-plugin-offline`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
