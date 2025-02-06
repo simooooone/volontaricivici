@@ -20,7 +20,7 @@ const Blog = () => {
           id
           html
           frontmatter {
-            titolo
+            title
             sottotitolo
             description
             slogan
@@ -65,7 +65,7 @@ const Blog = () => {
             <FsLightbox toggler={toggler} sources={[front.sideImage]} />
           </div>
           <div className="cont-testo testo pt-0 col-md-8 col-12">
-            <h1 className="titolo">{front.titolo}</h1>
+            <h1 className="titolo">{front.title}</h1>
             <h2 className="sottotitolo">{meta.blogDescription}</h2>
             <p>
               <em>{front.date}</em>

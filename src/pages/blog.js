@@ -12,7 +12,7 @@ const Blog = () => {
         edges {
           node {
             frontmatter {
-              titolo
+              title
               sottotitolo
               description
               slogan
@@ -72,7 +72,7 @@ const Blog = () => {
                   >
                     <div className="image">
                       <Link to={`/${edge.node.fields.slug}`}>
-                        <img src={post.sideImage} alt={`${post.titolo}`} />
+                        <img src={post.sideImage} alt={`${post.title}`} />
                       </Link>
                     </div>
                     <div className="post">
@@ -80,7 +80,7 @@ const Blog = () => {
                         className="link-post link-underlined"
                         to={`/${edge.node.fields.slug}`}
                       >
-                        <h2 className="tito">{post.titolo}</h2>
+                        <h2 className="tito">{post.title}</h2>
                       </Link>
                       <div className="stito">{post.sottotiolo}</div>
                       <div className="data">{post.date}</div>

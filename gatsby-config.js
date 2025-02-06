@@ -61,7 +61,6 @@ module.exports = {
             site {
               siteMetadata {
                 title
-                titolo
                 description
                 acronimo
                 slogan
@@ -126,7 +125,7 @@ module.exports = {
                       html
                       fields { slug }
                       frontmatter {
-                        titolo
+                        title
                         date
                         update
                       }

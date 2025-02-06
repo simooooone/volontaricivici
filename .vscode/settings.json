@@ -30,5 +30,12 @@
   "tailwindCSS.emmetCompletions": true,
   "emmet.showAbbreviationSuggestions": true,
   "terminal.integrated.suggest.quickSuggestions": true,
-  "cSpell.words": ["fslightbox", "maxc", "popperjs", "supabase", "SUPABASE"]
+  "cSpell.words": [
+    "decap",
+    "fslightbox",
+    "maxc",
+    "popperjs",
+    "supabase",
+    "SUPABASE"
+  ]
 }
