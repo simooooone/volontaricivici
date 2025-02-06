@@ -17,56 +17,40 @@
 //   })
 // }
 
-const path = require("path")
+const path = require("path");
 
 module.exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions
+  const { createNodeField } = actions;
   if (node.internal.type === "MarkdownRemark") {
-    const slug = path.basename(node.fileAbsolutePath, ".md")
+    const slug = path.basename(node.fileAbsolutePath, ".md");
     createNodeField({
       node,
       name: "slug",
       value: slug,
-    })
+    });
   }
-}
-
+};
 module.exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
-  const blogTemplate = path.resolve("./src/templates/blog.js")
-  const res = await graphql(`
+  const { createPage } = actions;
+  const result = await graphql(`
     query {
-      allMarkdownRemark(
-        filter: {
-          frontmatter: { update: { ne: null }, published: { eq: true } }
-        }
-        sort: [{ frontmatter: { update: ASC } }, { frontmatter: { date: ASC } }]
-      ) {
-        edges {
-          node {
-            fields {
-              slug
-            }
+      allMarkdownRemark {
+        nodes {
+          fields {
+            slug
           }
         }
       }
     }
-  `)
+  `);
 
-  const posts = res.data.allMarkdownRemark.edges
-
-  posts.forEach((edge, index) => {
-    const previous = index === 0 ? null : posts[index - 1].node
-    const next = index === posts.length - 1 ? null : posts[index + 1].node
-
+  result.data.allMarkdownRemark.nodes.forEach(node => {
     createPage({
-      component: blogTemplate,
-      path: `/${edge.node.fields.slug}`,
+      path: `/blog/${node.fields.slug}`,
+      component: path.resolve('./src/templates/blog-post.js'),
       context: {
-        slug: edge.node.fields.slug,
-        next,
-        previous,
-      },
-    })
-  })
-}
+        slug: node.fields.slug
+      }
+    });
+  });
+};

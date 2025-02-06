@@ -49,7 +49,7 @@
   ],
   "license": "Private Repo, all rights reserved &copy; Simone Foschi",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && mkdir -p public/img && cp -r content/assets/images/blog/* public/img/",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "gatsby develop",

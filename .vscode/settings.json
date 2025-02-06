@@ -34,8 +34,12 @@
     "decap",
     "fslightbox",
     "maxc",
+    "metatags",
     "popperjs",
     "supabase",
     "SUPABASE"
-  ]
+  ],
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }
