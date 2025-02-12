@@ -13,7 +13,7 @@ collections:
       - { label: "Slogan", name: "slogan", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Sottotitolo", name: "sottotitolo", widget: "string" }
-      - { label: "Tags", name: "tags", widget: "select",  default: ["Eventi ed Iniziative", "Progetti"] }
+      - { label: "Tags", name: "tags", widget: "select",  options: ["Eventi ed Iniziative", "Progetti"] }
       - { label: "Corpo", name: "description", widget: "markdown" }
       - { label: "Autore", name: "author", widget: "string" }
       - {
