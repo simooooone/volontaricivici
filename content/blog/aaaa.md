@@ -1,15 +1,15 @@
 ---
+slogan: aaa
 title: "Prova Simone 6 febbraio 16:45 "
 sottotitolo: aaaa
+tags: Eventi ed Iniziative
 description: aaa
-slogan: aaa
+author: aaa
 date: 06/02/2025
 update: 06/02/2025
-author: aaa
 published: true
-featuredImage: /img/domenica-4-agosto.jpg
+featuredImage: /img/carissimo.jpg
 sideImage: /img/domenica-4-agosto.jpg
-tags: Eventi ed Iniziative
 ---
 
 Nisi non non anim aute amet deserunt quis eiusmod in amet. Esse ullamco do labore ad nulla. Fugiat Lorem officia est sunt enim adipisicing nisi cupidatat. Reprehenderit deserunt consequat culpa veniam eu sunt dolore nostrud ut anim velit incididunt. Sit exercitation et eu sit eiusmod quis ea cillum esse exercitation. Ex magna id proident aute nulla enim eiusmod fugiat labore nulla.
