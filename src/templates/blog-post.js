@@ -40,7 +40,7 @@ const BlogPost = ({ data }) => {
   const meta = data.site.siteMetadata;
   const front = post.frontmatter;
   //const content = data?.allMarkdownRemark?.nodes[0];
-  console.log("blog post data: ", data?.MarkdownRemark?.nodes[0]);
+  console.log("Featured Image: ", front.featuredImage);
   return (
     <Layout>
       <Metatags

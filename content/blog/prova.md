@@ -8,7 +8,7 @@ author: Prova Prova Prova Prova
 date: 05/02/2025
 update: 05/02/2025
 published: true
-featuredImage: /img/domenica-4-agosto-top.jpg
+featuredImage: /img/carissimo.jpg
 sideImage: /img/domenica-4-agosto.jpg
 ---
 Prova Prova Prova Prova
