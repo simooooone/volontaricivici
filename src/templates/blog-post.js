@@ -22,6 +22,7 @@ export const pageQuery = graphql`
         published
         featuredImage
         sideImage
+        tags
       }
     }
     site {
@@ -57,7 +58,7 @@ const BlogPost = ({ data }) => {
             <button onClick={ () => setToggler(!toggler) } className="btn-img">
               <img
                 src={ front.sideImage }
-                alt={ `${meta.blogTitolo}` }
+                alt={ `${front.titolo}` }
                 className="bordo"
               />
             </button>
@@ -65,9 +66,12 @@ const BlogPost = ({ data }) => {
           </div>
           <div className="cont-testo testo pt-0 col-md-8 col-12">
             <h1 className="titolo">{ front.title }</h1>
-            <h2 className="sottotitolo">{ meta.blogDescription }</h2>
+            <h2 className="sottotitolo">{ front.sottotitolo }</h2>
+            <h3 className="tags">{ front.tags }</h3>
+            <div className="author">{ front.author }</div>
             <p>
-              <em>{ front.date }</em>
+              <em class="date">{ front.date }</em>
+              <em class="update">{ front.update }</em>
             </p>
             <br />
             <div

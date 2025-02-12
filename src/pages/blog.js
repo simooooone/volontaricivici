@@ -117,6 +117,7 @@ export const query = graphql`
             published
             featuredImage
             sideImage
+            tags
           }
           fields {
             slug

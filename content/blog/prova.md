@@ -9,5 +9,6 @@ author: Prova Prova Prova Prova
 published: true
 featuredImage: /img/logo-1.jpeg
 sideImage: /img/domenica-4-agosto.jpg
+tags: Progetti
 ---
 Prova Prova Prova Prova

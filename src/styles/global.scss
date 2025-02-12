@@ -254,6 +254,7 @@ body {
         font-size: 60px;
       }
     }
+
     .logo-mobi {
       margin-bottom: 20px;
     }
@@ -309,6 +310,36 @@ body {
       padding: 0 20px;
       color: var(--white);
     }
+
+    .tags {
+      // font-family: var(--font);
+      line-height: 1;
+      margin-bottom: 12px;
+      margin-top: 12px;
+      font-size: 17px;
+      font-weight: bold;
+      display: block;
+    }
+
+    .author {
+      // font-family: var(--font);
+      line-height: 1;
+      margin-bottom: 12px;
+      margin-top: 12px;
+      font-size: 19px;
+      font-style: italic;
+    }
+
+    .date {
+      font-size: 17px;
+      display: block;
+    }
+
+    .update {
+      font-size: 17px;
+      display: block;
+    }
+
   }
 
   .cont-img {
@@ -466,6 +497,7 @@ img {
       font-size: 1.25rem;
       margin-bottom: 15px;
     }
+
     // .nome {
     // }
   }

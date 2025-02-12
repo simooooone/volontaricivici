@@ -9,5 +9,6 @@ author: aaa
 published: true
 featuredImage: /img/domenica-4-agosto.jpg
 sideImage: /img/domenica-4-agosto.jpg
+tags: Eventi ed Iniziative
 ---
 aaaa
