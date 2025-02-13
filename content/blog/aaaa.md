@@ -1,10 +1,10 @@
 ---
-slogan: aaa
-title: "Prova Simone 6 febbraio 16:45 "
-sottotitolo: aaaa
+slogan: slogan
+title: titolo diu prova
+sottotitolo: sottoritolo
 tags: Eventi ed Iniziative
-description: aaa
-author: aaa
+description: corpo
+author: autore
 date: 06/02/2025
 update: 06/02/2025
 published: true
