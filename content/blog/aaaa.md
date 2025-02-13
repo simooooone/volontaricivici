@@ -1,6 +1,6 @@
 ---
 slogan: slogan
-title: titolo diu prova
+title: titolo di prova
 sottotitolo: sottoritolo
 tags: Eventi ed Iniziative
 description: corpo
