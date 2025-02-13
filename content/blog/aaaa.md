@@ -1,7 +1,7 @@
 ---
 slogan: slogan
 title: titolo di prova
-sottotitolo: sottoritolo
+sottotitolo: sottotitolo
 tags: Eventi ed Iniziative
 description: corpo
 author: autore
