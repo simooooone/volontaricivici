@@ -60,6 +60,7 @@ module.exports = {
           {
             site {
               siteMetadata {
+                titolo
                 title
                 description
                 acronimo
@@ -105,6 +106,7 @@ module.exports = {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
+                  title: edge.node.frontmatter.titolo,
                   date: edge.node.frontmatter.date,
                   update: [edge.node.frontmatter.update],
                   url: site.siteMetadata.siteUrl + "/" + edge.node.fields.slug,
@@ -125,7 +127,7 @@ module.exports = {
                       html
                       fields { slug }
                       frontmatter {
-                        title
+                        titolo
                         date
                         update
                       }

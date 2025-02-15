@@ -64,7 +64,7 @@ const Blog = ({ data }) => {
                   >
                     <div className="image">
                       <Link to={ `/blog/${edge.node.fields.slug}` }>
-                        <img src={ post.sideImage } alt={ `${post.title}` } />
+                        <img src={ post.sideImage } alt={ `${post.titolo}` } />
                       </Link>
                     </div>
                     <div className="post">
@@ -72,9 +72,9 @@ const Blog = ({ data }) => {
                         className="link-post link-underlined"
                         to={ `/blog/${edge.node.fields.slug}` }
                       >
-                        <h2 className="tito">{ post.title }</h2>
+                        <h2 className="tito">{ post.titolo }</h2>
                       </Link>
-                      <div className="stito">{ post.sottotiolo }</div>
+                      <div className="stito">{ post.sottotitolo }</div>
                       <div className="data">{ post.date }</div>
                     </div>
                   </div>
@@ -98,9 +98,10 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
-            title
+            titolo
             sottotitolo
-            description
+            seo_description
+            seo_title
             slogan
             date
             update

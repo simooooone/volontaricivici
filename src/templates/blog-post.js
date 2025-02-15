@@ -26,19 +26,12 @@ export const pageQuery = graphql`
         sideImage
       }
     }
-    site {
-      siteMetadata {
-        blogTitolo
-        blogDescription
-      }
-    }
   }
 `;
 
 const BlogPost = ({ data }) => {
   const [toggler, setToggler] = useState(false);
   const post = data.markdownRemark;
-  const meta = data.site.siteMetadata;
   const front = post.frontmatter;
   //const content = data?.allMarkdownRemark?.nodes[0];
   console.log("Featured Image: ", front.featuredImage);
