@@ -1,11 +1,13 @@
 ---
 slogan: Aiuto per i servizi digitali P.A.
 titolo: Punti di Facilitazione Digitale
-sottotitolo: Aiuto per la cittadinanza all'accesso ai servizi digitali della
+sottotitolo: Aiuto per la all'utenza all'accesso ai servizi digitali della
   P.A. della Repubblica di San Marino
 tags: Progetti
 seo_title: Punti di Facilitazione Digitale
-seo_description: Punti di Facilitazione Digitale
+seo_description:
+  Punti di Facilitazione Digitale per l'aiuto all'utenza all'accesso ai servizi digitali della
+  P.A. della Repubblica di San Marino.
 author: Melissa Mussoni
 date: 15/02/2025
 update: 15/02/2025
