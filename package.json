@@ -51,6 +51,7 @@
   "scripts": {
     "build": "gatsby build && mkdir -p public/img && cp -r content/assets/images/blog/* public/img/",
     "dev": "gatsby develop",
+    "doit": "npm run build && npm run dev",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",

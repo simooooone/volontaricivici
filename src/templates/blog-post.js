@@ -65,11 +65,11 @@ const BlogPost = ({ data }) => {
             <FsLightbox toggler={ toggler } sources={ [front.sideImage] } />
           </div>
           <div className="cont-testo testo pt-0 col-md-8 col-12">
+            <h3 className="tags">{ front.tags }</h3><br />
             <h1 className="titolo">{ front.title }</h1>
             <h2 className="sottotitolo">{ front.sottotitolo }</h2>
-            <h3 className="tags">Area: { front.tags }</h3>
             <div className="author">Autore: { front.author }</div>
-            <p>
+            <p className="cont-date">
               <em class="date">Data pubblicazione: { front.date }</em>
               <em class="update">Ultimo aggiornamento: { front.update }</em>
             </p>
@@ -80,7 +80,7 @@ const BlogPost = ({ data }) => {
               } }
             ></div>
             <p>
-              <Link to="/blog">&lsaquo; Torna all'elenco</Link>
+              <Link to="/blog" className="link-underlined normal maxc d-block">&lsaquo; Torna all'elenco</Link>
             </p>
           </div>
         </div>

@@ -2,7 +2,7 @@
 slogan: slogan
 title: titolo di prova
 sottotitolo: sottotitolo
-tags: Eventi ed Iniziative
+tags: Progetti
 description: corpo
 author: autore
 date: 06/02/2025
