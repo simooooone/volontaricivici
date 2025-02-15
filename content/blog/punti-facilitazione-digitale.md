@@ -1,13 +1,12 @@
 ---
-slogan: Aiuto per i servizi digitali P.A.
-titolo: Punti di Facilitazione Digitale
-sottotitolo: Aiuto per la all'utenza all'accesso ai servizi digitali della
+slogan: Prova Aiuto per i servizi digitali P.A.
+titolo: Prova Punti di Facilitazione Digitale
+sottotitolo: Prova Aiuto per la all'utenza all'accesso ai servizi digitali della
   P.A. della Repubblica di San Marino
 tags: Progetti
-seo_title: Punti di Facilitazione Digitale
-seo_description:
-  Punti di Facilitazione Digitale per l'aiuto all'utenza all'accesso ai servizi digitali della
-  P.A. della Repubblica di San Marino.
+seo_title: Prova Punti di Facilitazione Digitale
+seo_description: Prova Punti di Facilitazione Digitale per l'aiuto all'utenza
+  all'accesso ai servizi digitali della P.A. della Repubblica di San Marino.
 author: Melissa Mussoni
 date: 15/02/2025
 update: 15/02/2025
@@ -15,6 +14,7 @@ published: true
 featuredImage: /img/foto-post-formazione-digit.jpg
 sideImage: /img/foto-post-formazione-digit-laterale.jpg
 ---
+Prova
 
 In collaborazione con la Direzione Generale della Funzione Pubblica (DGFP) l’**Associazione Sociale e Culturale di Volontari Civici nei Castelli (Associazione Vo.Ci. nei Castelli)** offre il suo contributo all’attivazione di nuovi **“Punti di facilitazione digitale”**, per potenziare il servizio gratuito a supporto dei cittadini e residenti nell’utilizzo dei servizi on-line dell’Amministrazione.
 
