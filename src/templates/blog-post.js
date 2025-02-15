@@ -12,17 +12,18 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        title
-        sottotitolo
-        description
         slogan
+        titolo
+        sottotitolo
+        tags
+        seo_title
+        seo_description
+        author
         date
         update
-        author
         published
         featuredImage
         sideImage
-        tags
       }
     }
     site {
@@ -44,11 +45,11 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <Metatags
-        titolo={ meta.blogTitolo || `` }
-        description={ meta.blogDescription || `` }
+        titolo={ front.seo_title || `` }
+        description={ front.seo_description || `` }
       />
       <TopPagine
-        alt={ meta.blogTitolo }
+        alt={ front.seo_title }
         immagineTop={ front.featuredImage }
         slogan={ front.slogan }
       />
@@ -66,7 +67,7 @@ const BlogPost = ({ data }) => {
           </div>
           <div className="cont-testo testo pt-0 col-md-8 col-12">
             <h3 className="tags">{ front.tags }</h3><br />
-            <h1 className="titolo">{ front.title }</h1>
+            <h1 className="titolo">{ front.titolo }</h1>
             <h2 className="sottotitolo">{ front.sottotitolo }</h2>
             <div className="author">Autore: { front.author }</div>
             <p className="cont-date">
