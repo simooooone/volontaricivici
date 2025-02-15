@@ -1,6 +1,6 @@
-import React from "react"
-import { Link } from "gatsby"
-import moduloIscrizione from "../../content/assets/documenti/scheda-iscrizione-voci-nei-castelli.pdf"
+import React from "react";
+import { Link } from "gatsby";
+import moduloIscrizione from "../../content/assets/documenti/scheda-iscrizione-voci-nei-castelli.pdf";
 // import statuto from "../../content/assets/documenti/statuto-voci-nei-castelli.pdf"
 // import attoCostitutivo from "../../content/assets/documenti/atto-costitutivo-voci-nei-castelli.pdf"
 
@@ -20,8 +20,8 @@ const Menu = () => (
         >
           Direttivo
         </Link>
-      </li>
-      <li className="li">
+      </li>*/}
+      {/*  <li className="li">
         <a
           className="link-underlined white"
           target="_blank"
@@ -30,8 +30,8 @@ const Menu = () => (
         >
           Statuto
         </a>
-      </li>
-      <li className="li">
+      </li>*/}
+      {/*  <li className="li">
         <a
           className="link-underlined white"
           target="_blank"
@@ -41,21 +41,16 @@ const Menu = () => (
           Atto Costitutivo
         </a>
       </li> */}
-      {/* <li className="li">
-        <a
-          className="link-underlined white"
-          href="https://forms.gle/t68PppASbiaeQH54A"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Contatti
-        </a>
-      </li> */}
+      <li className="li">
+        <Link to="/blog" className="link-underlined white" activeClassName="active">
+          Progetti Eventi ed Iniziative
+        </Link>
+      </li>
       <li className="li">
         <a
           className="link-underlined white"
           target="_blank"
-          href={moduloIscrizione}
+          href={ moduloIscrizione }
           rel="noopener noreferrer"
         >
           Modulo di Iscrizione
@@ -63,6 +58,6 @@ const Menu = () => (
       </li>
     </ul>
   </>
-)
+);
 
-export default Menu
+export default Menu;

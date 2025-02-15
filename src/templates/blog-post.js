@@ -62,7 +62,7 @@ const BlogPost = ({ data }) => {
             <h3 className="tags">{ front.tags }</h3><br />
             <h1 className="titolo">{ front.titolo }</h1>
             <h2 className="sottotitolo">{ front.sottotitolo }</h2>
-            <div className="author">Autore: { front.author }</div>
+            <div className="author">Di: { front.author }</div>
             <p className="cont-date">
               <em class="date">Data pubblicazione: { front.date }</em>
               <em class="update">Ultimo aggiornamento: { front.update }</em>
