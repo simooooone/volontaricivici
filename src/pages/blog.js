@@ -13,7 +13,6 @@ const Blog = ({ data, location }) => {
   const [selectedTag, setSelectedTag] = useState(tagFromUrl);
   const meta = data?.site?.siteMetadata;
 
-  // Aggiorna selectedTag quando cambia l'URL
   useEffect(() => {
     setSelectedTag(tagFromUrl);
   }, [tagFromUrl]);
