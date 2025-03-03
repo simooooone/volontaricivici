@@ -29,12 +29,12 @@ I **Volontari Civici nei Castelli** sono pronti ad accogliervi alla prossima **A
 Durante l'assemblea verranno trattati diversi argomenti, tra cui:  
 - 📌 **Raccolta adesioni** per l'anno 2025  
 - 📆 **Discussione del calendario eventi** 2025  
-- 🗳 **Elezione nuovi membri** del Consiglio Direttivo  
+- 🗳 Raccolta delle candidature per l'**Elezione nuovi membri** del Consiglio Direttivo dell'Associazione VoCi nei Castelli  
 - … e **tanto altro!** 🎉  
 
 ## ⚠ Importante!  
 **Non è necessario essere iscritti all'associazione per partecipare all'Assemblea!**  
 🔊 **Venite a far sentire la vostra voce!**  
 
-## ✨ **Divenite parte del cambiamento!** ✨  
+## ✨ **Diventate parte del cambiamento!** ✨  
 Vi aspettiamo numerosi! 😊
