@@ -288,6 +288,7 @@ body {
         gap: 1rem;
         align-items: flex-start;
         padding: 0.5rem;
+        white-space: nowrap;
 
         a.active {
           color: var(--colore-titolo2);
