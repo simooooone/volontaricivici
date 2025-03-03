@@ -1,5 +1,5 @@
 ---
-slogan: Facilitazione digitale per tutti!
+slogan: 💡 Facilitazione digitale per tutti!
 titolo: "Punti di Facilitazione Digitale: Assistenza Gratuita per i Cittadini"
 sottotitolo: Scopri dove e quando accedere al nuovo servizio per supportarti
   nell’uso dei servizi online della Pubblica Amministrazione!
