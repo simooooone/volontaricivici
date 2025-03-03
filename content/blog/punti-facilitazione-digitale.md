@@ -8,7 +8,7 @@ seo_title: Nuovi Punti di Facilitazione Digitale a San Marino
 seo_description: Scopri i nuovi Punti di Facilitazione Digitale attivati
   dall’Associazione Vo.Ci. nei Castelli per aiutarti con i servizi online della
   PA!
-author: Melissa Mussoni
+author: Melissa
 date: 15/02/2025
 update: 03/03/2025
 published: true
