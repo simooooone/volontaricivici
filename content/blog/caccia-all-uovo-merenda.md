@@ -4,8 +4,8 @@ titolo: "Caccia all’Uovo e Merenda: Un Evento per Tutta la Famiglia!"
 sottotitolo: Giochi, premi e tante sorprese vi aspettano il 6 aprile
   all’Arboreto Didattico di Ca’ Vagnetto! Prenota subito!
 tags: Eventi ed Iniziative
-seo_title: Caccia all’Uomo & Merenda – 6 Aprile a San Marino!
-seo_description: Partecipa alla Caccia all’Uomo il 6 aprile 2025 all’Arboreto
+seo_title: Caccia all’Uovo & Merenda – 6 Aprile a San Marino!
+seo_description: Partecipa alla Caccia all’Uovo il 6 aprile 2025 all’Arboreto
   Didattico di Ca’ Vagnetto! Giochi, premi e merenda per grandi e piccini.
   Prenotazione obbligatoria!
 author: Melissa
