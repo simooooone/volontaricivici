@@ -15,6 +15,7 @@ published: true
 featuredImage: /img/foto-post-formazione-digit.jpg
 sideImage: /img/locandina-merenda-caccia-uovo.jpg
 ---
+
 I 𝐕𝐨𝐥𝐨𝐧𝐭𝐚𝐫𝐢 𝐂𝐢𝐯𝐢𝐜𝐢 𝐧𝐞𝐢 𝐂𝐚𝐬𝐭𝐞𝐥𝐥𝐢, in collaborazione con la 𝐆𝐢𝐮𝐧𝐭𝐚 𝐝𝐢 𝐂𝐚𝐬𝐭𝐞𝐥𝐥𝐨 𝐝𝐢 𝐃𝐨𝐦𝐚𝐠𝐧𝐚𝐧𝐨, non vedono l'ora di accogliervi alla
 
 🐣🥜𝐂𝐀𝐂𝐂𝐈𝐀 𝐀𝐋𝐋'𝐔𝐎𝐕𝐎 & 𝐌𝐄𝐑𝐄𝐍𝐃𝐀!🥜🐣

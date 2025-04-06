@@ -112,8 +112,8 @@ module.exports = {
                   url: site.siteMetadata.siteUrl + "/" + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + "/" + edge.node.fields.slug,
                   custom_elements: [{ "content:encoded": edge.node.html }],
-                });
-              });
+                })
+              })
             },
             query: `
               {
@@ -160,7 +160,7 @@ module.exports = {
       options: {
         name: "blog-images",
         path: `${__dirname}/content/assets/images/blog`,
-      }
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
@@ -202,4 +202,4 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
   ],
-};
+}

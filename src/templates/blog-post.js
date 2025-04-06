@@ -1,10 +1,10 @@
-import React from "react";
-import { useState } from "react";
-import { graphql, Link } from "gatsby";
-import Layout from "../components/layout";
-import Metatags from "../components/metatags";
-import FsLightbox from "fslightbox-react";
-import TopPagine from "../components/topPagine";
+import React from "react"
+import { useState } from "react"
+import { graphql, Link } from "gatsby"
+import Layout from "../components/layout"
+import Metatags from "../components/metatags"
+import FsLightbox from "fslightbox-react"
+import TopPagine from "../components/topPagine"
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -27,60 +27,63 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
 
 const BlogPost = ({ data }) => {
-  const [toggler, setToggler] = useState(false);
-  const post = data.markdownRemark;
-  const front = post.frontmatter;
+  const [toggler, setToggler] = useState(false)
+  const post = data.markdownRemark
+  const front = post.frontmatter
   //const content = data?.allMarkdownRemark?.nodes[0];
-  console.log("Featured Image: ", front.featuredImage);
+  console.log("Featured Image: ", front.featuredImage)
   return (
     <Layout>
       <Metatags
-        titolo={ front.seo_title || `` }
-        description={ front.seo_description || `` }
+        titolo={front.seo_title || ``}
+        description={front.seo_description || ``}
       />
       <TopPagine
-        alt={ front.seo_title }
-        immagineTop={ front.featuredImage }
-        slogan={ front.slogan }
+        alt={front.seo_title}
+        immagineTop={front.featuredImage}
+        slogan={front.slogan}
       />
       <div className="container-fluid">
         <div className="row blocco pt-5">
           <div className="cont-img sticky-cont col-md-4 col-12">
-            <button onClick={ () => setToggler(!toggler) } className="btn-img">
+            <button onClick={() => setToggler(!toggler)} className="btn-img">
               <img
-                src={ front.sideImage }
-                alt={ `${front.titolo}` }
+                src={front.sideImage}
+                alt={`${front.titolo}`}
                 className="bordo"
               />
             </button>
-            <FsLightbox toggler={ toggler } sources={ [front.sideImage] } />
+            <FsLightbox toggler={toggler} sources={[front.sideImage]} />
           </div>
           <div className="cont-testo testo pt-0 col-md-8 col-12">
-            <h3 className="tags">{ front.tags }</h3><br />
-            <h1 className="titolo">{ front.titolo }</h1>
-            <h2 className="sottotitolo">{ front.sottotitolo }</h2>
-            <div className="author">Di: { front.author }</div>
+            <h3 className="tags">{front.tags}</h3>
+            <br />
+            <h1 className="titolo">{front.titolo}</h1>
+            <h2 className="sottotitolo">{front.sottotitolo}</h2>
+            <div className="author">Di: {front.author}</div>
             <p className="cont-date">
-              <em class="date">Data pubblicazione: { front.date }</em>
-              <em class="update">Ultimo aggiornamento: { front.update }</em>
+              <em class="date">Data pubblicazione: {front.date}</em>
+              <em class="update">Ultimo aggiornamento: {front.update}</em>
             </p>
             <br />
             <div
-              dangerouslySetInnerHTML={ {
+              dangerouslySetInnerHTML={{
                 __html: post.html,
-              } }
+              }}
             ></div>
             <p>
-              <Link to="/blog" className="link-underlined normal maxc d-block">&lsaquo; Torna all'elenco</Link>
+              <Link to="/blog" className="link-underlined normal maxc d-block">
+                &lsaquo; Torna all'elenco
+              </Link>
             </p>
           </div>
         </div>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default BlogPost;
+export default BlogPost

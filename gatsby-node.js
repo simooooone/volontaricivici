@@ -17,21 +17,21 @@
 //   })
 // }
 
-const path = require("path");
+const path = require("path")
 
 module.exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions;
+  const { createNodeField } = actions
   if (node.internal.type === "MarkdownRemark") {
-    const slug = path.basename(node.fileAbsolutePath, ".md");
+    const slug = path.basename(node.fileAbsolutePath, ".md")
     createNodeField({
       node,
       name: "slug",
       value: slug,
-    });
+    })
   }
-};
+}
 module.exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage } = actions
   const result = await graphql(`
     query {
       allMarkdownRemark {
@@ -42,15 +42,15 @@ module.exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `);
+  `)
 
   result.data.allMarkdownRemark.nodes.forEach(node => {
     createPage({
       path: `/blog/${node.fields.slug}`,
-      component: path.resolve('./src/templates/blog-post.js'),
+      component: path.resolve("./src/templates/blog-post.js"),
       context: {
-        slug: node.fields.slug
-      }
-    });
-  });
-};
+        slug: node.fields.slug,
+      },
+    })
+  })
+}
