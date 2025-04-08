@@ -40,7 +40,7 @@ const Menu = () => {
           <li className="nav-item dropdown-container">
             <a
               href="#"
-              className={`voce-blog link-underlined greyed ${
+              className={`voce-blog link-underlined white greyed ${
                 location.pathname.startsWith("/blog") ? "active" : ""
               }`}
             >

@@ -54,7 +54,7 @@ body {
       padding: 0;
       border-bottom: 0 none;
 
-      > a.link-underlined {
+      .greyed {
           color: var(--grigiato);
       }
     }
@@ -379,6 +379,8 @@ body {
           width: 100%;
         }
       }
+
+
 
       &.active {
         color: var(--colore-testo);
