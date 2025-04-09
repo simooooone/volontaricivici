@@ -8,7 +8,6 @@
 import "bootstrap/dist/js/bootstrap.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "netlify-identity-widget";
-//import "./src/styles/global.css";
 
 if (typeof window !== "undefined") {
   // Faccio in modo chbe ad ogni build il file css abia un nome univoco in modo che si aggiorni automaticamente senza dover eliminare la cache

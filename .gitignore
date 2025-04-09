@@ -133,3 +133,5 @@ dist
 # custom Simone
 public/
 materiali/
+# Local Netlify folder
+.netlify

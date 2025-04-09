@@ -23,11 +23,16 @@ const Blog = ({ data, location }) => {
     ),
   ]
 
+  // Sorted array
   const filteredPosts = selectedTag
-    ? data.allMarkdownRemark.edges.filter(edge =>
-        edge.node.frontmatter.tags.includes(selectedTag)
-      )
-    : data.allMarkdownRemark.edges
+  ? data.allMarkdownRemark.edges
+      .filter(edge => edge.node.frontmatter.tags.includes(selectedTag))
+      .sort((a, b) => new Date(b.node.frontmatter.date) - new Date(a.node.frontmatter.date))
+  : data.allMarkdownRemark.edges
+      .sort((a, b) => new Date(b.node.frontmatter.date) - new Date(a.node.frontmatter.date));
+
+  // Not sorted
+  // const filteredPosts = selectedTag ? data.allMarkdownRemark.edges.filter(edge => edge.node.frontmatter.ags.includes(selectedTag)) : data.allMarkdownRemark.edges
 
   const handleTagClick = tag => {
     setSelectedTag(tag)
@@ -37,8 +42,6 @@ const Blog = ({ data, location }) => {
       : location.pathname
     window.history.pushState({}, "", newUrl)
   }
-
-  console.log("Tags:", tags)
 
   return (
     <Layout>

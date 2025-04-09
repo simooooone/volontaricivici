@@ -33,8 +33,6 @@ const BlogPost = ({ data }) => {
   const [toggler, setToggler] = useState(false)
   const post = data.markdownRemark
   const front = post.frontmatter
-  //const content = data?.allMarkdownRemark?.nodes[0];
-  console.log("Featured Image: ", front.featuredImage)
   return (
     <Layout>
       <Metatags
