@@ -3,7 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import { Location } from "@reach/router"
 import moduloIscrizione from "../../content/assets/documenti/scheda-iscrizione-voci-nei-castelli.pdf"
 
-const Menu = () => {
+const Menu = ({ setIsOpen }) => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark {
@@ -22,7 +22,11 @@ const Menu = () => {
     ...new Set(
       data.allMarkdownRemark.edges.flatMap(edge => edge.node.frontmatter.tags)
     ),
-  ]
+  ];
+
+  const handleLinkClick = () => {
+    setIsOpen(false) // Close the mobile menu
+  }
 
   return (
     <Location>
@@ -33,6 +37,7 @@ const Menu = () => {
               to="/"
               className="link-underlined white"
               activeClassName="active"
+              onClick={handleLinkClick}
             >
               Home
             </Link>
@@ -50,10 +55,11 @@ const Menu = () => {
               <ul className="dropdown-list">
                 <li key="all-posts" className="nav-subitem">
                   <Link
-                    to="/blog"
+                    to="/blog#main"
                     className="link-underlined normal"
                     activeClassName="active"
                     partiallyActive={true}
+                    onClick={handleLinkClick}
                   >
                     Tutti i Post
                   </Link>
@@ -61,10 +67,11 @@ const Menu = () => {
                 {tags.map(tag => (
                   <li key={tag} className="nav-subitem">
                     <Link
-                      to={`/blog?tag=${encodeURIComponent(tag)}`}
+                      to={`/blog#main?tag=${encodeURIComponent(tag)}`}
                       className="link-underlined normal"
                       activeClassName="active"
                       state={{ activeTag: tag }}
+                      onClick={handleLinkClick}
                     >
                       {tag}
                     </Link>
@@ -79,6 +86,7 @@ const Menu = () => {
               target="_blank"
               href={moduloIscrizione}
               rel="noopener noreferrer"
+              onClick={handleLinkClick}
             >
               Modulo di Iscrizione
             </a>

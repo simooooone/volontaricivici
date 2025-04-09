@@ -44,7 +44,7 @@ const Blog = ({ data, location }) => {
   }
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Metatags
         titolo={`${meta.blogTitolo}`}
         description={`${meta.blogDescription}`}

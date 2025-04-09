@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Metatags from "../components/metatags"
 import TopPagine from "../components/topPagine"
-import immagineTop from "../../content/assets/images/img-top-direttivo.jpg"
+import immagineTop from "../../content/assets/images/img-top-privacy.jpg"
 
 const PrivacyPolicy = () => {
   const data = useStaticQuery(graphql`

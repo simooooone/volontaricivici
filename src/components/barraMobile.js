@@ -15,7 +15,7 @@ const BarraMobile = () => {
         ☰
       </button>
       <Logo width="40" height="40" />
-      <Menu />
+      <Menu setIsOpen={setIsOpen} />
     </div>
   )
 }
