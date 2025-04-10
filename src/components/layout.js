@@ -1,10 +1,10 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 import BarraMobile from "./barraMobile"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
     query SiteLayoutQuery {
       site {
@@ -20,7 +20,9 @@ const Layout = ({ children }) => {
   useEffect(() => {
     // Check if the URL contains a hash (e.g., #main)
     if (location && location.hash) {
-      const element = document.querySelector(location.hash)
+      const hash = location.hash.split("?")[0]; // Remove query string
+      const element = document.querySelector(hash);
+
       if (element) {
         element.scrollIntoView({ behavior: "smooth" }) // Smooth scrolling
       }

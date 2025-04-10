@@ -52,7 +52,8 @@ const Footer = () => {
             {dati.cellulare}
             <br />
             <a
-              href={`mailto:${dati.email}`}
+              href={ `mailto:${dati.email}` }
+              alt="Email"
               target="_blank"
               rel="noopener noreferrer"
               className="link-underlined normal maxc d-block longWord"
@@ -65,6 +66,7 @@ const Footer = () => {
             <div className="cont-copyright">
               <a
                 className="link-underlined normal maxc d-block"
+                alt="Coordinate Bancarie"
                 target="_blank"
                 href={coordinateBancarie}
                 rel="noopener noreferrer"
@@ -73,6 +75,7 @@ const Footer = () => {
               </a>
               <a
                 className="link-underlined normal maxc d-block my-2"
+                alt="Atto Costitutivo"
                 target="_blank"
                 href={attoCostitutivo}
                 rel="noopener noreferrer"
@@ -81,6 +84,7 @@ const Footer = () => {
               </a>
               <a
                 className="link-underlined normal maxc d-block mb-2"
+                alt="Statuto"
                 target="_blank"
                 href={statuto}
                 rel="noopener noreferrer"
@@ -88,6 +92,7 @@ const Footer = () => {
                 Statuto
               </a>
               <Link
+                aria-label="Privacy"
                 to="/privacy"
                 className="link-underlined normal maxc d-block"
               >

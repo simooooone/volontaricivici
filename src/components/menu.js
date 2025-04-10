@@ -25,7 +25,11 @@ const Menu = ({ setIsOpen }) => {
   ];
 
   const handleLinkClick = () => {
-    setIsOpen(false) // Close the mobile menu
+    if (typeof setIsOpen === "function") {
+      setIsOpen(false)
+    } else {
+      console.log("setIsOpen is not a function")
+    }
   }
 
   return (
@@ -36,6 +40,7 @@ const Menu = ({ setIsOpen }) => {
             <Link
               to="/"
               className="link-underlined white"
+              aria-label="Home Page"
               activeClassName="active"
               onClick={handleLinkClick}
             >
@@ -44,7 +49,7 @@ const Menu = ({ setIsOpen }) => {
           </li>
           <li className="nav-item dropdown-container">
             <a
-              href="#"
+              href="#" 
               className={`voce-blog link-underlined white greyed ${
                 location.pathname.startsWith("/blog") ? "active" : ""
               }`}
@@ -55,9 +60,10 @@ const Menu = ({ setIsOpen }) => {
               <ul className="dropdown-list">
                 <li key="all-posts" className="nav-subitem">
                   <Link
-                    to="/blog#main"
+                    to="/blog#content"
                     className="link-underlined normal"
                     activeClassName="active"
+                    aria-label="Tutti i Post"
                     partiallyActive={true}
                     onClick={handleLinkClick}
                   >
@@ -67,9 +73,10 @@ const Menu = ({ setIsOpen }) => {
                 {tags.map(tag => (
                   <li key={tag} className="nav-subitem">
                     <Link
-                      to={`/blog#main?tag=${encodeURIComponent(tag)}`}
+                      to={`/blog#content?tag=${encodeURIComponent(tag)}`}
                       className="link-underlined normal"
                       activeClassName="active"
+                      aria-label={`Post con tag ${tag}`}
                       state={{ activeTag: tag }}
                       onClick={handleLinkClick}
                     >
@@ -84,6 +91,7 @@ const Menu = ({ setIsOpen }) => {
             <a
               className="link-underlined white"
               target="_blank"
+              alt="Modulo di iscrizione all'associazione Vo.Ci nei Castelli"
               href={moduloIscrizione}
               rel="noopener noreferrer"
               onClick={handleLinkClick}

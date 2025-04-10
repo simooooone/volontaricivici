@@ -6,6 +6,7 @@ const BarraMobile = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleBar = () => {
+    // console.log("BarraMobile.js toggleBar isOpen:", !isOpen)
     setIsOpen(!isOpen)
   }
 
@@ -15,9 +16,11 @@ const BarraMobile = () => {
         ☰
       </button>
       <Logo width="40" height="40" />
-      <Menu setIsOpen={setIsOpen} />
+      <Menu setIsOpen={(value) => {
+        setIsOpen(value)
+      }} />
     </div>
   )
-}
+};
 
-export default BarraMobile
+export default BarraMobile;

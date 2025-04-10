@@ -22,7 +22,7 @@ const Logo = ({ width, height, className }) => {
   imgProps.className = className ? `${className} logo` : "logo"
 
   return (
-    <Link to="/">
+    <Link to="/" aria-label="Vo.Ci. nei castelli" className="logo">
       <img
         {...imgProps}
         alt={`Logo ${data?.site?.siteMetadata?.titolo || ""}`}

@@ -24,12 +24,14 @@ const NotFoundPage = () => {
         description={`${data.site.siteMetadata.notFoundPageDescription}`}
       />
       <TopPagine alt="" immagineTop={immagineTop} />
-      <h1>404 Pagina non trovata :-(</h1>
-      <p>La pagina richiesta non è stata trovata.</p>
-      <br />
-      <p>
-        <Link to="/">Torna alla Home Page</Link>
-      </p>
+      <div className="container" id="content">
+        <h1>404 Pagina non trovata :-(</h1>
+        <p>La pagina richiesta non è stata trovata.</p>
+        <br />
+        <p>
+          <Link aria-label="Torna alla Home Page" to="/">Torna alla Home Page</Link>
+        </p>
+      </div>
     </Layout>
   )
 }

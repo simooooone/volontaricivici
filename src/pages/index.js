@@ -36,7 +36,7 @@ const IndexPage = () => {
           dedica="Un'associazione per San Marino"
           displayExtended="block"
         />
-        <div className="container-fluid">
+        <div className="container-fluid" id="content">
           <div className="row blocco">
             <div className="cont-testo col-lg-6 col-12">
               <h1 className="titolo">

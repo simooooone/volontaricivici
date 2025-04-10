@@ -6,16 +6,19 @@ import TopPagine from "../components/topPagine"
 import immagineUno from "../../content/assets/images/blog-1.jpg"
 
 const Blog = ({ data, location }) => {
-  // Ottieni il tag dall'URL se presente
-  const urlParams = new URLSearchParams(location.search)
-  const tagFromUrl = urlParams.get("tag")
+  const isBrowser = typeof window !== "undefined"
+  const urlParams = isBrowser ? location.state?.activeTag : null
+  const tagFromUrl = urlParams ? urlParams : null
 
   const [selectedTag, setSelectedTag] = useState(tagFromUrl)
   const meta = data?.site?.siteMetadata
+  
 
   useEffect(() => {
-    setSelectedTag(tagFromUrl)
-  }, [tagFromUrl])
+    if (isBrowser) {
+      setSelectedTag(tagFromUrl)
+    }
+  }, [tagFromUrl, isBrowser])
 
   const tags = [
     ...new Set(
@@ -54,7 +57,7 @@ const Blog = ({ data, location }) => {
         slogan={meta.blogAcronimo}
         immagineTop={immagineUno}
       />
-      <div className="container-fluid pt-5">
+      <div className="container-fluid pt-5" id="content">
         <div className="row">
           <h1 className="titolo">Blog</h1>
           <div className="tag-buttons">
@@ -95,14 +98,16 @@ const Blog = ({ data, location }) => {
                     key={`${post.published}+${post.update}+${post.date}`}
                   >
                     <div className="image">
-                      <Link to={`/blog/${edge.node.fields.slug}`}>
+                      <Link to={`/blog/${edge.node.fields.slug}`}
+                      aria-label={`${post.titolo}`}>
                         <img src={post.sideImage} alt={`${post.titolo}`} />
                       </Link>
                     </div>
                     <div className="post">
                       <Link
                         className="link-post link-underlined"
-                        to={`/blog/${edge.node.fields.slug}`}
+                        to={ `/blog/${edge.node.fields.slug}` }
+                        aria-label={`${post.titolo}`}
                       >
                         <h2 className="tito">{post.titolo}</h2>
                       </Link>

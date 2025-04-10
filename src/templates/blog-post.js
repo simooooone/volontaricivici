@@ -44,7 +44,7 @@ const BlogPost = ({ data }) => {
         immagineTop={front.featuredImage}
         slogan={front.slogan}
       />
-      <div className="container-fluid">
+      <div className="container-fluid" id="content">
         <div className="row blocco pt-5">
           <div className="cont-img sticky-cont col-md-4 col-12">
             <button onClick={() => setToggler(!toggler)} className="btn-img">
@@ -63,8 +63,8 @@ const BlogPost = ({ data }) => {
             <h2 className="sottotitolo">{front.sottotitolo}</h2>
             <div className="author">Di: {front.author}</div>
             <p className="cont-date">
-              <em class="date">Data pubblicazione: {front.date}</em>
-              <em class="update">Ultimo aggiornamento: {front.update}</em>
+              <em className="date">Data pubblicazione: {front.date}</em>
+              <em className="update">Ultimo aggiornamento: {front.update}</em>
             </p>
             <br />
             <div
@@ -73,7 +73,8 @@ const BlogPost = ({ data }) => {
               }}
             ></div>
             <p>
-              <Link to="/blog" className="link-underlined normal maxc d-block">
+              <Link to="/blog" className="link-underlined normal maxc d-block"
+              aria-label="Torna all'elenco">
                 &lsaquo; Torna all'elenco
               </Link>
             </p>
