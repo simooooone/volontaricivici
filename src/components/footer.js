@@ -53,7 +53,7 @@ const Footer = () => {
             <br />
             <a
               href={ `mailto:${dati.email}` }
-              alt="Email"
+              aria-label="Email"
               target="_blank"
               rel="noopener noreferrer"
               className="link-underlined normal maxc d-block longWord"
@@ -66,7 +66,7 @@ const Footer = () => {
             <div className="cont-copyright">
               <a
                 className="link-underlined normal maxc d-block"
-                alt="Coordinate Bancarie"
+                aria-label="Coordinate Bancarie"
                 target="_blank"
                 href={coordinateBancarie}
                 rel="noopener noreferrer"
@@ -75,7 +75,7 @@ const Footer = () => {
               </a>
               <a
                 className="link-underlined normal maxc d-block my-2"
-                alt="Atto Costitutivo"
+                aria-label="Atto Costitutivo"
                 target="_blank"
                 href={attoCostitutivo}
                 rel="noopener noreferrer"
@@ -84,7 +84,7 @@ const Footer = () => {
               </a>
               <a
                 className="link-underlined normal maxc d-block mb-2"
-                alt="Statuto"
+                aria-label="Statuto"
                 target="_blank"
                 href={statuto}
                 rel="noopener noreferrer"
@@ -99,10 +99,10 @@ const Footer = () => {
                 Privacy
               </Link>
               <div className="cont-social">
-                <a href={dati.facebook} alt="facebook">
+                <a href={dati.facebook} aria-label="facebook">
                   <span className="ico-facebook"></span>
                 </a>
-                <a href={dati.instagram} alt="instagram">
+                <a href={dati.instagram} aria-label="instagram">
                   <span className="ico-instagram"></span>
                 </a>
               </div>

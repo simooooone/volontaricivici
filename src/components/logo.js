@@ -26,7 +26,8 @@ const Logo = ({ width, height, className }) => {
       <img
         {...imgProps}
         alt={`Logo ${data?.site?.siteMetadata?.titolo || ""}`}
-        src={logo}
+        src={ logo }
+        
       />
     </Link>
   )

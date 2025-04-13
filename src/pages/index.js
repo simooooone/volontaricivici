@@ -5,6 +5,7 @@ import Metatags from "../components/metatags"
 import immagineTop from "../../content/assets/images/img-top-home.jpg"
 import immagineUno from "../../content/assets/images/index-1.jpg"
 import TopPagine from "../components/topPagine"
+import SliderBlog from "../components/sliderBlog"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -35,7 +36,8 @@ const IndexPage = () => {
           slogan={metadata.acronimo || ""}
           dedica="Un'associazione per San Marino"
           displayExtended="block"
-        />
+          width="1920"
+          height="768" />
         <div className="container-fluid" id="content">
           <div className="row blocco">
             <div className="cont-testo col-lg-6 col-12">
@@ -115,6 +117,7 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
+        <SliderBlog />
       </Layout>
     </>
   )

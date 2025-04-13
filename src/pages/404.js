@@ -23,7 +23,10 @@ const NotFoundPage = () => {
         titolo={`${data.site.siteMetadata.notFoundPageTitolo}`}
         description={`${data.site.siteMetadata.notFoundPageDescription}`}
       />
-      <TopPagine alt="" immagineTop={immagineTop} />
+      <TopPagine alt=""
+        immagineTop={ immagineTop }
+        width="1920"
+        height="768" />
       <div className="container" id="content">
         <h1>404 Pagina non trovata :-(</h1>
         <p>La pagina richiesta non è stata trovata.</p>

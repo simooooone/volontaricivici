@@ -188,6 +188,9 @@ module.exports = {
           {
             name: `Font`,
             file: `https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Eczar:wght@400..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap`,
+            fontStyle: `normal`,
+            fontDisplay: `swap`,
+            crossOrigin: `anonymous`,
           },
         ],
       },
