@@ -31,13 +31,11 @@ const IndexPage = () => {
           description={metadata.homeDescription || ""}
         />
         <TopPagine
-          alt=""
+          alt="Vo.Ci. Asspociazione San Marino"
           immagineTop={immagineTop}
           slogan={metadata.acronimo || ""}
           dedica="Un'associazione per San Marino"
-          displayExtended="block"
-          width="1920"
-          height="768" />
+          displayExtended="block" />
         <div className="container-fluid" id="content">
           <div className="row blocco">
             <div className="cont-testo col-lg-6 col-12">

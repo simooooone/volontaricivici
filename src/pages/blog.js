@@ -56,8 +56,6 @@ const Blog = ({ data, location }) => {
         alt={meta.blogTitolo}
         slogan={meta.blogAcronimo}
         immagineTop={immagineUno}
-        width="1920"
-        height="768"
       />
       <div className="container-fluid pt-5" id="content">
         <div className="row">

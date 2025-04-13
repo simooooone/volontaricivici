@@ -11,8 +11,8 @@ const TopPagine = props => {
         <img alt={ props.alt }
           src={ props.immagineTop }
           className="img-top"
-          width={ props.width } // Set width from props
-          height={ props.height } // Set height from props
+          width="1920" // Set width from props
+          height="768" // Set height from props
         />
         <div className="slogan-top">
           <div className="logo-mobi d-lg-none">

@@ -42,9 +42,7 @@ const BlogPost = ({ data }) => {
       <TopPagine
         alt={front.seo_title}
         immagineTop={front.featuredImage}
-        slogan={ front.slogan }
-        width="1920"
-        height="768" />
+        slogan={ front.slogan } />
       <div className="container-fluid" id="content">
         <div className="row blocco pt-5">
           <div className="cont-img sticky-cont col-md-4 col-12">

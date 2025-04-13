@@ -31,10 +31,8 @@ const PrivacyPolicy = () => {
           description={metadata.privacyDescription || ""}
         />
         <TopPagine
-          alt=""
-          immagineTop={ immagineTop }
-          width="1920"
-          height="768" />
+          alt="Privacy Policy"
+          immagineTop={ immagineTop } />
         <div className="container" id="content">
           <div className="row blocco">
             <div className="cont-testo col-12">
