@@ -5,7 +5,7 @@ import Metatags from "../components/metatags"
 import immagineTop from "../../content/assets/images/img-top-home.jpg"
 import immagineUno from "../../content/assets/images/index-1.jpg"
 import TopPagine from "../components/topPagine"
-import SliderBlog from "../components/sliderBlog"
+// import SliderBlog from "../components/sliderBlog"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -115,7 +115,6 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
-        <SliderBlog />
       </Layout>
     </>
   )

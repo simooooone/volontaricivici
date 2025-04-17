@@ -10,15 +10,15 @@ seo_description: Partecipa all'Assemblea VoCi nei Castelli il 22 Aprile 2025 a
   eventi!
 author: Simone
 date: 08/04/2025
-update: 08/04/2025
+update: 17/04/2025
 published: true
 featuredImage: /img/foto-post-formazione-digit.jpg
-sideImage: /img/locandina-asemblea-voci-aprile.jpg
+sideImage: /img/locandina-asemblea-voci-aprile-2.jpg
 ---
 
 # 📢 Unisciti a Noi! Assemblea VoCi nei Castelli il 22 Aprile
 
-# ATTENZIONE! L'assemblea è stata rinviata dal 14 Aprile al 22 Aprile 2025 alla Casa del Castello di Serravalle alle ore 19:00
+## AVVISO IMPORTANTE. A causa di un imprevisto la Sala che ci doveva ospitare per stasera non è disponibile. Ci troviamo dunque costretti a rimandare l'assemblea alla settimana prossima! Quindi il 22 Aprile 2025 alla Casa del Castello di Serravalle alle ore 19:00
 
 I **Volontari Civici nei Castelli** sono pronti ad accogliervi alla prossima **Assemblea dell'associazione VoCi nei Castelli**, con annesso **aperitivo!**
 
