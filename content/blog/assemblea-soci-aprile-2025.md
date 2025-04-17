@@ -1,13 +1,10 @@
 ---
 slogan: 22 Aprile 2025 - 📢 La tua voce, il futuro dei Castelli!
 titolo: Unisciti a Noi! Assemblea VoCi nei Castelli il 22 Aprile
-sottotitolo: Partecipa all'Assemblea, scopri i nuovi progetti e fai sentire la
-  tua voce per il futuro della comunità!
+sottotitolo: Partecipa all'Assemblea, scopri i nuovi progetti e fai sentire la tua voce per il futuro della comunità!
 tags: Eventi ed Iniziative
-seo_title: Assemblea VoCi nei Castelli – 22 Aprile 2025 a San Marino
-seo_description: Partecipa all'Assemblea VoCi nei Castelli il 22 Aprile 2025 a
-  Casa del Castello di Serravalle. Aperta a tutti i cittadini, con aperitivo e dibattito sui prossimi
-  eventi!
+seo_title: Assemblea VoCi nei Castelli – 22 Aprile 2025 a Serravalle
+seo_description: Partecipa all'Assemblea VoCi nei Castelli il 22 Aprile 2025 nella Casa del Castello di Serravalle. Aperta a tutti i cittadini, con aperitivo e dibattito sui prossimi eventi!
 author: Simone
 date: 08/04/2025
 update: 17/04/2025
