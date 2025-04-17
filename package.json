@@ -53,6 +53,7 @@
     "img-move":"cp -r content/assets/images/blog/* static/img/",
     "build-prod": "npm run img-move && gatsby build && gatsby serve",
     "build-dev": "npm run img-move && gatsby build && gatsby develop",
+    "deploy": "netlify deploy --prod --dir=public",
     "clean": "gatsby clean",
     "clean-public": "rm -rf ./public",
     "clean-cache": "rm -rf ./cache",

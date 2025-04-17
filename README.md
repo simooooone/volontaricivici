@@ -1,5 +1,10 @@
 # Gatsby Starter Blog
 
+```
+netlify deploy --prod --dir=public
+```
+
+
 This starter ships with the main Gatsby configuration files you might need.
 
 rm -rf ./node_modules && rm -rf ./package-lock.json && rm -rf ./cache && rm -rf ./public && && gatsby clean && npm install && gatsby build && gatsby serve && gatsby clean && gatsby develop
