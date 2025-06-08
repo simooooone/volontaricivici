@@ -27,9 +27,10 @@ const Menu = ({ setIsOpen }) => {
   const handleLinkClick = () => {
     if (typeof setIsOpen === "function") {
       setIsOpen(false)
-    } else {
-      console.log("setIsOpen is not a function")
     }
+    //else {
+    //  console.log("setIsOpen is not a function")
+    //}
   }
 
   return (

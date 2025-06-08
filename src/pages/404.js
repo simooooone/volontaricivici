@@ -18,7 +18,7 @@ const NotFoundPage = () => {
   `)
 
   return (
-    <Layout alt="404 Pagina non trovata!">
+    <Layout alt={`${data.site.siteMetadata.notFoundPageTitolo}`}>
       <Metatags
         titolo={`${data.site.siteMetadata.notFoundPageTitolo}`}
         description={`${data.site.siteMetadata.notFoundPageDescription}`}
@@ -37,4 +37,4 @@ const NotFoundPage = () => {
   )
 }
 
-export default NotFoundPage
+export default NotFoundPage;
