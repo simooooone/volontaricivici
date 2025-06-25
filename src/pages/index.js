@@ -1,13 +1,12 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Layout from "../components/layout"
-import Metatags from "../components/metatags"
-import immagineTop from "../../content/assets/images/img-top-home.jpg"
-import immagineUno from "../../content/assets/images/index-1.jpg"
-import TopPagine from "../components/topPagine"
-// import SliderBlog from "../components/sliderBlog"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Layout from '../components/layout';
+import Metatags from '../components/metatags';
+import TopPagine from '../components/topPagine';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const IndexPage = () => {
+
   const data = useStaticQuery(graphql`
     query SiteIndexQuery {
       site {
@@ -18,24 +17,54 @@ const IndexPage = () => {
           acronimo
         }
       }
+      immagineQuery: file(relativePath: { eq: "blog-41.jpg" }) {
+        # Path relative to 'content/assets/images/'
+        childImageSharp {
+          gatsbyImageData(
+            formats: [AUTO, WEBP] # Request WebP (and AUTO for fallback)
+            placeholder: BLURRED # Or DOMINANT_COLOR, TRACED_SVG
+            width: 1920 # Optional: specify a base width
+            # Add other gatsby-plugin-image options as needed:
+            quality: 60
+            layout: CONSTRAINED
+          )
+        }
+      }
+      immagineLaterale: file(relativePath: { eq: "blog-lateral-41.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(
+            formats: [AUTO, WEBP]
+            placeholder: BLURRED
+            width: 600 # Adjust as needed
+            quality: 60
+            layout: CONSTRAINED
+          )
+        }
+      }
     }
-  `)
+  `);
 
-  const metadata = data?.site?.siteMetadata
+  const immagineTopData = data?.immagineQuery?.childImageSharp?.gatsbyImageData;
+  const immagineLateraleData = data?.immagineLaterale?.childImageSharp?.gatsbyImageData;
+  const metadata = data?.site?.siteMetadata;
 
   return (
     <>
       <Layout>
         <Metatags
+          location="/"
           titolo={metadata.homeTitolo || ""}
-          description={metadata.homeDescription || ""}
+          description={ metadata.homeDescription || "" }
+          immagineGatsbyData={ immagineTopData }
         />
         <TopPagine
-          alt="Vo.Ci. Asspociazione San Marino"
-          immagineTop={immagineTop}
-          slogan={metadata.acronimo || ""}
+          alt={"Vo.Ci. Associazione San Marino"}
+          slogan={ metadata.acronimo || '' }
+          immagineGatsbyData={ immagineTopData }
           dedica="Un'associazione per San Marino"
-          displayExtended="block" />
+          displayExtended="block" 
+        
+          />
         <div className="container-fluid" id="content">
           <div className="row blocco">
             <div className="cont-testo col-lg-6 col-12">
@@ -70,7 +99,12 @@ const IndexPage = () => {
               </p>
             </div>
             <div className="cont-img order-lg-first col-lg-6 px-0">
-              <img alt="Immagine Chi Siamo" src={immagineUno} className="img" />
+            <GatsbyImage
+                                image={ immagineLateraleData }
+                                loading="lazy"
+                                alt="Immagine Chi Sono"
+                                className="h-image-detail w-100"
+                            />
             </div>
           </div>
         </div>

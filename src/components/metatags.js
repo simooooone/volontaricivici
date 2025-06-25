@@ -1,9 +1,8 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
 const Metatags = props => {
-  // {titolo, description}
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -15,79 +14,80 @@ const Metatags = props => {
         }
       }
     }
-  `)
+  `);
 
   return (
-    <Helmet htmlAttributes={{ lang: "it" }}>
-      <title>{`${props.titolo} | ${data.site.siteMetadata.titolo}`}</title>
+    <Helmet htmlAttributes={ { lang: 'it' } }>
+      <title>{ `${data.site.siteMetadata.titolo}` }</title>
       <meta
         name="description"
-        content={`${props.description} | ${data.site.siteMetadata.description}`}
+        content={ `${data.site.siteMetadata.description}` }
       />
-      <meta name="description" content={`${data.site.siteMetadata.author}`} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+      />
+      <link rel="canonical" href={ `${"https://www.volontaricivici.sm"}${props.location}` } />
+      <meta name="apple-mobile-web-app-title" content="VolontariCivici" />
       <link
         rel="apple-touch-icon"
         sizes="120x120"
-        href="../favicons/apple-touch-icon.png"
+        href="../content/assets/images/apple-touch-icon.png"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="32x32"
-        href="../favicons/favicon-32x32.png"
+        href="../content/assets/images/favicon-32x32.png"
       />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
         rel="icon"
         type="image/png"
         sizes="16x16"
-        href="../favicons/favicon-16x16.png"
+        href="../content/assets/images/favicon-16x16.png"
       />
-      <link
+     <link
         rel="mask-icon"
-        href="../favicons/safari-pinned-tab.svg"
         color="#ffffff"
-      />
+        href="../content/assets/images/safari-pinned-tab.svg"
+/>
       <meta name="msapplication-TileColor" content="#2d89ef" />
       <meta name="theme-color" content="#ffffff" />
       <meta
         itemprop="name"
-        content={`${props.titolo} | ${data.site.siteMetadata.titolo}`}
+        content={ `${props.titolo} | ${data.site.siteMetadata.titolo}` }
       />
-      {/* <meta
-        name="google-site-verification"
-        content="OWXaxaKJ9W7togjVQe05PEuQCf2gi7ytdB2RW3h9jk8"
-      /> */}
-      <meta
-        itemprop="description"
-        content={`${props.description} | ${data.site.siteMetadata.description}`}
-      />
-      <meta itemprop="image" content="" />
-      <meta property="og:url" content={`${data.site.siteMetadata.siteUrl}`} />
       <meta property="og:type" content="website" />
       <meta
-        property="og:title"
-        content={`${props.titolo} | ${data.site.siteMetadata.titolo}`}
+        itemprop="description"
+        content={ `${props.description} | ${data.site.siteMetadata.description}` }
       />
+      <meta itemprop="image" content={ `${props.featuredImage}` }
+      />
+      <meta property="og:url" content={ `${data.site.siteMetadata.siteUrl}` }
+      />
+      <meta property="og:title" content={ `${props.titolo} | ${data.site.siteMetadata.titolo}` } />
       <meta
         property="og:description"
-        content={`${props.description} | ${data.site.siteMetadata.description}`}
+        content={ `${props.description} | ${data.site.siteMetadata.description}` }
       />
-      <meta property="og:image" content="" />
+      <meta property="og:image"
+        content={ `${props.featuredImage}` }
+      />
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:title"
-        content={`${props.titolo} | ${data.site.siteMetadata.titolo}`}
+        content={ `${props.titolo} | ${data.site.siteMetadata.titolo}` }
       />
       <meta
         name="twitter:description"
-        content={`${props.description} | ${data.site.siteMetadata.description}`}
+        content={ `${props.description} | ${data.site.siteMetadata.description}` }
       />
-      <meta name="twitter:image" content="" />
+      {/* <meta name="twitter:image"
+        content={ `${props.immagineGatsbyData.placeholder.fallback}` }
+      /> */}
     </Helmet>
-  )
-}
+  );
+};
 
-export default Metatags
+export default Metatags;

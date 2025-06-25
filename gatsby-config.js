@@ -7,6 +7,8 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+const path = require("path");
+
 module.exports = {
   siteMetadata: {
     title: `Vo.Ci. Nei Castelli`,
@@ -33,7 +35,7 @@ module.exports = {
     direttivoDescription:
       "Il direttivo di Vo.Ci. Nei Castelli è composto da un gruppo di persone che si occupano della gestione dell'associazione",
     direttivoAcronimo: "Direttivo",
-    chiSiamoTitolo: "Cjhi Siamo Vo.Ci. Nei Castelli",
+    chiSiamoTitolo: "Chi Siamo Vo.Ci. Nei Castelli",
     chiSiamoDescription:
       "Siamo un'associazione di volontariato sammarinese che si occupa di varie attività ed eventi in Repubblica",
     chiSiamoAcronimo: "Chi Siamo",
@@ -50,9 +52,9 @@ module.exports = {
     notFoundPageAcronimo: "404 | Pagina non trovata",
     privacyTitolo: "Privacy policy",
     privacyDescription: "Privacy policy Vo.Ci. Nei Castelli",
+    privacyAcronimo: "Privacy policy",
   },
   plugins: [
-    `gatsby-plugin-decap-cms`,
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -143,6 +145,27 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+          name: 'images',
+          path: path.join(__dirname, "content/assets/images/blog")
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+          name: 'images',
+          path: path.join(__dirname, "content/assets/images")
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+          name: `blog`,
+          path: path.join(__dirname, "content/blog")
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Associazione Vo.Ci. nei Castelli San Marino`,
@@ -153,27 +176,6 @@ module.exports = {
         icon: `content/assets/images/logo.png`,
         background_color: `#663399`,
         theme_color: `#663399`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "blog-images",
-        path: `${__dirname}/content/assets/images/blog`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: `${__dirname}/content/assets/images`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "posts",
-        path: `${__dirname}/content/blog`,
       },
     },
     {
@@ -195,14 +197,25 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-sass`,
-    "gatsby-plugin-postcss",
+    `gatsby-plugin-decap-cms`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    "gatsby-plugin-offline",
+    `gatsby-plugin-offline`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-postcss`,
+    {
+        resolve: `gatsby-plugin-purgecss`,
+        options: {
+            printRejected: true,
+            develop: false,
+            tailwind: false,
+            safelist: {
+                standard: [/^btn/, /^col/, /^row/, /^container/, /^navbar/, /^text-/, /^bg-/, /^fade/, /^show/, /^code/, /^pre/, /^blockquote/, /^blockquote-footer/, /^iubenda-black/, /^iubenda-noiframe/, /^iubenda-embed/],
+            }
+        },
+    },
   ],
 }

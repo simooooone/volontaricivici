@@ -1,8 +1,8 @@
-import React, { useEffect } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Header from "./header"
-import Footer from "./footer"
-import BarraMobile from "./barraMobile"
+import React, { useEffect } from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Header from './header'
+import Footer from './footer'
+import BarraMobile from './barraMobile'
 
 const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
@@ -20,11 +20,11 @@ const Layout = ({ children, location }) => {
   useEffect(() => {
     // Check if the URL contains a hash (e.g., #main)
     if (location && location.hash) {
-      const hash = location.hash.split("?")[0]; // Remove query string
+      const hash = location.hash.split('?')[0] // Remove query string
       const element = document.querySelector(hash);
 
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" }) // Smooth scrolling
+        element.scrollIntoView({ behavior: 'smooth' }) // Smooth scrolling
       }
     }
   }, [location])

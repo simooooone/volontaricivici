@@ -1,6 +1,6 @@
-import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import { Location } from "@reach/router"
+import React, { useState } from 'react';
+import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Location } from '@reach/router';
 import moduloIscrizione from "../../content/assets/documenti/scheda-iscrizione-voci-nei-castelli.pdf"
 
 const Menu = ({ setIsOpen }) => {
@@ -11,27 +11,40 @@ const Menu = ({ setIsOpen }) => {
           node {
             frontmatter {
               tags
+              published
             }
           }
         }
       }
     }
-  `)
+  `);
 
-  const tags = [
-    ...new Set(
-      data.allMarkdownRemark.edges.flatMap(edge => edge.node.frontmatter.tags)
-    ),
-  ];
+  const [isHovered, setIsHovered] = useState(false);
+
+  const getPublishedPosts = () => {
+    return data.allMarkdownRemark.edges.filter(
+      edge => edge.node.frontmatter.published
+    );
+  };
+
+
+  const getAllTags = posts => {
+    const allTags = new Set();
+    posts.forEach(edge => {
+      const tags = edge.node.frontmatter.tags || [];
+      tags.forEach(tag => allTags.add(tag));
+    });
+    return Array.from(allTags);
+  };
+
+
+  const tags = getAllTags(getPublishedPosts());
 
   const handleLinkClick = () => {
-    if (typeof setIsOpen === "function") {
-      setIsOpen(false)
+    if (typeof setIsOpen === 'function') {
+      setIsOpen(false);
     }
-    //else {
-    //  console.log("setIsOpen is not a function")
-    //}
-  }
+  };
 
   return (
     <Location>
@@ -49,42 +62,46 @@ const Menu = ({ setIsOpen }) => {
             </Link>
           </li>
           <li className="nav-item dropdown-container">
-            <a
-              href="#" 
-              className={`voce-blog link-underlined white greyed ${
-                location.pathname.startsWith("/blog") ? "active" : ""
-              }`}
+            <button
+              onClick={ e => e.preventDefault() }
+              onMouseEnter={ () => setIsHovered(true) }
+              onMouseLeave={ () => setIsHovered(false) }
+              className={ `voce-blog link-underlined white greyed ${isHovered ? 'opened' : ''} ${location.pathname.startsWith('/blog')
+                ? 'active'
+                : ''
+                }` }
             >
               Blog
-            </a>
+            </button>
+
             <div className="dropdown">
               <ul className="dropdown-list">
                 <li key="all-posts" className="nav-subitem">
                   <Link
-                    to="/blog#content"
+                    to="/blog"
                     className="link-underlined normal"
                     activeClassName="active"
                     aria-label="Tutti i Post"
-                    partiallyActive={true}
-                    onClick={handleLinkClick}
+                    partiallyActive={ true }
+                    onClick={ handleLinkClick }
                   >
                     Tutti i Post
                   </Link>
                 </li>
-                {tags.map(tag => (
-                  <li key={tag} className="nav-subitem">
+                { tags.map(tag => (
+                  <li key={ tag } className="nav-subitem">
                     <Link
-                      to={`/blog#content?tag=${encodeURIComponent(tag)}`}
+                      to={ `/blog?tag=${encodeURIComponent(tag.replace(/\s+/g, '_'))}` }
                       className="link-underlined normal"
                       activeClassName="active"
-                      aria-label={`Post con tag ${tag}`}
-                      state={{ activeTag: tag }}
-                      onClick={handleLinkClick}
+                      aria-label={ `Post con tag ${tag}` }
+                      state={ { activeTag: tag } }
+                      onClick={ handleLinkClick }
                     >
-                      {tag}
+                      { tag }
                     </Link>
                   </li>
-                ))}
+                )) }
               </ul>
             </div>
           </li>
@@ -93,9 +110,9 @@ const Menu = ({ setIsOpen }) => {
               className="link-underlined white"
               target="_blank"
               alt="Modulo di iscrizione all'associazione Vo.Ci nei Castelli"
-              href={moduloIscrizione}
+              href={ moduloIscrizione }
               rel="noopener noreferrer"
-              onClick={handleLinkClick}
+              onClick={ handleLinkClick }
             >
               Modulo di Iscrizione
             </a>
@@ -103,7 +120,7 @@ const Menu = ({ setIsOpen }) => {
         </ul>
       )}
     </Location>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

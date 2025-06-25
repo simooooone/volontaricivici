@@ -1,87 +1,146 @@
 import React from "react"
-import { useState } from "react"
-import { graphql, Link } from "gatsby"
+import { graphql, Link } from "gatsby" // Make sure Link is imported
 import Layout from "../components/layout"
 import Metatags from "../components/metatags"
-import FsLightbox from "fslightbox-react"
 import TopPagine from "../components/topPagine"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
-export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      html
-      frontmatter {
-        slogan
-        titolo
-        sottotitolo
-        tags
-        seo_title
-        seo_description
-        author
-        date
-        update
-        published
-        featuredImage
-        sideImage
-      }
-    }
-  }
-`
+const BlogPost = (props) => {
+  const { data, pageContext } = props
+  // console.log('pageContext: ', pageContext);
+  // console.log("data", data);
 
-const BlogPost = ({ data }) => {
-  const [toggler, setToggler] = useState(false)
   const post = data.markdownRemark
   const front = post.frontmatter
+  const immagineTopData = getImage(front.featuredImage?.childImageSharp?.gatsbyImageData)
+  const immagineSideData = getImage(front.sideImage?.childImageSharp?.gatsbyImageData)
+
+  //console.log("BlogPost featuredImage: ", front.featuredImage?.childImageSharp?.gatsbyImageData);
+  //console.log("BlogPost sideImage: ", front.sideImage?.childImageSharp?.gatsbyImageData);
+  //console.log("BlogPost immagineTopData: ", immagineTopData);
+  //console.log("BlogPost immagineSideData: ", immagineSideData);
+
   return (
     <Layout>
       <Metatags
-        titolo={front.seo_title || ``}
-        description={front.seo_description || ``}
+        location={ `/blog${post.fields.slug}` }
+        titolo={ front.seo_title || `` }
+        description={ front.seo_description || `` }
+        immagineGatsbyData={ immagineTopData || null }
       />
       <TopPagine
-        alt={front.seo_title}
-        immagineTop={front.featuredImage}
-        slogan={ front.slogan } />
+        alt={ front.seo_title || front.titolo || 'Immagine principale del post' }
+        slogan={ front.slogan }
+        immagineGatsbyData={ immagineTopData || null }
+      />
       <div className="container-fluid" id="content">
-        <div className="row blocco pt-5">
-          <div className="cont-img sticky-cont col-md-4 col-12">
-            <button onClick={() => setToggler(!toggler)} className="btn-img">
-              <img
-                src={front.sideImage}
-                alt={`${front.titolo}`}
-                className="bordo"
+        <div className="row blocco pt-4 pt-md-5">
+          <div className="cont-img sticky-cont col-md-4 col-12 d-none d-md-block">
+            { immagineSideData ? (
+              <GatsbyImage
+                image={ immagineSideData }
+                loading="lazy"
+                alt={ `${front.titolo}` }
+                className="bordo h-image-detail w-100"
               />
-            </button>
-            <FsLightbox toggler={toggler} sources={[front.sideImage]} />
+            ) : null }
           </div>
           <div className="cont-testo testo pt-0 col-md-8 col-12">
-            <h3 className="tags">{front.tags}</h3>
+            <h3 className="tags">{ front.tags }</h3>
             <br />
-            <h1 className="titolo">{front.titolo}</h1>
-            <h2 className="sottotitolo">{front.sottotitolo}</h2>
-            <div className="author">Di: {front.author}</div>
+            <h1 className="titolo">{ front.titolo }</h1>
+            <h2 className="sottotitolo">{ `${front.slogan}  ${front.sottotitolo}` }</h2>
+            <div className="author">Di: { front.author }</div>
             <p className="cont-date">
-              <em className="date">Data pubblicazione: {front.date}</em>
-              <em className="update">Ultimo aggiornamento: {front.update}</em>
+              <em>Data: { front.date }</em>
             </p>
-            <br />
             <div
-              dangerouslySetInnerHTML={{
+              dangerouslySetInnerHTML={ {
                 __html: post.html,
-              }}
+              } }
             ></div>
-            <p>
-              <Link to="/blog" className="link-underlined normal maxc d-block"
-              aria-label="Torna all'elenco">
-                &lsaquo; Torna all'elenco
-              </Link>
-            </p>
+            <div className="container-fluid" id="content">
+              <div className="row blocco mt-5">
+                <div className="col-12 footer-post">
+                  <Link
+                    to={ pageContext.previous ? `/blog${pageContext.previous.fields.slug}` : '#' }
+
+                    className="d-inline-block link-underlined normal maxc"
+                    aria-disabled={ pageContext.previous ? "false" : "true" }
+
+                  >
+                    &lsaquo; Precedente
+                  </Link>
+                  <Link
+                    to="/blog"
+                    className="d-inline-block link-to-list link-underlined normal maxc"
+                    aria-label="Torna all'elenco"
+                  >
+                    Torna all'elenco
+                  </Link>
+                  <Link
+                    to={ pageContext.next ? `/blog${pageContext.next.fields.slug}` : '#' }
+
+                    className="d-inline-block link-underlined normal maxc"
+                    aria-disabled={ pageContext.next ? "false" : "true" }
+                  >
+                    Successivo &rsaquo;
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </Layout>
   )
 }
+
+export const pageQuery = graphql`
+  query BlogPostBySlug($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      id
+      html
+      fields {
+        slug
+      }
+      frontmatter {
+        featuredImage {
+          childImageSharp {
+            gatsbyImageData(
+              formats: [AUTO, WEBP]
+              placeholder: BLURRED
+              width: 1920
+              layout: CONSTRAINED
+              quality: 60
+            )
+          }
+        }
+        sideImage {
+          childImageSharp {
+            gatsbyImageData(
+              formats: [AUTO, WEBP]
+              placeholder: BLURRED
+              width: 1000
+              layout: CONSTRAINED
+              quality: 60
+            )
+          }
+        }
+        slogan
+        titolo
+        sottotitolo
+        tags
+        index
+        seo_title
+        seo_description
+        author
+        date
+        update
+        published
+      }
+    }
+  }
+`
 
 export default BlogPost

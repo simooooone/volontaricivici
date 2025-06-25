@@ -1,19 +1,19 @@
 ---
-slogan: 💡 Facilitazione digitale per tutti!
-titolo: "Punti di Facilitazione Digitale: Assistenza Gratuita per i Cittadini"
-sottotitolo: Scopri dove e quando accedere al nuovo servizio per supportarti
-  nell’uso dei servizi online della Pubblica Amministrazione!
-tags: Progetti
-seo_title: Nuovi Punti di Facilitazione Digitale a San Marino
-seo_description: Scopri i nuovi Punti di Facilitazione Digitale attivati
-  dall’Associazione Vo.Ci. nei Castelli per aiutarti con i servizi online della
-  PA!
-author: Melissa
-date: 15/02/2025
-update: 03/03/2025
+slogan: '💡Facilitazione digitale per tutti!'
+titolo: 'Punti di Facilitazione Digitale: Assistenza Gratuita per i Cittadini'
+sottotitolo: 'Scopri dove e quando accedere al nuovo servizio per supportarti nell’uso dei servizi online della Pubblica Amministrazione!'
+tags: ['Progetti']
+seo_title: 'Nuovi Punti di Facilitazione Digitale a San Marino'
+seo_description: 'Scopri i nuovi Punti di Facilitazione Digitale attivati dall’Associazione Vo.Ci. nei Castelli per aiutarti con i servizi online della PA!'
+author: 'Melissa'
+date: '15/02/2025'
+update: '03/03/2025'
 published: true
-featuredImage: /img/foto-post-formazione-digit.jpg
-sideImage: /img/foto-post-formazione-digit-laterale.jpg
+featuredImage: '../assets/images/blog/foto-post-formazione-digit.jpg'
+sideImage: '../assets/images/blog/foto-post-formazione-digit-laterale.jpg'
+index: 1
+langKey: 'it'
+description: ''
 ---
 
 # 💻 Punti di Facilitazione Digitale: Un Nuovo Servizio per i Cittadini

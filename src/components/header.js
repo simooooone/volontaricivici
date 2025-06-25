@@ -1,35 +1,31 @@
-import React, { useEffect } from "react"
-import Menu from "./menu"
-import Logo from "./logo"
+import React, { useEffect, useCallback } from 'react';
+import Menu from './menu';
+import Logo from './logo';
 
 const Header = () => {
+  const handleScroll = useCallback(async () => {
+    const scrollTop = window.scrollY;
+
+    if (scrollTop >= 1) {
+      document.querySelector('.barra-navigazione').classList.add('fix');
+    } else {
+      document.querySelector('.barra-navigazione').classList.remove('fix');
+    }
+  }, []);
+  
   useEffect(() => {
     if (window.innerWidth > 991) {
-      window.addEventListener("scroll", handleScroll)
+      window.addEventListener('scroll', handleScroll);
+
       return () => {
-        window.removeEventListener("scroll", handleScroll)
-      }
+        window.removeEventListener('scroll', handleScroll);
+      };
     }
-  }, [])
-
-  const handleScroll = () => {
-    const scrollTop = window.scrollY
-    const scrollHeight = document.documentElement.scrollHeight
-    const clientHeight = window.innerHeight
-    const position = Math.ceil(
-      (scrollTop / (scrollHeight - clientHeight)) * 100
-    )
-
-    if (position > 10) {
-      document.querySelector(".barraNavigazione").classList.add("fix")
-    } else {
-      document.querySelector(".barraNavigazione").classList.remove("fix")
-    }
-  }
+  }, [handleScroll]);
 
   return (
-    <header>
-      <div className="barraNavigazione w-full">
+    <header className="header">
+      <div className="barra-navigazione w-full">
         <div className="cont-barra px-4">
           <div className="cont-logo">
             <Logo />
@@ -37,15 +33,10 @@ const Header = () => {
           <div className="cont-menu">
             <Menu />
           </div>
-          {/* <div className="cont-btn">
-            <Link className="btn-contatti" to="/contatti">
-              Contattaci per partecipare
-            </Link>
-          </div> */}
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

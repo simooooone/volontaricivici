@@ -1,9 +1,15 @@
 [build]
-  command = "npm run build-prod"
+  command = "npm run build"
   publish = "public"
 
 [dev]  
-  command = "npm run build-dev"
+  command = "npm run start"
   port = 8888
   targetPort = 8000
-  framework = "#custom"
+  framework = "gatsby"
+
+[[redirects]]
+  from = "https://volontaricivici.netlify.app/*"
+  to = "https://www.volontaricivici.sm/:splat"
+  status = 301
+  force = true

@@ -1,11 +1,21 @@
-import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import Logo from "./logo"
+import React from 'react';
+import { useStaticQuery, graphql, Link } from 'gatsby';
+import Logo from './logo';
 import coordinateBancarie from "../../content/assets/documenti/coordinate-bancarie-voci-nei-castelli.pdf"
 import statuto from "../../content/assets/documenti/statuto-voci-nei-castelli.pdf"
 import attoCostitutivo from "../../content/assets/documenti/atto-costitutivo-voci-nei-castelli.pdf"
 
 const Footer = () => {
+  const getYear = () => {
+    const date = new Date().getFullYear();
+    const blogPubYear = 2025;
+    if (date === blogPubYear) {
+        return blogPubYear;
+    } else {
+        return blogPubYear + ' - ' + date;
+    }
+  };
+
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -25,9 +35,9 @@ const Footer = () => {
         }
       }
     }
-  `)
+  `);
 
-  const dati = data.site.siteMetadata
+  const dati = data.site.siteMetadata;
 
   return (
     <>
@@ -110,7 +120,7 @@ const Footer = () => {
           </div>
           <div className="row px-5 pt-5">
             <div className="col-12 text-md-center">
-              &copy; {new Date().getFullYear()} {dati.azienda}
+              &copy; 2024 - {getYear()} {dati.azienda}
             </div>
           </div>
         </div>

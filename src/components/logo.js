@@ -1,36 +1,50 @@
-import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import logo from "../../content/assets/images/logo.png"
+import React from 'react';
+import { useStaticQuery, graphql, Link } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const Logo = ({ width, height, className }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          titolo
-        }
-      }
-    }
-  `)
-
   const imgProps = {
     ...(width && { width }),
     ...(height && { height }),
     ...(className && { className }),
-  }
+  };
 
-  imgProps.className = className ? `${className} logo` : "logo"
+  const data = useStaticQuery(graphql`
+        query TopQuery {
+            site {
+                siteMetadata {
+                    titolo
+                }
+            }
+            logoQuery: file(relativePath: { eq: "logo.webp" }) {
+                childImageSharp {
+                    gatsbyImageData(
+                        formats: [AUTO, WEBP]
+                        placeholder: BLURRED
+                        width: 170
+                        height: 170
+                        quality: 80
+                        layout: CONSTRAINED
+                    )
+                }
+            }
+        }
+    `);
+
+  // console.log("data", data);
+
+  const logoTopData = data?.logoQuery?.childImageSharp?.gatsbyImageData;
+  imgProps.className = className ? `${className} logo` : 'logo';
 
   return (
     <Link to="/" aria-label="Vo.Ci. nei castelli" className="logo">
-      <img
-        {...imgProps}
-        alt={`Logo ${data?.site?.siteMetadata?.titolo || ""}`}
-        src={ logo }
-        
+      <GatsbyImage
+        { ...imgProps }
+        image={ logoTopData }
+        alt={ `Logo ${data?.site?.siteMetadata?.titolo || ''}` }
       />
     </Link>
-  )
-}
+  );
+};
 
-export default Logo
+export default Logo;

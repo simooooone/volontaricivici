@@ -1,22 +1,22 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
+// import React from "react"
+// import { graphql, Link } from "gatsby"
 
 const SliderBlog = ({ data }) => {
-  const filteredPosts = selectedTag
-    ? data.allMarkdownRemark.edges
-        .filter(edge => edge.node.frontmatter.tags.includes(selectedTag))
-        .sort(
-          (a, b) =>
-            new Date(b.node.frontmatter.date) - new Date(a.node.frontmatter.date)
-        )
-    : data.allMarkdownRemark.edges.sort(
-        (a, b) =>
-          new Date(b.node.frontmatter.date) - new Date(a.node.frontmatter.date)
-      )
+  // const filteredPosts = selectedTag
+  //   ? data.allMarkdownRemark.edges
+  //       .filter(edge => edge.node.frontmatter.tags.includes(selectedTag))
+  //       .sort(
+  //         (a, b) =>
+  //           new Date(b.node.frontmatter.date) - new Date(a.node.frontmatter.date)
+  //       )
+  //   : data.allMarkdownRemark.edges.sort(
+  //       (a, b) =>
+  //         new Date(b.node.frontmatter.date) - new Date(a.node.frontmatter.date)
+  //     )
 
   return (
     <>
-      {filteredPosts.length ? (
+      {/* {filteredPosts.length ? (
         <div className="container-fluid pt-3 pb-5">
           <div className="row">
             {filteredPosts.map(edge => {
@@ -54,45 +54,45 @@ const SliderBlog = ({ data }) => {
             })}
           </div>
         </div>
-      ) : null}
+      ) : null} */}
     </>
   )
 }
 
-export const query = graphql`
-  query {
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            titolo
-            sottotitolo
-            seo_description
-            seo_title
-            slogan
-            date
-            update
-            author
-            published
-            featuredImage
-            sideImage
-            tags
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
+// export const query = graphql`
+//   query {
+//     allMarkdownRemark {
+//       edges {
+//         node {
+//           frontmatter {
+//             titolo
+//             sottotitolo
+//             seo_description
+//             seo_title
+//             slogan
+//             date
+//             update
+//             author
+//             published
+//             featuredImage
+//             sideImage
+//             tags
+//           }
+//           fields {
+//             slug
+//           }
+//         }
+//       }
+//     }
 
-    site {
-      siteMetadata {
-        blogTitolo
-        blogDescription
-        blogAcronimo
-      }
-    }
-  }
-`
+//     site {
+//       siteMetadata {
+//         blogTitolo
+//         blogDescription
+//         blogAcronimo
+//       }
+//     }
+//   }
+// `
 
 export default SliderBlog
