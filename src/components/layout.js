@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import Footer from './footer'
 import BarraMobile from './barraMobile'
+import '../styles/global.css'
 
 const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`

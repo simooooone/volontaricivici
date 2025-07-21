@@ -99,12 +99,12 @@ const IndexPage = () => {
               </p>
             </div>
             <div className="contImg order-lg-first col-lg-6 px-0">
-            <GatsbyImage
-                                image={ immagineLateraleData }
-                                loading="lazy"
-                                alt="Immagine Chi Sono"
-                                className="h-image-detail w-100"
-                            />
+              <GatsbyImage
+                image={ immagineLateraleData }
+                loading="lazy"
+                alt="Immagine Chi Sono"
+                className="h-image-detail w-100"
+              />
             </div>
           </div>
         </div>
@@ -115,7 +115,7 @@ const IndexPage = () => {
         </div>
         <div className="container mb-3">
           <div className="row bloccoDirettivo">
-            <div className="cont-direttivo offset-md-4 col-md-4 col-12">
+            <div className="contDirettivo offset-md-4 col-md-4 col-12">
               <div className="carica">Presidente</div>
               <div className="nome">Melissa Mussoni</div>
             </div>
@@ -123,27 +123,27 @@ const IndexPage = () => {
         </div>
         <div className="container mb-3">
           <div className="row bloccoDirettivo">
-            <div className="cont-direttivo col-md-4 col-6">
+            <div className="contDirettivo col-md-4 col-6">
               <div className="carica">Segretario</div>
               <div className="nome">Paolo Bartolini</div>
             </div>
-            <div className="cont-direttivo col-md-4 col-6">
+            <div className="contDirettivo col-md-4 col-6">
               <div className="carica">Vice-presidente</div>
               <div className="nome">Lino Sbraccia</div>
             </div>
-            <div className="cont-direttivo col-md-4 col-6">
+            <div className="contDirettivo col-md-4 col-6">
               <div className="carica">Tesoriere</div>
               <div className="nome">Maddalena Muccioli</div>
             </div>
-            <div className="cont-direttivo col-md-4 col-6">
+            <div className="contDirettivo col-md-4 col-6">
               <div className="carica">Consigliere</div>
               <div className="nome">Anna Fiorelli</div>
             </div>
-            <div className="cont-direttivo col-md-4 col-6">
+            <div className="contDirettivo col-md-4 col-6">
               <div className="carica">Consigliere</div>
               <div className="nome">Roberto Ercolani</div>
             </div>
-            <div className="cont-direttivo col-md-4 col-6">
+            <div className="contDirettivo col-md-4 col-6">
               <div className="carica">Consigliere</div>
               <div className="nome">Gabriele Muratori</div>
             </div>

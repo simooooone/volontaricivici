@@ -1,5 +1,36 @@
 {
-  "cSpell.words": [
+    "[javascript, javascriptreact, typescript, typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2
+    },
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "editor.suggestSelection": "first",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": true,
+    "editor.insertSpaces": true,
+    "editor.indentSize": "tabSize",
+    "editor.detectIndentation": true,
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.tabWidth": 2,
+    "prettier.useTabs": true,
+    "tailwindCSS.suggestions": true,
+    "tailwindCSS.emmetCompletions": true,
+    "emmet.showAbbreviationSuggestions": true,
+    "terminal.integrated.suggest.quickSuggestions": true,
+   "cSpell.words": [
     "𝐀𝐋𝐋'𝐔𝐎𝐕𝐎",
     "𝐚𝐧𝐭𝐢𝐜𝐢𝐩𝐨",
     "𝑎𝑝𝑝𝑙𝑖𝑐𝑎𝑡𝑎",
@@ -81,5 +112,36 @@
     "𝐯𝐨𝐜𝐢𝐧𝐞𝐢𝐜𝐚𝐬𝐭𝐞𝐥𝐥𝐢",
     "𝐕𝐨𝐥𝐨𝐧𝐭𝐚𝐫𝐢",
     "𝑣𝑜𝑙𝑜𝑛𝑡𝑎𝑟𝑖𝑎𝑡𝑜"
-  ]
+  ],
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "github.copilot.chat.scopeSelection": true,
+    "github.copilot.nextEditSuggestions.fixes": true,
+    "github.copilot.chat.codesearch.enabled": true,
+    "github.copilot.chat.agent.thinkingTool": true,
+    "github.copilot.chat.editor.temporalContext.enabled": true,
+    "github.copilot.chat.completionContext.typescript.mode": "on",
+    "github.copilot.chat.terminalChatLocation": "terminal",
+    "github.copilot.chat.followUps": "always",
+    "github.copilot.chat.generateTests.codeLens": true,
+    "github.copilot.chat.languageContext.fix.typescript.enabled": true,
+    "github.copilot.chat.languageContext.inline.typescript.enabled": true,
+    "github.copilot.chat.languageContext.typescript.enabled": true,
+    "github.copilot.chat.search.keywordSuggestions": true,
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }

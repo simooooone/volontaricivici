@@ -37,7 +37,7 @@ const SliderBlog = ({ data }) => {
                     </div>
                     <div className="post">
                       <Link
-                        className="link-post linkUnderlined"
+                        className="linkPost linkUnderlined"
                         to={`/blog/${edge.node.fields.slug}`}
                         aria-label={`${post.titolo}`}
                       >

@@ -93,7 +93,7 @@ const Blog = ({ location, data }) => {
               <button
                 key={ tag }
                 onClick={ () => handleTagClick(tag) }
-                className={ `btn-tag linkUnderlined normal maxc d-block ${selectedTag === tag ? 'active' : ''
+                className={ `btnTag linkUnderlined normal maxc d-block ${selectedTag === tag ? 'active' : ''
                   }` }
               >
                 { tag }
@@ -102,7 +102,7 @@ const Blog = ({ location, data }) => {
             { tags.length > 0 && (
               <button
                 onClick={ () => handleTagClick(null) }
-                className={ `btn-tag linkUnderlined normal maxc d-block ${selectedTag === null ? 'active' : ''
+                className={ `btnTag linkUnderlined normal maxc d-block ${selectedTag === null ? 'active' : ''
                   }` }
               >
                 Mostra Tutti
@@ -138,7 +138,7 @@ const Blog = ({ location, data }) => {
                   </div>
                   <div className="post">
                     <Link
-                      className="link-post linkUnderlined"
+                      className="linkPost linkUnderlined"
                       to={ `/blog${edge.node.fields.slug}` }
                       aria-label={ `${post.titolo}` }
                     >
@@ -172,7 +172,7 @@ export const data = graphql`
         blogAcronimo
       }
     }
-    immagineQuery: file(relativePath: { eq: "img-top-blog.jpg" }) {
+    immagineQuery: file(relativePath: { eq: "imgTop-blog.jpg" }) {
       childImageSharp {
         gatsbyImageData(
           formats: [AUTO, WEBP]

@@ -43,7 +43,7 @@ const Footer = () => {
     <>
       <footer className="footer py-5 mt-5 container-fluid">
         <div className="row px-5">
-          <div className="col-lg-4 col-12 border-blocco-logo">
+          <div className="col-lg-4 col-12 borderBloccoLogo">
             <div className="mb-4">
               <Logo width="90" alt={dati.acronimo} />
             </div>
@@ -53,7 +53,7 @@ const Footer = () => {
             <br />
             <b className="sottotitolo">{dati.slogan}</b>
           </div>
-          <div className="col-lg-4 col-md-6 col-12 bordo-contatti-footer">
+          <div className="col-lg-4 col-md-6 col-12 bordoContattiFooter">
             <h3 className="titolo2">Contatti</h3>
             {dati.azienda}
             <br />

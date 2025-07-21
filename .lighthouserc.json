@@ -1,0 +1,38 @@
+{
+  "ci": {
+    "collect": {
+      "url": [
+        "https://devserver-preview--comecapire.netlify.app",
+        "https://devserver-preview--comecapire.netlify.app/blog/",
+        "https://devserver-preview--comecapire.netlify.app/blog/chi_era_gesu/"
+      ],
+      "startServerCommand": "npm run start",
+      "numberOfRuns": 1,
+      "startServerReadyPattern": "ready on",
+      "settings": {
+        "preset": "desktop",
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "seo"
+        ],
+        "throttlingMethod": "simulate"
+      }
+    },
+    "assert": {
+      "preset": "lighthouse:recommended"
+    },
+    "artifactName": {},
+    "basicAuthPassword": {},
+    "basicAuthUsername": {},
+    "budgetPath": {},
+    "configPath": {},
+    "runs": {},
+    "serverBaseUrl": {},
+    "serverToken": {},
+    "temporaryPublicStorage": {},
+    "uploadArtifacts": {},
+    "uploadExtraArgs": {},
+    "urls": {}
+  }
+}

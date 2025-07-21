@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.volontaricivici.sm/sitemap-0.xml

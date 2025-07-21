@@ -7,9 +7,9 @@ const Header = () => {
     const scrollTop = window.scrollY;
 
     if (scrollTop >= 1) {
-      document.querySelector('.barra-navigazione').classList.add('fix');
+      document.querySelector('.barraNavigazione').classList.add('fix');
     } else {
-      document.querySelector('.barra-navigazione').classList.remove('fix');
+      document.querySelector('.barraNavigazione').classList.remove('fix');
     }
   }, []);
   
@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="barra-navigazione w-full">
+      <div className="barraNavigazione w-full">
         <div className="contBarra px-4">
           <div className="cont-logo">
             <Logo />

@@ -8,20 +8,20 @@ const TopPagine = props => {
 
     return (
         <div className="w-full top mx-0">
-            <div className="contImg-top int">
+            <div className="contImgTop int">
                 {props.immagineGatsbyData && (
                   <GatsbyImage
                     fetchpriority="high"
                     loading="eager"
-                    className="img-top"
+                    className="imgTop"
                     width="1920"
                     height="768"
                     image={props.immagineGatsbyData}
                     alt={props.alt}
                   />
                 )}
-                <div className="slogan-top">
-                    <div className="logo-mobi d-lg-none">
+                <div className="sloganTop">
+                    <div className="logoMobi d-lg-none">
                         <Logo
                             width="100"
                             height="100"

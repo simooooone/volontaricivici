@@ -20,7 +20,7 @@ const PrivacyPolicy = () => {
                   siteUrl
               }
           }
-          immagineQuery: file(relativePath: { eq: "img-top-privacy.jpg" }) {
+          immagineQuery: file(relativePath: { eq: "imgTop-privacy.jpg" }) {
               # Path relative to 'content/assets/images/'
               childImageSharp {
                   gatsbyImageData(

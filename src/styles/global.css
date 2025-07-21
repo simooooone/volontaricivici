@@ -329,10 +329,10 @@ body {
   width: 100%;
 }
 
-.top .contImg-top {
+.top .contImgTop {
   position: relative;
 }
-.top .contImg-top:before {
+.top .contImgTop:before {
   content: "";
   position: absolute;
   top: 0;
@@ -342,7 +342,7 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 2;
 }
-.top .contImg-top .img-top {
+.top .contImgTop .imgTop {
   margin: 0;
   display: block;
   width: 100%;
@@ -353,10 +353,10 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.top .contImg-top.int .img-top {
+.top .contImgTop.int .imgTop {
   height: 80vh;
 }
-.top .contImg-top .slogan-top {
+.top .contImgTop .sloganTop {
   position: absolute;
   top: 50%;
   left: 0;
@@ -372,26 +372,26 @@ body {
   z-index: 3;
   line-height: 1.2;
 }
-.top .contImg-top .slogan-top .acronimo {
+.top .contImgTop .sloganTop .acronimo {
   font-size: 60px;
 }
-.top .contImg-top .logo-mobi {
+.top .contImgTop .logoMobi {
   margin-bottom: 20px;
 }
 @media screen and (max-width: 991px) {
   .top {
     padding-top: 60px;
   }
-  .top .contImg-top .img-top {
+  .top .contImgTop .imgTop {
     height: calc(100vh - 60px);
   }
-  .top .contImg-top.int .img-top {
+  .top .contImgTop.int .imgTop {
     height: 60vh;
   }
-  .top .contImg-top .slogan-top .acronimo {
+  .top .contImgTop .sloganTop .acronimo {
     font-size: 35px;
   }
-  .top .contImg-top .slogan-top .home {
+  .top .contImgTop .sloganTop .home {
     font-size: 30px;
   }
 }
@@ -409,7 +409,7 @@ body {
     padding: 2rem 1.5rem;
   }
 }
-.blocco .contTesto .btn-testo {
+.blocco .contTesto .btnTesto {
   width: -moz-max-content;
   width: max-content;
   display: flex;
@@ -439,20 +439,20 @@ body {
   font-size: 17px;
 }
 
-.contTesto .cont-date {
+.contTesto .contDate {
   margin: 20px 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.contTesto .cont-date .date {
+.contTesto .contDate .date {
   font-style: italic;
   line-height: 1;
   display: block;
 }
 
-.contTesto .cont-date .update {
+.contTesto .contDate .update {
   font-style: italic;
   line-height: 1;
   display: block;
@@ -530,39 +530,39 @@ body {
 .footer {
   border-top: 1px solid var(--colore-bordi);
 }
-.footer .border-blocco-logo {
+.footer .borderBloccoLogo {
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 3rem;
 }
 @media screen and (min-width: 992px) {
-  .footer .border-blocco-logo {
+  .footer .borderBloccoLogo {
     padding-top: 3rem;
     padding-right: 3rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .footer .border-blocco-logo {
+  .footer .borderBloccoLogo {
     margin-bottom: 3rem;
   }
 }
-.footer .bordo-contatti-footer {
+.footer .bordoContattiFooter {
   padding: 3rem 0;
 }
 @media screen and (min-width: 992px) {
-  .footer .bordo-contatti-footer {
+  .footer .bordoContattiFooter {
     border-left: 1px solid var(--colore-bordi);
     padding-left: 3rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .footer .bordo-contatti-footer {
+  .footer .bordoContattiFooter {
     padding-right: 3rem;
     border-right: 1px solid var(--colore-bordi);
   }
 }
 @media screen and (max-width: 767px) {
-  .footer .bordo-contatti-footer {
+  .footer .bordoContattiFooter {
     border-top: 1px solid var(--colore-bordi);
     border-bottom: 1px solid var(--colore-bordi);
   }
@@ -602,17 +602,17 @@ img.bordo {
   }
 }
 
-.bloccoDirettivo .cont-direttivo {
+.bloccoDirettivo .contDirettivo {
   text-align: center;
   padding-bottom: 1rem;
   padding-top: 1rem;
 }
 @media (max-width: 767px) {
-  .bloccoDirettivo .cont-direttivo {
+  .bloccoDirettivo .contDirettivo {
     text-align: left;
   }
 }
-.bloccoDirettivo .cont-direttivo .carica {
+.bloccoDirettivo .contDirettivo .carica {
   color: var(--colore-titolo2);
   font-size: 1.25rem;
   margin-bottom: 15px;
@@ -631,11 +631,11 @@ img.bordo {
 .contPost .post {
   padding: 20px;
 }
-.contPost .post .link-post {
+.contPost .post .linkPost {
   margin-bottom: 15px;
   text-decoration: none;
 }
-.contPost .post .link-post .tito {
+.contPost .post .linkPost .tito {
   line-height: 1;
   font-size: 20px;
   font-family: var(--font);
@@ -715,7 +715,7 @@ img.bordo {
   gap: 10px;
   padding: 0 15px;
 }
-.tagButtons .btn-tag {
+.tagButtons .btnTag {
   background: none;
   border: none;
   padding: 0;
@@ -724,19 +724,19 @@ img.bordo {
   cursor: pointer;
   outline: inherit;
 }
-.tagButtons .btn-tag.active {
+.tagButtons .btnTag.active {
   position: relative;
 }
-.tagButtons .btn-tag.active:before {
+.tagButtons .btnTag.active:before {
   width: 0;
 }
-.tagButtons .btn-tag.active:hover:before {
+.tagButtons .btnTag.active:hover:before {
   width: 0;
 }
-.tagButtons .btn-tag.active.normal:before {
+.tagButtons .btnTag.active.normal:before {
   width: 0;
 }
-.tagButtons .btn-tag.active.normal:hover:before {
+.tagButtons .btnTag.active.normal:hover:before {
   width: 0;
 }
 

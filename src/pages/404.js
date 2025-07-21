@@ -13,7 +13,7 @@ const NotFoundPage = () => {
                     notFoundPageDescription
                 }
             }
-            immagineQuery: file(relativePath: { eq: "img-top-privacy.jpg" }) { # Path relative to 'content/assets/images/'
+            immagineQuery: file(relativePath: { eq: "imgTop-privacy.jpg" }) { # Path relative to 'content/assets/images/'
                 childImageSharp {
                 gatsbyImageData(
                     formats: [AUTO, WEBP] # Request WebP (and AUTO for fallback)

@@ -43,7 +43,7 @@ const BlogPost = (props) => {
             <h1 className="titolo">{ front.titolo }</h1>
             <h2 className="sottotitolo">{ `${front.slogan}  ${front.sottotitolo}` }</h2>
             <div className="author">Di: { front.author }</div>
-            <p className="cont-date">
+            <p className="contDate">
               <em>Data: { front.date }</em>
             </p>
             <div
