@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby" // Make sure Link is imported
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Metatags from "../components/metatags"
 import TopPagine from "../components/topPagine"
@@ -7,18 +7,10 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 const BlogPost = (props) => {
   const { data, pageContext } = props
-  // console.log('pageContext: ', pageContext);
-  // console.log("data", data);
-
   const post = data.markdownRemark
   const front = post.frontmatter
   const immagineTopData = getImage(front.featuredImage?.childImageSharp?.gatsbyImageData)
   const immagineSideData = getImage(front.sideImage?.childImageSharp?.gatsbyImageData)
-
-  //console.log("BlogPost featuredImage: ", front.featuredImage?.childImageSharp?.gatsbyImageData);
-  //console.log("BlogPost sideImage: ", front.sideImage?.childImageSharp?.gatsbyImageData);
-  //console.log("BlogPost immagineTopData: ", immagineTopData);
-  //console.log("BlogPost immagineSideData: ", immagineSideData);
 
   return (
     <Layout>
@@ -35,7 +27,7 @@ const BlogPost = (props) => {
       />
       <div className="container-fluid" id="content">
         <div className="row blocco pt-4 pt-md-5">
-          <div className="cont-img sticky-cont col-md-4 col-12 d-none d-md-block">
+          <div className="contImg sticky-cont col-md-4 col-12 d-none d-md-block">
             { immagineSideData ? (
               <GatsbyImage
                 image={ immagineSideData }
@@ -45,7 +37,7 @@ const BlogPost = (props) => {
               />
             ) : null }
           </div>
-          <div className="cont-testo testo pt-0 col-md-8 col-12">
+          <div className="contTesto testo pt-0 col-md-8 col-12">
             <h3 className="tags">{ front.tags }</h3>
             <br />
             <h1 className="titolo">{ front.titolo }</h1>
@@ -65,7 +57,7 @@ const BlogPost = (props) => {
                   <Link
                     to={ pageContext.previous ? `/blog${pageContext.previous.fields.slug}` : '#' }
 
-                    className="d-inline-block link-underlined normal maxc"
+                    className="d-inline-block linkUnderlined normal maxc"
                     aria-disabled={ pageContext.previous ? "false" : "true" }
 
                   >
@@ -73,7 +65,7 @@ const BlogPost = (props) => {
                   </Link>
                   <Link
                     to="/blog"
-                    className="d-inline-block link-to-list link-underlined normal maxc"
+                    className="d-inline-block link-to-list linkUnderlined normal maxc"
                     aria-label="Torna all'elenco"
                   >
                     Torna all'elenco
@@ -81,7 +73,7 @@ const BlogPost = (props) => {
                   <Link
                     to={ pageContext.next ? `/blog${pageContext.next.fields.slug}` : '#' }
 
-                    className="d-inline-block link-underlined normal maxc"
+                    className="d-inline-block linkUnderlined normal maxc"
                     aria-disabled={ pageContext.next ? "false" : "true" }
                   >
                     Successivo &rsaquo;

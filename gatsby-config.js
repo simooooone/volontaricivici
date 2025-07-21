@@ -10,55 +10,56 @@
 const path = require("path");
 
 module.exports = {
-  siteMetadata: {
-    title: `Vo.Ci. Nei Castelli`,
-    titolo: `Vo.Ci. Nei Castelli`,
-    description: `Associazione Dei Volontari Civici Sammarinesi - Vo.Ci. Nei Castelli`,
-    acronimo: `Vo.Ci.`,
-    slogan: `Associazione Sammarinese di Volontari`,
-    author: `Simone Foschi`,
-    azienda: "Vo.Ci. Nei Castelli",
-    presidente: "Melissa Mussoni",
-    indirizzo: "Via Cà dei lunghi, 132  Cailungo",
-    telefono: "338 189 31 99",
-    cellulare: "338 189 31 99",
-    email: "vocineicastelli@giuntedicastello.sm",
-    siteUrl: "https://www.vocisanmarino.sm",
-    privacy: "Privacy Policy",
-    facebook: "https://www.facebook.com/profile.php?id=61559614356602",
-    instagram: "https://www.instagram.com/",
-    homeTitolo: "Vo.Ci. Nei Castelli, associazione di volontariato sammarinese",
-    homeDescription:
-      "Vo.Ci. Nei Castelli è un'associazione di volontariato sammarinese",
-    homeAcronimo: "Vo.Ci. Nei Castelli",
-    direttivoTitolo: "Il direttivo di Vo.Ci. Nei Castelli",
-    direttivoDescription:
-      "Il direttivo di Vo.Ci. Nei Castelli è composto da un gruppo di persone che si occupano della gestione dell'associazione",
-    direttivoAcronimo: "Direttivo",
-    chiSiamoTitolo: "Chi Siamo Vo.Ci. Nei Castelli",
-    chiSiamoDescription:
-      "Siamo un'associazione di volontariato sammarinese che si occupa di varie attività ed eventi in Repubblica",
-    chiSiamoAcronimo: "Chi Siamo",
-    cosaFacciamoTitolo: "Cosa facciamo - Vo.Ci. Nei Castelli",
-    cosaFacciamoDescription:
-      "Cosa facciamo in Vo.Ci. Nei Castelli - Associazione di volontariato sammarinese",
-    cosaFacciamoAcronimo: "Cosa Facciamo",
-    blogTitolo: "Il Blog di Vo.Ci. Nei Castelli",
-    blogDescription:
-      "Il nostro Blog con tutte le novità e gli eventi di Vo.Ci. Nei Castelli",
-    blogAcronimo: "Il Blog di Vo.Ci. Nei Castelli",
-    notFoundPageTitolo: "404 | Pagina non trovata",
-    notFoundPageDescription: "La pagina richiesta non è stata trovata",
-    notFoundPageAcronimo: "404 | Pagina non trovata",
-    privacyTitolo: "Privacy policy",
-    privacyDescription: "Privacy policy Vo.Ci. Nei Castelli",
-    privacyAcronimo: "Privacy policy",
-  },
-  plugins: [
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        query: `
+    siteMetadata: {
+        title: `Vo.Ci. Nei Castelli`,
+        titolo: `Vo.Ci. Nei Castelli`,
+        description: `Associazione Dei Volontari Civici Sammarinesi - Vo.Ci. Nei Castelli`,
+        acronimo: `Vo.Ci.`,
+        slogan: `Associazione Sammarinese di Volontari`,
+        author: `Simone Foschi`,
+        azienda: 'Vo.Ci. Nei Castelli',
+        presidente: 'Melissa Mussoni',
+        indirizzo: 'Via Cà dei lunghi, 132  Cailungo',
+        telefono: '338 189 31 99',
+        cellulare: '338 189 31 99',
+        email: 'vocineicastelli@giuntedicastello.sm',
+        siteUrl: 'https://www.vocisanmarino.sm',
+        privacy: 'Privacy Policy',
+        facebook: 'https://www.facebook.com/profile.php?id=61559614356602',
+        instagram: 'https://www.instagram.com/',
+        homeTitolo:
+            'Vo.Ci. Nei Castelli, associazione di volontariato sammarinese',
+        homeDescription:
+            "Vo.Ci. Nei Castelli è un'associazione di volontariato sammarinese",
+        homeAcronimo: 'Vo.Ci. Nei Castelli',
+        direttivoTitolo: 'Il direttivo di Vo.Ci. Nei Castelli',
+        direttivoDescription:
+            "Il direttivo di Vo.Ci. Nei Castelli è composto da un gruppo di persone che si occupano della gestione dell'associazione",
+        direttivoAcronimo: 'Direttivo',
+        chiSiamoTitolo: 'Chi Siamo Vo.Ci. Nei Castelli',
+        chiSiamoDescription:
+            "Siamo un'associazione di volontariato sammarinese che si occupa di varie attività ed eventi in Repubblica",
+        chiSiamoAcronimo: 'Chi Siamo',
+        cosaFacciamoTitolo: 'Cosa facciamo - Vo.Ci. Nei Castelli',
+        cosaFacciamoDescription:
+            'Cosa facciamo in Vo.Ci. Nei Castelli - Associazione di volontariato sammarinese',
+        cosaFacciamoAcronimo: 'Cosa Facciamo',
+        blogTitolo: 'Il Blog di Vo.Ci. Nei Castelli',
+        blogDescription:
+            'Il nostro Blog con tutte le novità e gli eventi di Vo.Ci. Nei Castelli',
+        blogAcronimo: 'Il Blog di Vo.Ci. Nei Castelli',
+        notFoundPageTitolo: '404 | Pagina non trovata',
+        notFoundPageDescription: 'La pagina richiesta non è stata trovata',
+        notFoundPageAcronimo: '404 | Pagina non trovata',
+        privacyTitolo: 'Privacy policy',
+        privacyDescription: 'Privacy policy Vo.Ci. Nei Castelli',
+        privacyAcronimo: 'Privacy policy',
+    },
+    plugins: [
+        {
+            resolve: `gatsby-plugin-feed`,
+            options: {
+                query: `
           {
             site {
               siteMetadata {
@@ -102,22 +103,37 @@ module.exports = {
             }
           }
         `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  title: edge.node.frontmatter.titolo,
-                  date: edge.node.frontmatter.date,
-                  update: [edge.node.frontmatter.update],
-                  url: site.siteMetadata.siteUrl + "/" + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + "/" + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
-                })
-              })
-            },
-            query: `
+                feeds: [
+                    {
+                        serialize: ({ query: { site, allMarkdownRemark } }) => {
+                            return allMarkdownRemark.edges.map(edge => {
+                                return Object.assign(
+                                    {},
+                                    edge.node.frontmatter,
+                                    {
+                                        description: edge.node.excerpt,
+                                        title: edge.node.frontmatter.titolo,
+                                        date: edge.node.frontmatter.date,
+                                        update: [edge.node.frontmatter.update],
+                                        url:
+                                            site.siteMetadata.siteUrl +
+                                            '/' +
+                                            edge.node.fields.slug,
+                                        guid:
+                                            site.siteMetadata.siteUrl +
+                                            '/' +
+                                            edge.node.fields.slug,
+                                        custom_elements: [
+                                            {
+                                                'content:encoded':
+                                                    edge.node.html,
+                                            },
+                                        ],
+                                    }
+                                )
+                            })
+                        },
+                        query: `
               {
                 allMarkdownRemark(
                   filter: { frontmatter: { date: { ne: null }, update: { ne: null } } }
@@ -138,84 +154,154 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
-            title: "Vo.Ci. Nei Castelli RSS Feed",
-          },
-        ],
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-          name: 'images',
-          path: path.join(__dirname, "content/assets/images/blog")
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-          name: 'images',
-          path: path.join(__dirname, "content/assets/images")
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-          name: `blog`,
-          path: path.join(__dirname, "content/blog")
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Associazione Vo.Ci. nei Castelli San Marino`,
-        short_name: `Vo.Ci. nei Castelli`,
-        lang: `it`,
-        display: `standalone`,
-        start_url: `/`,
-        icon: `content/assets/images/logo.png`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-      },
-    },
-    {
-      resolve: `gatsby-omni-font-loader`,
-      options: {
-        enableListener: true,
-        preconnect: [
-          `https://fonts.googleapis.com`,
-          `https://fonts.gstatic.com`,
-        ],
-        web: [
-          {
-            name: `Font`,
-            file: `https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Eczar:wght@400..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap`,
-            fontStyle: `normal`,
-            fontDisplay: `swap`,
-            crossOrigin: `anonymous`,
-          },
-        ],
-      },
-    },
-    `gatsby-plugin-decap-cms`,
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
-    `gatsby-transformer-sharp`,
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-postcss`,
-    {
-        resolve: `gatsby-plugin-purgecss`,
-        options: {
-            printRejected: true,
-            develop: false,
-            tailwind: false,
-            safelist: {
-                standard: [/^btn/, /^col/, /^row/, /^container/, /^navbar/, /^text-/, /^bg-/, /^fade/, /^show/, /^code/, /^pre/, /^blockquote/, /^blockquote-footer/, /^iubenda-black/, /^iubenda-noiframe/, /^iubenda-embed/],
-            }
+                        output: '/rss.xml',
+                        title: 'Vo.Ci. Nei Castelli RSS Feed',
+                    },
+                ],
+            },
         },
-    },
-  ],
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: 'images',
+                path: path.join(__dirname, 'content/assets/images/blog'),
+            },
+        },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: 'images',
+                path: path.join(__dirname, 'content/assets/images'),
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `blog`,
+                path: path.join(__dirname, 'content/blog'),
+            },
+        },
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `Associazione Vo.Ci. nei Castelli San Marino`,
+                short_name: `Vo.Ci. nei Castelli`,
+                lang: `it`,
+                display: `standalone`,
+                start_url: `/`,
+                icon: `content/assets/images/logo.png`,
+                background_color: `#663399`,
+                theme_color: `#663399`,
+            },
+        },
+        {
+            resolve: `gatsby-omni-font-loader`,
+            options: {
+                enableListener: true,
+                preconnect: [
+                    `https://fonts.googleapis.com`,
+                    `https://fonts.gstatic.com`,
+                ],
+                web: [
+                    {
+                        name: `Font`,
+                        file: `https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Eczar:wght@400..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap`,
+                        fontStyle: `normal`,
+                        fontDisplay: `swap`,
+                        crossOrigin: `anonymous`,
+                    },
+                ],
+            },
+        },
+        `gatsby-plugin-decap-cms`,
+        `gatsby-plugin-sitemap`,
+        `gatsby-plugin-image`,
+        `gatsby-plugin-sharp`,
+        `gatsby-plugin-offline`,
+        `gatsby-transformer-sharp`,
+        `gatsby-transformer-remark`,
+        `gatsby-plugin-sass`,
+        `gatsby-plugin-postcss`,
+        {
+            resolve: `gatsby-plugin-purgecss`,
+            options: {
+                printRejected: true,
+                develop: false,
+                tailwind: false,
+                safelist: {
+                    standard: [
+                        /^btn/,
+                        /^col/,
+                        /^row/,
+                        /^container/,
+                        /^navbar/,
+                        /^text-/,
+                        /^bg-/,
+                        /^fade/,
+                        /^show/,
+                        /^code/,
+                        /^pre/,
+                        /^blockquote/,
+                        /^blockquote-footer/,
+                        /^iubenda-black/,
+                        /^iubenda-noiframe/,
+                        /^iubenda-embed/,
+                        /^font1/,
+                        /^font2/,
+                        /^font3/,
+                        /^font4/,
+                        /^font5/,
+                        /^barraMobile/,
+                        /^barraNavigazione/,
+                        /^top/,
+                        /^blocco/,
+                        /^contTesto/,
+                        /^contImg/,
+                        /^titolo/,
+                        /^titolo2/,
+                        /^sottotitolo/,
+                        /^sottotitolo2/,
+                        /^fontTit/,
+                        /^link/,
+                        /^footer/,
+                        /^btnImg/,
+                        /^contTitDirettivo/,
+                        /^bloccoDirettivo/,
+                        /^contPost/,
+                        /^linkUnderlined/,
+                        /^tagButtons/,
+                        /^listaSito/,
+                        /^maxc/,
+                        /^dropdown/,
+                        /^nav-list/,
+                        /^nav-item/,
+                        /^contBarra/,
+                        /^cont-logo/,
+                        /^cont-menu/,
+                        /^logo/,
+                        /^active/,
+                        /^fix/,
+                        /^normal/,
+                        /^white/,
+                        /^longWord/,
+                        /^voce-blog/,
+                        /^cont-date/,
+                        /^author/,
+                        /^date/,
+                        /^update/,
+                        /^img/,
+                        /^bordo/,
+                        /^slogan-top/,
+                        /^acronimo/,
+                        /^logo-mobi/,
+                        /^contImg-top/,
+                        /^contTesto/,
+                        /^bloccoDirettivo/,
+                        /^cont-direttivo/,
+                        /^carica/,
+                    ],
+                },
+            },
+        },
+    ],
 }

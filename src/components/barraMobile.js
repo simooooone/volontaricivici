@@ -10,7 +10,7 @@ const BarraMobile = () => {
     };
 
     return (
-        <div className={ `barra-mobile ${isOpen ? 'open' : ''}` }>
+        <div className={ `barraMobile ${isOpen ? 'open' : ''}` }>
             <button className="toggle-button" onClick={ toggleBar }>
                 ☰
             </button>

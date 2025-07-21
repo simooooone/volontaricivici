@@ -53,7 +53,7 @@ const Menu = ({ setIsOpen }) => {
           <li className="nav-item">
             <Link
               to="/"
-              className="link-underlined white"
+              className="linkUnderlined white"
               aria-label="Home Page"
               activeClassName="active"
               onClick={handleLinkClick}
@@ -66,7 +66,7 @@ const Menu = ({ setIsOpen }) => {
               onClick={ e => e.preventDefault() }
               onMouseEnter={ () => setIsHovered(true) }
               onMouseLeave={ () => setIsHovered(false) }
-              className={ `voce-blog link-underlined white greyed ${isHovered ? 'opened' : ''} ${location.pathname.startsWith('/blog')
+              className={ `voce-blog linkUnderlined white greyed ${isHovered ? 'opened' : ''} ${location.pathname.startsWith('/blog')
                 ? 'active'
                 : ''
                 }` }
@@ -79,7 +79,7 @@ const Menu = ({ setIsOpen }) => {
                 <li key="all-posts" className="nav-subitem">
                   <Link
                     to="/blog"
-                    className="link-underlined normal"
+                    className="linkUnderlined normal"
                     activeClassName="active"
                     aria-label="Tutti i Post"
                     partiallyActive={ true }
@@ -92,7 +92,7 @@ const Menu = ({ setIsOpen }) => {
                   <li key={ tag } className="nav-subitem">
                     <Link
                       to={ `/blog?tag=${encodeURIComponent(tag.replace(/\s+/g, '_'))}` }
-                      className="link-underlined normal"
+                      className="linkUnderlined normal"
                       activeClassName="active"
                       aria-label={ `Post con tag ${tag}` }
                       state={ { activeTag: tag } }
@@ -107,7 +107,7 @@ const Menu = ({ setIsOpen }) => {
           </li>
           <li className="nav-item">
             <a
-              className="link-underlined white"
+              className="linkUnderlined white"
               target="_blank"
               alt="Modulo di iscrizione all'associazione Vo.Ci nei Castelli"
               href={ moduloIscrizione }

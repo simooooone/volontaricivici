@@ -67,9 +67,9 @@ const IndexPage = () => {
           />
         <div className="container-fluid" id="content">
           <div className="row blocco">
-            <div className="cont-testo col-lg-6 col-12">
+            <div className="contTesto col-lg-6 col-12">
               <h1 className="titolo">
-                Associazione Vo.Ci. - Volontari Civici dei Castelli
+                Associazione Vo.Ci. - Volontari Civici nei Castelli
               </h1>
               <h2 className="sottotitolo">{metadata.slogan || ""}</h2>
               <p>
@@ -86,7 +86,7 @@ const IndexPage = () => {
               </p>
 
               <h3 className="sottotitolo2">
-                Creazione Associazione/Cooperativa “Volontari Civici dei
+                Creazione Associazione/Cooperativa “Volontari Civici nei
                 Castelli”
               </h3>
               <p>
@@ -98,7 +98,7 @@ const IndexPage = () => {
                 </i>
               </p>
             </div>
-            <div className="cont-img order-lg-first col-lg-6 px-0">
+            <div className="contImg order-lg-first col-lg-6 px-0">
             <GatsbyImage
                                 image={ immagineLateraleData }
                                 loading="lazy"
@@ -110,11 +110,11 @@ const IndexPage = () => {
         </div>
         <div className="container pt-5 mb-3">
           <div className="row">
-            <h2 className="cont-tit-direttivo col-12">Direttivo</h2>
+            <h2 className="contTitDirettivo col-12">Direttivo</h2>
           </div>
         </div>
         <div className="container mb-3">
-          <div className="row blocco-direttivo">
+          <div className="row bloccoDirettivo">
             <div className="cont-direttivo offset-md-4 col-md-4 col-12">
               <div className="carica">Presidente</div>
               <div className="nome">Melissa Mussoni</div>
@@ -122,14 +122,14 @@ const IndexPage = () => {
           </div>
         </div>
         <div className="container mb-3">
-          <div className="row blocco-direttivo">
+          <div className="row bloccoDirettivo">
             <div className="cont-direttivo col-md-4 col-6">
               <div className="carica">Segretario</div>
               <div className="nome">Paolo Bartolini</div>
             </div>
             <div className="cont-direttivo col-md-4 col-6">
               <div className="carica">Vice-presidente</div>
-              <div className="nome">Ana Balint Carattoni</div>
+              <div className="nome">Lino Sbraccia</div>
             </div>
             <div className="cont-direttivo col-md-4 col-6">
               <div className="carica">Tesoriere</div>
@@ -137,7 +137,7 @@ const IndexPage = () => {
             </div>
             <div className="cont-direttivo col-md-4 col-6">
               <div className="carica">Consigliere</div>
-              <div className="nome">Lino Sbraccia</div>
+              <div className="nome">Anna Fiorelli</div>
             </div>
             <div className="cont-direttivo col-md-4 col-6">
               <div className="carica">Consigliere</div>

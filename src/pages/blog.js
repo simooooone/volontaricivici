@@ -88,12 +88,12 @@ const Blog = ({ location, data }) => {
       <div className="container-fluid pt-5" id="content">
         <div className="row">
           <h1 className="titolo">Blog</h1>
-          <div className="tag-buttons">
+          <div className="tagButtons">
             { tags.map(tag => (
               <button
                 key={ tag }
                 onClick={ () => handleTagClick(tag) }
-                className={ `btn-tag link-underlined normal maxc d-block ${selectedTag === tag ? 'active' : ''
+                className={ `btn-tag linkUnderlined normal maxc d-block ${selectedTag === tag ? 'active' : ''
                   }` }
               >
                 { tag }
@@ -102,7 +102,7 @@ const Blog = ({ location, data }) => {
             { tags.length > 0 && (
               <button
                 onClick={ () => handleTagClick(null) }
-                className={ `btn-tag link-underlined normal maxc d-block ${selectedTag === null ? 'active' : ''
+                className={ `btn-tag linkUnderlined normal maxc d-block ${selectedTag === null ? 'active' : ''
                   }` }
               >
                 Mostra Tutti
@@ -118,7 +118,7 @@ const Blog = ({ location, data }) => {
               const post = edge.node.frontmatter;
               return (
                 <div
-                  className="cont-post col-lg-4 col-md-6 col-12"
+                  className="contPost col-lg-4 col-md-6 col-12"
                   key={ `${post.titolo} ${post.date}` }
                 >
                   <div className="image">
@@ -138,7 +138,7 @@ const Blog = ({ location, data }) => {
                   </div>
                   <div className="post">
                     <Link
-                      className="link-post link-underlined"
+                      className="link-post linkUnderlined"
                       to={ `/blog${edge.node.fields.slug}` }
                       aria-label={ `${post.titolo}` }
                     >

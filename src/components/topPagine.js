@@ -1,6 +1,5 @@
 import React from 'react';
 import Logo from './logo';
-import "../styles/global.scss";
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 const TopPagine = props => {
@@ -9,7 +8,7 @@ const TopPagine = props => {
 
     return (
         <div className="w-full top mx-0">
-            <div className="cont-img-top int">
+            <div className="contImg-top int">
                 {props.immagineGatsbyData && (
                   <GatsbyImage
                     fetchpriority="high"

@@ -2,7 +2,7 @@ import React from 'react';
 
 const ImmagineTop = immagine => (
     <div className="w-full top mx-0">
-        <div className="cont-img-top">
+        <div className="contImg-top">
             <img alt="Immagine Principale" src={ immagine } className="img-top" />
             <div className="slogan-top">
                 <div className="acronimo">{ acronimo }</div>

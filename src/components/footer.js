@@ -66,7 +66,7 @@ const Footer = () => {
               aria-label="Email"
               target="_blank"
               rel="noopener noreferrer"
-              className="link-underlined normal maxc d-block longWord"
+              className="linkUnderlined normal maxc d-block longWord"
             >
               {dati.email}
             </a>
@@ -75,7 +75,7 @@ const Footer = () => {
             <h3 className="titolo2">Links</h3>
             <div className="cont-copyright">
               <a
-                className="link-underlined normal maxc d-block"
+                className="linkUnderlined normal maxc d-block"
                 aria-label="Coordinate Bancarie"
                 target="_blank"
                 href={coordinateBancarie}
@@ -84,7 +84,7 @@ const Footer = () => {
                 Coordinate Bancarie
               </a>
               <a
-                className="link-underlined normal maxc d-block my-2"
+                className="linkUnderlined normal maxc d-block my-2"
                 aria-label="Atto Costitutivo"
                 target="_blank"
                 href={attoCostitutivo}
@@ -93,7 +93,7 @@ const Footer = () => {
                 Atto Costitutivo
               </a>
               <a
-                className="link-underlined normal maxc d-block mb-2"
+                className="linkUnderlined normal maxc d-block mb-2"
                 aria-label="Statuto"
                 target="_blank"
                 href={statuto}
@@ -104,7 +104,7 @@ const Footer = () => {
               <Link
                 aria-label="Privacy"
                 to="/privacy"
-                className="link-underlined normal maxc d-block"
+                className="linkUnderlined normal maxc d-block"
               >
                 Privacy
               </Link>

@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="barra-navigazione w-full">
-        <div className="cont-barra px-4">
+        <div className="contBarra px-4">
           <div className="cont-logo">
             <Logo />
           </div>

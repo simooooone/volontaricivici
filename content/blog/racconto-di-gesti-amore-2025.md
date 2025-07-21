@@ -4,7 +4,7 @@ titolo: '15 Giugno 2025 - Sala Little Tony - Serravalle'
 sottotitolo: 'Compagnia degli invincibili presenta "Racconto di Gesti d’Amore!" - 15 Giugno 2025 - Sala Little Tony - Serravalle'
 tags: ['Eventi ed Iniziative']
 seo_title: 'Vo.Ci. presenta - "Racconto di Gesti d’Amore" | Teatro e Solidarietà a San Marino'
-seo_description: 'L’Associazione Volontari Civici dei Castelli (Vo.Ci.) ti invita a "Racconto di Gesti d’Amore", un evento unico a Serravalle. Supporta le nostre iniziative con un’offerta libera il 15 giugno 2025. Scopri il potere dei piccoli gesti.'
+seo_description: 'L’Associazione Volontari Civici nei Castelli (Vo.Ci.) ti invita a "Racconto di Gesti d’Amore", un evento unico a Serravalle. Supporta le nostre iniziative con un’offerta libera il 15 giugno 2025. Scopri il potere dei piccoli gesti.'
 author: 'Simone'
 date: '15/06/2025'
 update: '08/06/2025'
@@ -16,7 +16,7 @@ langKey: 'it'
 description: ''
 ---
 
-# 📢 **L'Associazione Vo.Ci. Volontari Civici dei Castelli**
+# 📢 **L'Associazione Vo.Ci. Volontari Civici nei Castelli**
 
 è lieta di invitarvi a un evento unico nel suo genere: **"Racconto di gesti d'amore"**, un esperimento di Teatro non Teatro che promette di toccare le corde più profonde dell'animo.
 

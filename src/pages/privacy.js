@@ -55,13 +55,13 @@ const PrivacyPolicy = () => {
               />
               <div className="container" id="content">
                   <div className="row blocco">
-                      <div className="cont-testo col-12">
+                      <div className="contTesto col-12">
                           <h1 className="titolo">Privacy policy</h1>
                           <p>
                               Ultimo aggiornamento: 14/09/2024
                               <br />
                               <br />
-                              <ul className="lista-sito">
+                              <ul className="listaSito">
                                   <li>
                                       <b>
                                           1. Titolare del trattamento dei dati

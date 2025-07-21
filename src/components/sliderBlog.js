@@ -24,7 +24,7 @@ const SliderBlog = ({ data }) => {
               if (post.published) {
                 return (
                   <div
-                    className="cont-post col-lg-4 col-md-6 col-12"
+                    className="contPost col-lg-4 col-md-6 col-12"
                     key={`${post.published}+${post.update}+${post.date}`}
                   >
                     <div className="image">
@@ -37,7 +37,7 @@ const SliderBlog = ({ data }) => {
                     </div>
                     <div className="post">
                       <Link
-                        className="link-post link-underlined"
+                        className="link-post linkUnderlined"
                         to={`/blog/${edge.node.fields.slug}`}
                         aria-label={`${post.titolo}`}
                       >
