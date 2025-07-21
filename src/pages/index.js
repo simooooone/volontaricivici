@@ -17,7 +17,7 @@ const IndexPage = () => {
           acronimo
         }
       }
-      immagineQuery: file(relativePath: { eq: "blog-41.jpg" }) {
+      immagineQuery: file(relativePath: { eq: "img-top-home.jpg" }) {
         # Path relative to 'content/assets/images/'
         childImageSharp {
           gatsbyImageData(
@@ -30,7 +30,7 @@ const IndexPage = () => {
           )
         }
       }
-      immagineLaterale: file(relativePath: { eq: "blog-lateral-41.jpg" }) {
+      immagineLaterale: file(relativePath: { eq: "index-1.jpg" }) {
         childImageSharp {
           gatsbyImageData(
             formats: [AUTO, WEBP]
