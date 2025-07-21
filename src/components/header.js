@@ -27,10 +27,10 @@ const Header = () => {
     <header className="header">
       <div className="barraNavigazione w-full">
         <div className="contBarra px-4">
-          <div className="cont-logo">
+          <div className="contLogo">
             <Logo />
           </div>
-          <div className="cont-menu">
+          <div className="contMenu">
             <Menu />
           </div>
         </div>
