@@ -172,7 +172,7 @@ export const data = graphql`
         blogAcronimo
       }
     }
-    immagineQuery: file(relativePath: { eq: "imgTop-blog.jpg" }) {
+    immagineQuery: file(relativePath: { eq: "img-top-blog.jpg" }) {
       childImageSharp {
         gatsbyImageData(
           formats: [AUTO, WEBP]
