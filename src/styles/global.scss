@@ -221,6 +221,10 @@ body {
 .barraMobile {
   display: none;
 
+  .logo {
+    max-width: 50px;
+  }
+
   .nav-item {
     padding: 5px 0 5px 0 !important;
     
@@ -417,6 +421,8 @@ body {
         top: 27px;
         max-width: 170px;
         display: block;
+        width: 100%;
+        transition: top .4s ease, max-width .4s ease;
       }
     }
 
@@ -554,6 +560,13 @@ body {
       box-shadow: 0px 5px 6px 4px rgba(0, 0, 0, 0.1);
     }
 
+    .contLogo {
+      .logo {
+        top: 25px;
+        max-width: 100px;
+      }
+    }
+
     .linkUnderlined {
       color: var(--colore-testo) !important;
 
@@ -635,6 +648,10 @@ body {
 
     .logoMobi {
       margin-bottom: 20px;
+
+      .gatsby-image-wrapper {
+        width: 110px;
+      }
     }
   }
 
