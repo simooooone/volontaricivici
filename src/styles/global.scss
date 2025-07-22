@@ -650,7 +650,7 @@ body {
     .logoMobi {
       margin-bottom: 20px;
 
-      .gatsby-image-wrapper {
+      &>div {
         width: 110px;
       }
     }
@@ -751,10 +751,6 @@ body {
       }
     }
   }
-}
-
-.h-image {
-  height: 100%;
 }
 
 .contImg {

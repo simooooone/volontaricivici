@@ -577,7 +577,7 @@ body {
 .top .contImgTop .logoMobi {
   margin-bottom: 20px;
 }
-.top .contImgTop .logoMobi .gatsby-image-wrapper {
+.top .contImgTop .logoMobi > div {
   width: 110px;
 }
 @media screen and (max-width: 991px) {
@@ -669,7 +669,7 @@ body {
     top: 125px;
   }
 }
-.contImg .gatsby-image-wrapper {
+.contImg > div, .contImg > a > div {
   height: 100%;
 }
 .contImg .img {
@@ -821,8 +821,7 @@ img.bordo {
 .contPost .image {
   display: block;
 }
-.contPost .image > a,
-.contPost .image .gatsby-image-wrapper {
+.contPost .image > a, .contPost .image > a > div {
   display: block;
 }
 .contPost .image img {
