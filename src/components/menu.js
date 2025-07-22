@@ -66,7 +66,7 @@ const Menu = ({ setIsOpen }) => {
               onClick={ e => e.preventDefault() }
               onMouseEnter={ () => setIsHovered(true) }
               onMouseLeave={ () => setIsHovered(false) }
-              className={ `voce-blog linkUnderlined white greyed ${isHovered ? 'opened' : ''} ${location.pathname.startsWith('/blog')
+              className={ `voceBlog linkUnderlined white greyed ${isHovered ? 'opened' : ''} ${location.pathname.startsWith('/blog')
                 ? 'active'
                 : ''
                 }` }
