@@ -190,12 +190,12 @@ export const data = graphql`
             slug
           }
           frontmatter {
-            featuredImage {
+            sideImage {
               childImageSharp {
                 gatsbyImageData(
                   formats: [AUTO, WEBP]
                   placeholder: BLURRED
-                  width: 500
+                  width: 600
                   layout: CONSTRAINED
                   quality: 60
                 )
