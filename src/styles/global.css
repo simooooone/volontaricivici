@@ -224,6 +224,8 @@ body {
 .barraMobile .voceBlog {
   display: block;
   border-bottom: 1px solid var(--color-barraMobile);
+  background: none;
+  border: 0 none;
 }
 .barraMobile .nav-item {
   padding: 5px 0 5px 0 !important;
@@ -382,22 +384,22 @@ body {
   margin: 0 auto;
   width: 100%;
 }
-.barraNavigazione .contLogo {
+.barraNavigazione .contBarra .contLogo {
   flex: 1;
   position: relative;
   align-self: flex-start;
 }
-.barraNavigazione .contLogo .logo {
+.barraNavigazione .contBarra .contLogo .logo {
   position: absolute;
   left: 1.5rem;
   top: 27px;
   max-width: 170px;
   display: block;
 }
-.barraNavigazione .contMenu {
+.barraNavigazione .contBarra .contMenu {
   text-align: center;
 }
-.barraNavigazione .nav-list {
+.barraNavigazione .contBarra .contMenu .nav-list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -408,10 +410,10 @@ body {
   z-index: 3;
   list-style: none;
 }
-.barraNavigazione .nav-list .nav-item {
+.barraNavigazione .contBarra .contMenu .nav-list .nav-item {
   position: relative;
 }
-.barraNavigazione .nav-list .nav-item .dropdown {
+.barraNavigazione .contBarra .contMenu .nav-list .nav-item .dropdown {
   position: absolute;
   top: 100%;
   left: 0;
@@ -428,12 +430,12 @@ body {
   width: 170px;
   max-width: max-content;
 }
-.barraNavigazione .nav-list .nav-item:hover .dropdown, .barraNavigazione .nav-list .nav-item:focus-within .dropdown {
+.barraNavigazione .contBarra .contMenu .nav-list .nav-item:hover .dropdown, .barraNavigazione .contBarra .contMenu .nav-list .nav-item:focus-within .dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
-.barraNavigazione .nav-list .nav-item .dropdown-list {
+.barraNavigazione .contBarra .contMenu .nav-list .nav-item .dropdown-list {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -442,14 +444,14 @@ body {
   padding: 0.5rem;
   white-space: nowrap;
 }
-.barraNavigazione .nav-list .nav-item .dropdown-list a.active {
+.barraNavigazione .contBarra .contMenu .nav-list .nav-item .dropdown-list a.active {
   color: var(--colore-titolo2);
   font-weight: 500;
 }
-.barraNavigazione .nav-list .nav-item .dropdown-list a.active:before {
+.barraNavigazione .contBarra .contMenu .nav-list .nav-item .dropdown-list a.active:before {
   width: 100%;
 }
-.barraNavigazione .nav-list .nav-item .dropdown-list .voceBlog {
+.barraNavigazione .contBarra .contMenu .nav-list .nav-item .dropdown-list .voceBlog {
   background: none;
   border: none;
   padding: 0;
@@ -458,14 +460,14 @@ body {
   cursor: pointer;
   outline: inherit;
 }
-.barraNavigazione .nav-list .nav-item .dropdown-list .voceBlog.active {
+.barraNavigazione .contBarra .contMenu .nav-list .nav-item .dropdown-list .voceBlog.active {
   position: relative;
   color: var(--white-hover);
 }
-.barraNavigazione .nav-list .nav-item .dropdown-list .voceBlog.active:before {
+.barraNavigazione .contBarra .contMenu .nav-list .nav-item .dropdown-list .voceBlog.active:before {
   width: 100%;
 }
-.barraNavigazione .nav-list .nav-item .dropdown-list .voceBlog.active:hover:before {
+.barraNavigazione .contBarra .contMenu .nav-list .nav-item .dropdown-list .voceBlog.active:hover:before {
   width: 100%;
 }
 @media (max-width: 768px) {
