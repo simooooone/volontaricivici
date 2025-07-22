@@ -588,7 +588,7 @@ body {
 
 .blocco {
   background-color: var(--white);
-  align-items: flex-start;
+  align-items: stretch;
 }
 .blocco .contTesto {
   padding: 2rem 3rem;
@@ -609,6 +609,9 @@ body {
   height: 40px;
   padding: 0 20px;
   color: var(--white);
+}
+.blocco .contTesto .footer-post .link-to-list {
+  margin: 0 15px;
 }
 
 .contTesto .tags {
@@ -653,6 +656,9 @@ body {
     position: sticky;
     top: 125px;
   }
+}
+.contImg .gatsby-image-wrapper {
+  height: 100%;
 }
 .contImg .img {
   object-fit: cover;

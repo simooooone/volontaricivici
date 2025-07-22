@@ -667,7 +667,7 @@ body {
 
 .blocco {
   background-color: var(--white);
-  align-items: flex-start;
+  align-items: stretch;
 
   .contTesto {
     padding: 2rem 3rem;
@@ -687,6 +687,12 @@ body {
       height: 40px;
       padding: 0 20px;
       color: var(--white);
+    }
+
+    .footer-post {
+      .link-to-list {
+        margin: 0 15px;
+      }
     }
   }
 }
@@ -736,6 +742,10 @@ body {
   @media screen and (min-width: 992px) {
     position: sticky;
     top: 125px;
+  }
+
+  .gatsby-image-wrapper {
+    height: 100%;
   }
 
   .img {
@@ -889,15 +899,12 @@ img {
 }
 
 .contPost {
-  
   .image {
     display: block;
 
     & > a, .gatsby-image-wrapper {
       display:block;
     }
-
-
 
     img {
       object-fit: cover;
