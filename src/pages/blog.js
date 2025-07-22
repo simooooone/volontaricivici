@@ -126,9 +126,9 @@ const Blog = ({ location, data }) => {
                       to={ `/blog${edge.node.fields.slug}` }
                       aria-label={ `${post.titolo}` }
                     >
-                      { getImage(post.featuredImage?.childImageSharp?.gatsbyImageData) ? (
+                      { getImage(post.sideImage?.childImageSharp?.gatsbyImageData) ? (
                         <GatsbyImage
-                          image={ getImage(post.featuredImage?.childImageSharp?.gatsbyImageData) }
+                          image={ getImage(post.sideImage?.childImageSharp?.gatsbyImageData) }
                           alt={ `${post.titolo}` }
                           loading="lazy"
                           className=""

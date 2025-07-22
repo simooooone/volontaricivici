@@ -25,9 +25,9 @@ I **Volontari Civici nei Castelli** sono pronti ad accogliervi alla prossima **A
 
 ## Dettagli dell'evento
 
-**Data:** 17 Marzo 2025\
-**Ora:** 19:00\
-**Luogo:** Sala Montelupo, Domagnano\
+**Data:** 17 Marzo 2025
+**Ora:** 19:00
+**Luogo:** Sala Montelupo, Domagnano
 **Indirizzo:** Piazza Filippo da Sterpeto, 3, Repubblica di San Marino
 
 ## Ordine del Giorno

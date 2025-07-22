@@ -16,7 +16,7 @@ const Logo = ({ width, height, className }) => {
                     titolo
                 }
             }
-            logoQuery: file(relativePath: { eq: "logo.webp" }) {
+            logoQuery: file(relativePath: { eq: "logo.png" }) {
                 childImageSharp {
                     gatsbyImageData(
                         formats: [AUTO, WEBP]
