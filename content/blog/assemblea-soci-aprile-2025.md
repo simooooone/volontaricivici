@@ -1,19 +1,19 @@
 ---
 titolo: 'Unisciti a Noi! Assemblea VoCi nei Castelli il 22 Aprile'
-sottotitolo: 'Partecipa all’Assemblea, scopri i nuovi progetti e fai sentire la tua voce per il futuro della comunità!'
-slogan: '22 Aprile 2025 - 📢 La tua voce, il futuro dei Castelli!'
-tags: ['Eventi ed Iniziative']
+description: ''
+index: 2
 seo_title: 'Assemblea VoCi nei Castelli – 22 Aprile 2025 a Serravalle'
 seo_description: 'Partecipa all’Assemblea VoCi nei Castelli il 22 Aprile 2025 nella Casa del Castello di Serravalle. Aperta a tutti i cittadini, con aperitivo e dibattito sui prossimi eventi!'
-author: 'Simone'
+slogan: '22 Aprile 2025 - 📢 La tua voce, il futuro dei Castelli!'
+sottotitolo: 'Partecipa all’Assemblea, scopri i nuovi progetti e fai sentire la tua voce per il futuro della comunità!'
+tags: ['Eventi ed Iniziative']
 date: '08/04/2025'
 update: '17/04/2025'
+author: 'Simone'
 published: true
+langKey: 'it'
 featuredImage: '../assets/images/blog/foto-post-formazione-digit.jpg'
 sideImage: '../assets/images/blog/locandina-asemblea-voci-aprile-2.jpg'
-index: 2
-langKey: 'it'
-description: ''
 ---
 
 # 📢 Unisciti a Noi! Assemblea VoCi nei Castelli il 22 Aprile
@@ -37,7 +37,7 @@ Durante l'assemblea verranno trattati diversi argomenti, tra cui:
 - **Raccolta adesioni**
 - … e **tanto altro!**
 
-## Importante!
+## Importante
 
 **Non è necessario essere iscritti all'associazione per partecipare all'Assemblea!**\
 **Venite a far sentire la vostra voce!**

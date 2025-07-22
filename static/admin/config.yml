@@ -1,45 +1,57 @@
 backend:
-  name: git-gateway
-  branch: main
+    name: git-gateway
+    branch: main
 media_folder: content/assets/images/blog
 public_folder: /img
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Slogan", name: "slogan", widget: "string" }
-      - { label: "Titolo", name: "titolo", widget: "string" }
-      - { label: "Sottotitolo", name: "sottotitolo", widget: "string" }
-      - {
-          label: "Tags",
-          name: "tags",
-          widget: "select",
-          options: ["Eventi ed Iniziative", "Progetti"],
-        }
-      - { label: "SEO Title", name: "seo_title", widget: "string" }
-      - { label: "SEO Description", name: "seo_description", widget: "string" }
-      - { label: "Autore", name: "author", widget: "string" }
-      - {
-          label: "Data di pubblicazione",
-          name: "date",
-          widget: "datetime",
-          format: "DD/MM/YYYY",
-        }
-      - {
-          label: "Data di aggiornamento",
-          name: "update",
-          widget: "datetime",
-          format: "DD/MM/YYYY",
-        }
-      - {
-          label: "Pubblicato",
-          name: "published",
-          widget: "boolean",
-          default: true,
-        }
-      - { label: "Immagine grande", name: "featuredImage", widget: "image" }
-      - { label: "Immagine laterale", name: "sideImage", widget: "image" }
-      - { label: "Corpo del post", name: "body", widget: "markdown" }
+    - name: 'blog'
+      label: 'Blog'
+      folder: 'content/blog'
+      create: true
+      slug: '{{slug}}'
+      fields:
+          - { label: 'Titolo', name: 'titolo', widget: 'string' }
+          - { label: 'Descrizione', name: 'description', widget: 'string' }
+          - { label: 'Index', name: 'index', widget: 'number' }
+          - { label: 'Slogan', name: 'slogan', widget: 'string' }
+          - { label: 'Sottotitolo', name: 'sottotitolo', widget: 'string' }
+          - {
+                label: 'Tags',
+                name: 'tags',
+                widget: 'select',
+                options: ['Eventi ed Iniziative', 'Progetti'],
+            }
+          - {
+                label: 'Lingua',
+                name: 'langKey',
+                widget: 'select',
+                options: ['it'],
+            }
+          - { label: 'SEO Title', name: 'seo_title', widget: 'string' }
+          - {
+                label: 'SEO Description',
+                name: 'seo_description',
+                widget: 'string',
+            }
+          - { label: 'Autore', name: 'author', widget: 'string' }
+          - {
+                label: 'Data di pubblicazione',
+                name: 'date',
+                widget: 'datetime',
+                format: 'DD/MM/YYYY',
+            }
+          - {
+                label: 'Data di aggiornamento',
+                name: 'update',
+                widget: 'datetime',
+                format: 'DD/MM/YYYY',
+            }
+          - {
+                label: 'Pubblicato',
+                name: 'published',
+                widget: 'boolean',
+                default: true,
+            }
+          - { label: 'Immagine grande', name: 'featuredImage', widget: 'image' }
+          - { label: 'Immagine laterale', name: 'sideImage', widget: 'image' }
+          - { label: 'Corpo del post', name: 'body', widget: 'markdown' }
