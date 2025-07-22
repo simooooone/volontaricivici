@@ -821,7 +821,8 @@ img.bordo {
 .contPost .image {
   display: block;
 }
-.contPost .image > a, .contPost .image .gatsby-image-wrapper {
+.contPost .image > a,
+.contPost .image .gatsby-image-wrapper {
   display: block;
 }
 .contPost .image img {
