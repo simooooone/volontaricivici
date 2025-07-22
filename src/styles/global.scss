@@ -753,6 +753,10 @@ body {
   }
 }
 
+.h-image {
+  height: 100%;
+}
+
 .contImg {
   @media screen and (max-width: 991px) {
     margin-bottom: 20px;
@@ -763,7 +767,8 @@ body {
     top: 125px;
   }
 
-  .gatsby-image-wrapper {
+  &>div,
+  &>a>div {
     height: 100%;
   }
 
@@ -922,7 +927,7 @@ img {
     display: block;
 
     &>a,
-    .gatsby-image-wrapper {
+    &>a>div {
       display: block;
     }
 
