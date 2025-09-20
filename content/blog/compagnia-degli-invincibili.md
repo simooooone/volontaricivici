@@ -1,5 +1,5 @@
 ---
-slogan: 'Compagnia degli invincibili'
+slogan: 'Compagnia degli invincibili - Progetto teatrale'
 titolo: 'Progetti della Compagnia degli invincibili'
 sottotitolo: 'Compagnia degli invincibili presenta "Racconto di Gesti d’Amore!"'
 tags: ['Progetti']
