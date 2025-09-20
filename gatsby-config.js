@@ -229,7 +229,7 @@ module.exports = {
                 develop: false,
                 tailwind: false,
                 safelist: {
-                    standard: [/^btn/, /^col/, /^row/, /^container/, /^navbar/, /^text-/, /^bg-/, /^fade/, /^show/, /^code/, /^pre/, /^blockquote/, /^blockquote-footer/, /^iubenda-black/, /^iubenda-noiframe/, /^iubenda-embed/, /^gatsby-image-wrapper/],
+                    standard: [/^btn/, /^col/, /^row/, /^container/, /^navbar/, /^text-/, /^bg-/, /^fade/, /^show/, /^code/, /^pre/, /^blockquote/, /^blockquote-footer/, /^iubenda-black/, /^iubenda-noiframe/, /^iubenda-embed/, /^gatsby-image-wrapper/, /^wrapper/],
                 },
             },
         },
