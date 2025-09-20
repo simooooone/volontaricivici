@@ -39,9 +39,10 @@ const Logo = ({ width, height, className }) => {
   return (
     <Link to="/" aria-label="Vo.Ci. nei castelli" className="logo">
       <GatsbyImage
-        { ...imgProps }
-        image={ logoTopData }
-        alt={ `Logo ${data?.site?.siteMetadata?.titolo || ''}` }
+        {...imgProps}
+        image={logoTopData}
+        alt={`Logo ${data?.site?.siteMetadata?.titolo || ''}`}
+        className='logoImg'
       />
     </Link>
   );
