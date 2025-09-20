@@ -1,8 +1,8 @@
 ---
-slogan: 'Articoli e riferimenti online della Compagnia degli invincibili'
-titolo: 'Articoli e riferimenti online del progetto "Gesti d amore" della Compagnia degli invincibili'
+slogan: 'Compagnia degli invincibili'
+titolo: 'Progetti della Compagnia degli invincibili'
 sottotitolo: 'Compagnia degli invincibili presenta "Racconto di Gesti d’Amore!"'
-tags: ['Eventi ed Iniziative']
+tags: ['Progetti']
 seo_title: 'Compagnia degli invincibili | Vo.Ci. - Volontari Civici di San Marino'
 seo_description: ''
 author: 'Anna Fiorelli'
