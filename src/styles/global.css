@@ -360,7 +360,6 @@ body {
   width: 100%;
   z-index: 3;
   margin: 0;
-  /* Mobile Styles */
 }
 @media screen and (max-width: 991px) {
   .barraNavigazione {
@@ -469,6 +468,9 @@ body {
 }
 .barraNavigazione .contBarra .contMenu .nav-list .nav-item .voceBlog.active:hover:before {
   width: 100%;
+}
+.barraNavigazione {
+  /* Mobile Styles */
 }
 @media (max-width: 768px) {
   .barraNavigazione .nav-list {
@@ -699,6 +701,7 @@ body {
   font-size: 30px;
 }
 
+h2,
 .sottotitolo {
   line-height: 1.3;
   font-size: 20px;
@@ -706,6 +709,7 @@ body {
   margin-bottom: 2rem;
 }
 
+h3,
 .sottotitolo2 {
   line-height: 1.3;
   font-size: 21px;

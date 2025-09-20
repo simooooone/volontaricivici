@@ -1,18 +1,39 @@
 # Gatsby Starter Blog
 
+## Installazione
+
 ```BASH
-npm i
 npm i -g gatsby-cli
+npm i -g netlify-cli
+netlify init
+npm i --legacy-peer-deps
+```
+
+## Run locale
+
+```BASH
 npm run build
 npm run start
 ```
+
+## Build locale Netlify
+
+```BASH
+netlify build 
+```
+
+## Pubblicazione su Netlify
+
+```BASH
+netlify deploy --prod --dir=public
+```
+
+## As always Git
 
 ```BASH
 git add . 
 git commit -m ""
 git push
-netlify build 
-netlify deploy --prod --dir=public
 ```
 
 This starter ships with the main Gatsby configuration files you might need.
