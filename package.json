@@ -13,7 +13,7 @@
     "netlify-build": "netlify build",
     "netlify-deploy": "netlify deploy --prod --dir=public",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "test": "jest",
     "watch": "sass --watch ./src/styles/global.scss:./src/styles/global.css"
   },
   "dependencies": {
@@ -45,9 +45,15 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "babel-jest": "^30.1.2",
+    "babel-preset-gatsby": "^3.15.0",
+    "gatsby-module-loader": "^1.0.11",
     "gatsby-plugin-postcss": "^6.15.0",
     "gatsby-plugin-purgecss": "^6.2.1",
     "gatsby-plugin-sass": "^6.15.0",
+    "gatsby-plugin-testing": "^0.3.5",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^30.1.3",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "prettier": "^3.6.2",
