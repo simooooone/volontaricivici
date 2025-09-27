@@ -2,6 +2,11 @@
   command = "npm run build"
   publish = "public"
 
+[build.secrets_scanning]
+  secrets_omit_paths = [
+    "public/**" # Ignora tutti i file nella directory di output
+  ]
+
 [dev]  
   command = "npm run start"
   port = 8888

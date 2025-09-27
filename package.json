@@ -41,6 +41,7 @@
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
     "react-quill": "^2.0.0",
+    "rimraf": "^6.0.1",
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
