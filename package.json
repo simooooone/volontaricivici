@@ -20,7 +20,6 @@
     "@popperjs/core": "^2.11.8",
     "cookieconsent": "^3.1.1",
     "decap-cms-app": "^3.6.4",
-    "dotenv": "^17.2.2",
     "gatsby": "^5.15.0",
     "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-decap-cms": "^4.0.4",
