@@ -2,10 +2,8 @@
   command = "npm run build"
   publish = "public"
 
-[build.secrets_scanning]
-  secrets_omit_paths = [
-    "public/**" # Ignora tutti i file nella directory di output
-  ]
+  [build.secrets_scanning]
+    secrets_omit_keys = ["AUTH0_AUDIENCE"]
 
 [dev]  
   command = "npm run start"
